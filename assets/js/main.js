@@ -24,14 +24,14 @@
   "use strict";
 
   // 01. Sticky 
-  let header = document.querySelector('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      header.classList.add('sticky')
-    } else {
-      header.classList.remove('sticky')
-    }
-  })
+  // let header = document.querySelector('header');
+  // window.addEventListener('scroll', () => {
+  //   if (window.scrollY > 500) {
+  //     header.classList.add('sticky')
+  //   } else {
+  //     header.classList.remove('sticky')
+  //   }
+  // })
 
   // Screen Width
   var device_width = window.screen.width;

@@ -10797,3 +10797,78 @@ section {
 }
 
 /* custome css end*/
+
+.clients-area-inner {
+    padding-top: 98px
+}
+
+@media only screen and (max-width: 1919px) {
+    .clients-area-inner {
+        padding-top: 78px
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .clients-area-inner {
+        padding-top: 58px
+    }
+}
+
+.clients-area .section-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary);
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--white);
+    padding: 0 22px;
+    margin-top: 0
+}
+
+.dark .clients-area .section-title {
+    background-color: var(--black)
+}
+
+.clients-area .title-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1
+}
+
+.clients-area .title-wrapper:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    top: 4px;
+    z-index: -1
+}
+
+.clients-area .title-wrapper:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    top: 8px;
+    z-index: -1
+}
+
+.clients-area .section-header {
+    margin-bottom: 48px
+}
+
+.client-slider-active .swiper-slide {
+    width: auto
+}
+
+.client-slider .swiper-wrapper {
+    transition-timing-function: linear
+}
+
+.client-box img {
+    opacity: 1
+}

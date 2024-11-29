@@ -1,22 +1,22 @@
 .sidebar {
-    z-index: 1;
+    z-index: 99;
     position: fixed;
     right: 0;
     top: 0;
     width: 80px;
     height: 100vh;
-    background-color: #0000008c;
-    backdrop-filter: blur(7.5px);
+    background-color: transparent;
+    /* backdrop-filter: blur(7.5px); */
     transition: ease-in-out 1s;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    
+
 }
 
 .dark .sidebar {
-    background: rgba(255, 255, 255, 0.185);
+    background-color: transparent;
 }
 
 .menu-toggle {
@@ -107,4 +107,20 @@
     .sidebar {
         width: 60px;
     }
+}
+
+.expanded-menu {
+    width: 100%;
+    margin-left: 38px;
+}
+
+.expanded-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.expanded-menu ul li {
+    font-size: 3.5rem;
+    font-weight: 500;
 }

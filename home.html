@@ -26,19 +26,27 @@
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <link rel="stylesheet" href="assets/css/master-ai-agency.css">
   <link rel="stylesheet" href="assets/css/left-fixed-header.css">
-
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/vission-section.css">
+  <!-- <link rel="stylesheet" href="assets/css/master-seo-agency.css"> -->
 
 </head>
 
 
 <body class="font-heading-instumentsans-medium dark">
-
+  <style>
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+  </style>
   <!-- Preloader -->
   <div id="preloader">
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/imgs/logo/EHC-Black-trans.png" alt="site-logo">
+        <img src="assets/imgs/logo/bubble-drop.png" alt="site-logo">
         <div class="txt-loading">
           <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
@@ -187,8 +195,9 @@
         menuitem.innerHTML =
           `<nav class="nav-menu expanded-menu">
             <ul>
-              <li><a href="#">home</a></li>
-              <li><a href="about.html">about</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </nav>`
       } else {
@@ -330,136 +339,63 @@
 
           <!-- info area start  -->
           <section class="info-area">
-            <div class="container">
-              <div class="section1" id="vision">
-                <div class="section1-image bg cf_image overflow-hidden">
-                  <img src="assets/imgs/gallery/vision_detail_sample.jpg" alt="image">
+            <section class="section22 vision">
+              <div class="particles22" id="vision-particles"></div>
+              <div class="content22">
+                <div class="image-container22">
+                  <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7" alt="Sustainable Energy">
+                  <div class="image-overlay22"></div>
                 </div>
-                <div class="section1-content">
+                <div class="text-content22">
                   <h2>Vision</h2>
-                  <p class="text has_text_move_anim">To be world's unique investment leader, driving stability and
-                    sustainable growth through innovation
-                    & a strategically diversified portfolio.</p>
+                  <p>To be world's unique <span class="highlight-text22">investment leader</span>, driving stability and
+                    sustainable growth through innovation & a strategically diversified portfolio.</p>
                 </div>
               </div>
+              <svg class="line-drawing" viewBox="0 0 100 100">
+                <path d="M10,50 Q50,10 90,50 T90,50" />
+              </svg>
+            </section>
 
-              <div class="section1" id="mission">
-                <div class="section1-content">
+            <section class="section22 mission">
+              <div class="particles22" id="mission-particles"></div>
+              <div class="content22 reverse">
+                <div class="image-container22">
+                  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Industrial Excellence">
+                  <div class="image-overlay22"></div>
+                </div>
+                <div class="text-content22">
                   <h2>Mission</h2>
-                  <p class="text has_text_move_anim">To drive strategic investments and build strong foundations by
-                    creating a resilient and sustainable
-                    portfolio for long-term growth & shareholder's value.</p>
-                </div>
-                <div class="section1-image bg cf_image overflow-hidden">
-                  <img src="assets/imgs/gallery/mission_detail_sample.jpg" alt="image">
+                  <p>To drive <span class="highlight-text22">strategic investments</span> and build strong foundations
+                    by creating a resilient and sustainable portfolio for long-term growth & shareholder's value.</p>
                 </div>
               </div>
+              <svg class="line-drawing" viewBox="0 0 100 100">
+                <path d="M20,20 Q50,90 80,20" />
+              </svg>
+            </section>
 
-              <div class="section1" id="values">
-                <div class="section1-image bg cf_image overflow-hidden">
-                  <img src="assets/imgs/gallery/values_detail_sample.jpg.jpg" alt="image">
+            <section class="section22 values">
+              <div class="particles22" id="values-particles"></div>
+              <div class="content22">
+                <div class="image-container22">
+                  <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" alt="Corporate Values">
+                  <div class="image-overlay22"></div>
                 </div>
-                <div class="section1-content">
+                <div class="text-content22">
                   <h2>Values</h2>
-                  <p class="text has_text_move_anim">Resilience Innovation Collaboration Integrity Sustainability
-                    Excellence.</p>
+                  <p>Embracing <span class="highlight-text22">innovation</span>, fostering collaboration, and
+                    maintaining unwavering integrity in every endeavor to create lasting impact.</p>
                 </div>
               </div>
+              <svg class="line-drawing" viewBox="0 0 100 100">
+                <path d="M10,90 Q50,10 90,90" />
+              </svg>
+            </section>
 
-              <script>
-                const sections = document.querySelectorAll('.section1');
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
 
-                const observer = new IntersectionObserver((entries) => {
-                  entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                      entry.target.classList.add('visible');
-                    } else {
-                      // entry.target.classList.remove('visible');
-                    }
-                  });
-                }, {
-                  threshold: 0.1
-                });
-
-                sections.forEach(section => {
-                  observer.observe(section);
-                });
-              </script>
-              <!-- <div class="info-area-inner section-spacing">
-                <div class="area-shape-1 has_fade_anim" data-fade-from="left" data-duration="2" data-delay="0.3"
-                  data-fade-offset="80" data-ease="bounce">
-                  <img src="assets/imgs/shape/img-s-75.webp" alt="image">
-                </div>
-                <div class="info-points">
-                  <div class="shape-1">
-                    <img class="show-light" src="assets/imgs/shape/img-s-77.webp" alt="image">
-                    <img class="show-dark" src="assets/imgs/shape/img-s-77-dark.webp" alt="image">
-                  </div>
-                  <div class="bg">
-                    <img src="assets/imgs/shape/img-s-76.webp" alt="image">
-                  </div>
-                  <div class="info-list">
-                    <ul>
-                      <li>+ Artificial</li>
-                      <li>+ Local Authority</li>
-                      <li>+ Business Survey</li>
-                      <li>+ Identity</li>
-                      <li>+ Data Connection</li>
-                      <li>+ Public Server</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="infos-wrapper-box">
-                  <div class="infos-wrapper">
-                    <div class="info-box">
-                      <div class="info-img">
-                        <img src="assets/imgs/gallery/vision_detail_sample.jpg" alt="image">
-                      </div>
-                      <div class="content">
-                        <h2 class="title has_fade_anim" data-fade-from="left">Vision</h2>
-                        <p class="text has_text_move_anim">To be world’s
-                          unique investment leader,
-                          driving stability and
-                          sustainable growth through
-                          innovation & a strategically
-                          diversified portfolio.</p>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="info-img">
-                        <img src="assets/imgs/gallery/mission_detail_sample.jpg" alt="image">
-
-                      </div>
-                      <div class="content">
-                        <h2 class="title has_fade_anim">Mission</h2>
-                        <p class="text has_text_move_anim">To drive strategic
-                          investments and build strong
-                          partnerships, creating a
-                          resilient and sustainable
-                          portfolio for long-term
-                          growth & shareholder’s
-                          value.</p>
-                      </div>
-                    </div>
-                    <div class="info-box">
-                      <div class="info-img">
-                        <img src="assets/imgs/gallery/values_detail_sample.jpg.jpg" alt="image">
-
-                      </div>
-                      <div class="content">
-                        <h2 class="title has_fade_anim">Values</h2>
-                        <p class="text has_text_move_anim">Resilience
-                          Innovation
-                          Collaboration
-                          Integrity
-                          Sustainability
-                          Excellence.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
           </section>
           <!-- info area end  -->
 
@@ -471,28 +407,33 @@
                   <div class="section-header">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper">
-                        <h2 class="section-title has_text_move_anim">Delivering innovative and sustainable solutions that drive growth, efficiency, and safety across diverse industries.</h2>
+                        <h2 class="section-title has_text_move_anim">Delivering innovative and sustainable solutions
+                          that drive growth, efficiency, and safety across diverse industries.</h2>
                       </div>
                     </div>
                   </div>
                   <div class="section-content showcase container">
                     <div class="showcase-panel">
-                      <div class="showcase-content active" data-background-image="assets/imgs/gallery/energy_sector_sample.jpg" data-index="0">
+                      <div class="showcase-content active"
+                        data-background-image="assets/imgs/gallery/energy_sector_sample.jpg" data-index="0">
 
                         <h3 class="title">ENERGY</h3>
                         <button href="#" class="try-button">Learn more</button>
                       </div>
-                      <div class="showcase-content" data-background-image="assets/imgs/gallery/infra_sector_sample.jpg" data-index="1">
+                      <div class="showcase-content" data-background-image="assets/imgs/gallery/infra_sector_sample.jpg"
+                        data-index="1">
 
                         <h3 class="title">INFRASTRUCTURE</h3>
                         <button href="#" class="try-button">Learn more</button>
                       </div>
-                      <div class="showcase-content" data-background-image="assets/imgs/gallery/service_sector_sample.jpg" data-index="2">
+                      <div class="showcase-content"
+                        data-background-image="assets/imgs/gallery/service_sector_sample.jpg" data-index="2">
 
                         <h3 class="title">SAFETY</h3>
                         <button href="#" class="try-button">Learn more</button>
                       </div>
-                      <div class="showcase-content" data-background-image="assets/imgs/gallery/tech_sector_sample.jpg" data-index="3">
+                      <div class="showcase-content" data-background-image="assets/imgs/gallery/tech_sector_sample.jpg"
+                        data-index="3">
 
                         <h3 class="title">TECHNOLOGY</h3>
                         <button href="#" class="try-button">Learn more</button>
@@ -504,7 +445,7 @@
                       <div class="feature-item feature-box active has_fade_anim" data-fade-from="left"
                         data-fade-offset="70" data-index="0">
                         <div class="thumb">
-                          <img src="assets/imgs/shape/img-s-79.webp" alt="feature icon">
+                          <img src="assets/imgs/logo/sector-11.png" alt="feature icon">
                         </div>
                         <div class="feature-content content">
                           <h3 class="title">ENERGY</h3>
@@ -517,7 +458,7 @@
                       <div class="feature-item feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70"
                         data-index="1">
                         <div class="thumb">
-                          <img src="assets/imgs/shape/img-s-81.webp" alt="feature icon">
+                          <img src="assets/imgs/logo/sector-22.png" alt="feature icon">
                         </div>
                         <div class="feature-content content">
                           <h3 class="title">INFRASTRUCTURE</h3>
@@ -530,7 +471,7 @@
                       <div class="feature-item feature-box has_fade_anim " data-fade-from="left" data-fade-offset="70"
                         data-index="2">
                         <div class="thumb">
-                          <img src="assets/imgs/shape/img-s-80.webp" alt="feature icon">
+                          <img src="assets/imgs/logo/sector-33.png" alt="feature icon">
                         </div>
                         <div class="feature-content content">
                           <h3 class="title">SAFETY</h3>
@@ -542,7 +483,7 @@
                       <div class="feature-item feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70"
                         data-index="3">
                         <div class="thumb">
-                          <img src="assets/imgs/shape/img-s-81.webp" alt="feature icon">
+                          <img src="assets/imgs/logo/sector-44.png" alt="feature icon">
                         </div>
                         <div class="feature-content content">
                           <h3 class="title">TECHNOLOGY</h3>
@@ -615,80 +556,296 @@
           <!-- service area end  -->
 
           <!-- video area start  -->
-          <div class="container large">
+          <!-- <div class="container large">
             <div class="video-area">
               <div class="area-bg">
                 <img src="assets/imgs/gallery/img-s-84.webp" alt="image">
               </div>
             </div>
           </div>
+          -->
+
+
+          <!-- Resources -->
+          <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+          <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+          <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+          <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+          <div id="chartdiv"></div>
+          <!-- Chart code -->
+          <script>
+            am5.ready(function () {
+
+              /**
+               * ---------------------------------------
+               * This demo was created using amCharts 5.
+               *
+               * For more information visit:
+               * https://www.amcharts.com/
+               *
+               * Documentation is available at:
+               * https://www.amcharts.com/docs/v5/
+               * ---------------------------------------
+               */
+
+              // Create root element
+              // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+              var root = am5.Root.new("chartdiv");
+
+              // Set themes
+              // https://www.amcharts.com/docs/v5/concepts/themes/
+              root.setThemes([am5themes_Animated.new(root)]);
+
+              // Create the map chart
+              // https://www.amcharts.com/docs/v5/charts/map-chart/
+              var chart = root.container.children.push(
+                am5map.MapChart.new(root, {
+                  panX: "rotateX",
+                  panY: "translateY",
+                  projection: am5map.geoMercator()
+                })
+              );
+
+              var cont = chart.children.push(
+                am5.Container.new(root, {
+                  layout: root.horizontalLayout,
+                  x: 20,
+                  y: 40
+                })
+              );
+
+              // Add labels and controls
+              cont.children.push(
+                am5.Label.new(root, {
+                  centerY: am5.p50,
+                  text: "Map"
+                })
+              );
+
+              var switchButton = cont.children.push(
+                am5.Button.new(root, {
+                  themeTags: ["switch"],
+                  centerY: am5.p50,
+                  icon: am5.Circle.new(root, {
+                    themeTags: ["icon"]
+                  })
+                })
+              );
+
+              switchButton.on("active", function () {
+                if (!switchButton.get("active")) {
+                  chart.set("projection", am5map.geoMercator());
+                  chart.set("panY", "translateY");
+                  chart.set("rotationY", 0);
+                  backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
+                } else {
+                  chart.set("projection", am5map.geoOrthographic());
+                  chart.set("panY", "rotateY");
+
+                  backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
+                }
+              });
+
+              cont.children.push(
+                am5.Label.new(root, {
+                  centerY: am5.p50,
+                  text: "Globe"
+                })
+              );
+
+              // Create series for background fill
+              // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+              var backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
+              backgroundSeries.mapPolygons.template.setAll({
+                fill: root.interfaceColors.get("alternativeBackground"),
+                fillOpacity: 0,
+                strokeOpacity: 0
+              });
+
+              // Add background polygon
+              // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+              backgroundSeries.data.push({
+                geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+              });
+
+              // Create main polygon series for countries
+              // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+              var polygonSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                  geoJSON: am5geodata_worldLow
+                })
+              );
+
+              // Create line series for trajectory lines
+              // https://www.amcharts.com/docs/v5/charts/map-chart/map-line-series/
+              var lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
+              lineSeries.mapLines.template.setAll({
+                stroke: root.interfaceColors.get("alternativeBackground"),
+                strokeOpacity: 0.3
+              });
+
+              // Create point series for markers
+              // https://www.amcharts.com/docs/v5/charts/map-chart/map-point-series/
+              var pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+              var colorset = am5.ColorSet.new(root, {});
+
+              pointSeries.bullets.push(function () {
+                var container = am5.Container.new(root, {
+                  tooltipText: "{title}",
+                  cursorOverStyle: "pointer"
+                });
+
+                container.events.on("click", (e) => {
+                  window.location.href = e.target.dataItem.dataContext.url;
+                });
+
+
+
+                var circle = container.children.push(
+                  am5.Circle.new(root, {
+                    radius: 4,
+                    tooltipY: 0,
+                    fill: colorset.next(),
+                    strokeOpacity: 0
+                  })
+                );
+
+
+                var circle2 = container.children.push(
+                  am5.Circle.new(root, {
+                    radius: 4,
+                    tooltipY: 0,
+                    fill: colorset.next(),
+                    strokeOpacity: 0,
+                    tooltipText: "{title}"
+                  })
+                );
+
+                circle.animate({
+                  key: "scale",
+                  from: 1,
+                  to: 5,
+                  duration: 600,
+                  easing: am5.ease.out(am5.ease.cubic),
+                  loops: Infinity
+                });
+                circle.animate({
+                  key: "opacity",
+                  from: 1,
+                  to: 0.1,
+                  duration: 600,
+                  easing: am5.ease.out(am5.ease.cubic),
+                  loops: Infinity
+                });
+
+                return am5.Bullet.new(root, {
+                  sprite: container
+                });
+              });
+              var cities = [
+                {
+                  title: "UAE",
+                  latitude: 23.4241,
+                  longitude: 53.8478,
+                  url: "https://ehcuae.vercel.app/"
+                },
+                {
+                  title: "KSA",
+                  latitude: 23.8859,
+                  longitude: 45.0792,
+                  url: "https://ehcuae.vercel.app/"
+                },
+                {
+                  title: "Oman",
+                  latitude: 21.4735,
+                  longitude: 55.9754,
+                  url: "https://ehcuae.vercel.app/"
+                },
+                {
+                  title: "Romania",
+                  latitude: 45.9432,
+                  longitude: 24.9668,
+                  url: "https://ehcuae.vercel.app/"
+                },
+              ];
+
+              for (var i = 0; i < cities.length; i++) {
+                var city = cities[i];
+                addCity(city.longitude, city.latitude, city.title, city.url);
+              }
+
+              function addCity(longitude, latitude, title, url) {
+                pointSeries.data.push({
+                  url: url,
+                  geometry: { type: "Point", coordinates: [longitude, latitude] },
+                  title: title
+                });
+              }
+
+              // Make stuff animate on load
+              chart.appear(1000, 1000);
+
+
+            }); // end am5.ready()
+          </script>
           <!-- video area end  -->
 
           <!-- client area start  -->
-          <section class="client-area">
+          <div class="clients-area">
             <div class="container">
-              <div class="client-area-inner section-spacing">
-
+              <div class="clients-area-inner">
                 <div class="section-header">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="section-title has_text_move_anim">5 millions of companies are using
-                        Arolx to power up their (ai) system
-                        world wide</h2>
+                      <h2 class="section-title has_word_anim">We worked with the world’s best companies</h2>
                     </div>
                   </div>
                 </div>
-                <div class="clients-wrapper-box">
-                  <div class="clients-wrapper">
-                    <div class="client-box has_fade_anim" data-fade-from="bottom" data-delay="0.15">
-                      <div class="thumb">
-                        <img class="show-light" src="assets/imgs/brand/img-s-13.webp" alt="client icon">
-                        <img class="show-dark" src="assets/imgs/brand/img-s-13-light.webp" alt="client icon">
+                <div class="client-slider has_fade_anim mb-4">
+                  <div class="swiper client-slider-active">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-13.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/aldar.png" alt="client image">
+                        </div>
                       </div>
-                      <div class="content">
-                        <h3 class="title">Canon</h3>
-                        <p class="text">It involves the creation of algorithms and models that enable machines to learn,
-                          reason, perceive, and make decisions.</p>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-14.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/anastasia.png" alt="client image">
+                        </div>
                       </div>
-                    </div>
-                    <div class="client-box has_fade_anim" data-fade-from="bottom" data-delay="0.30">
-                      <div class="thumb">
-                        <img class="show-light" src="assets/imgs/brand/img-s-14.webp" alt="client icon">
-                        <img class="show-dark" src="assets/imgs/brand/img-s-14-light.webp" alt="client icon">
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-15.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/aswaaq.png" alt="client image">
+                        </div>
                       </div>
-                      <div class="content">
-                        <h3 class="title">Aecom</h3>
-                        <p class="text">Emphasize the knowledge of your team in developing and networks handles needs
-                          from corporate robust features</p>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-16.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/bloom.png" alt="client image">
+                        </div>
                       </div>
-                    </div>
-                    <div class="client-box has_fade_anim" data-fade-from="bottom" data-delay="0.45">
-                      <div class="thumb">
-                        <img class="show-light" src="assets/imgs/brand/img-s-16.webp" alt="client icon">
-                        <img class="show-dark" src="assets/imgs/brand/img-s-16-light.webp" alt="client icon">
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-17.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/dubai-properties.png" alt="client image">
+                        </div>
                       </div>
-                      <div class="content">
-                        <h3 class="title">Netflix</h3>
-                        <p class="text">For company sites focused on lead generation and sales, provides all the tools
-                          for high-converting funnels</p>
-                      </div>
-                    </div>
-                    <div class="client-box has_fade_anim" data-fade-from="bottom" data-delay="0.60">
-                      <div class="thumb">
-                        <img class="show-light" src="assets/imgs/brand/img-s-18.webp" alt="client icon">
-                        <img class="show-dark" src="assets/imgs/brand/img-s-18-light.webp" alt="client icon">
-                      </div>
-                      <div class="content">
-                        <h3 class="title">Stripe</h3>
-                        <p class="text">The sleek, modern design makes a statement while still being flexible enough to
-                          fit the needs of diverse websites</p>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-18.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/ducab.png" alt="client image">
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
           <!-- client area end  -->
 
 
@@ -717,7 +874,7 @@
                     <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                   </ul>
                 </div>
-                <div class="footer-widget-wrapper">
+                <!-- <div class="footer-widget-wrapper">
                   <h2 class="title">Service</h2>
                   <ul class="footer-nav-list">
                     <li><a href="#">UI/UX Design</a></li>
@@ -726,15 +883,12 @@
                     <li><a href="#">Webflow</a></li>
                     <li><a href="#">Development</a></li>
                   </ul>
-                </div>
+                </div> -->
                 <div class="footer-widget-wrapper">
                   <h2 class="title">Company</h2>
                   <ul class="footer-nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Agency</a></li>
-                    <li><a href="#">Achievement</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </div>
                 <div class="footer-widget-wrapper newsletter">
@@ -790,7 +944,7 @@
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/offcanvas.js"></script>
   <script src="assets/js/showcase-panel.js"></script>
-
+  <script src="assets/js/swiper-bundle.min.js"></script>
   <script>
 
     // client slider 
@@ -877,7 +1031,117 @@
     }
 
   </script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
 
+    const cursor = document.querySelector('.cursor1');
+    // document.addEventListener('mousemove', (e) => {
+    //     gsap.to(cursor, {
+    //         x: e.clientX - 10,
+    //         y: e.clientY - 10,
+    //         duration: 0.3
+    //     });
+    //     gsap.to(cursorDot, {
+    //         x: e.clientX - 2,
+    //         y: e.clientY - 2,
+    //         duration: 0.1
+    //     });
+    // });
+
+    // Particle animation
+    function createParticles(containerId, count) {
+      const container = document.getElementById(containerId);
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle22';
+        particle.style.width = Math.random() * 3 + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        container.appendChild(particle);
+
+        gsap.to(particle, {
+          x: (Math.random() - 0.5) * 100,
+          y: (Math.random() - 0.5) * 100,
+          opacity: Math.random(),
+          duration: Math.random() * 3 + 2,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        });
+      }
+    }
+
+    createParticles('vision-particles', 50);
+    createParticles('mission-particles', 50);
+    createParticles('values-particles', 50);
+
+    // Scroll animations
+    document.querySelectorAll('.section22').forEach(section => {
+      const img = section.querySelector('img');
+      const title = section.querySelector('h2');
+      const text = section.querySelector('p');
+      const path = section.querySelector('path');
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play none none reverse"
+        }
+      });
+
+      tl.from(img, {
+        scale: 1.2,
+        duration: 1.5,
+        ease: "power2.out"
+      })
+        .to(title, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out"
+        }, "-=1")
+        .to(text, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out"
+        }, "-=0.6")
+        .from(path, {
+          strokeDasharray: 1000,
+          strokeDashoffset: 1000,
+          duration: 1.5,
+          ease: "power2.out"
+        }, "-=1");
+    });
+
+    // Hover effects
+    document.querySelectorAll('.image-container22').forEach(container => {
+      container.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+          scale: 1.5,
+          duration: 0.3
+        });
+        gsap.to(container.querySelector('img'), {
+          scale: 1.05,
+          duration: 0.5
+        });
+      });
+
+      container.addEventListener('mouseleave', () => {
+        gsap.to(cursor, {
+          scale: 1,
+          duration: 0.3
+        });
+        gsap.to(container.querySelector('img'), {
+          scale: 1,
+          duration: 0.5
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
