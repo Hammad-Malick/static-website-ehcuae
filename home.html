@@ -46,14 +46,14 @@
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/imgs/logo/bubble-drop.png" alt="site-logo">
+        <img src="assets/imgs/logo/bubble-drop.png" width="200" alt="site-logo">
         <div class="txt-loading">
-          <span data-text="E" class="characters">E</span>
+          <!-- <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
           <span data-text="C" class="characters">C</span>
           <span data-text="U" class="characters">U</span>
           <span data-text="A" class="characters">A</span>
-          <span data-text="E" class="characters">E</span>
+          <span data-text="E" class="characters">E</span> -->
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -149,63 +149,269 @@
   <!-- search modal end -->
 
   <!-- Sidenav area start -->
-  <nav class="sidebar">
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div id="menue-items">
+  <!-- <nav class="sidebar">
+    <div class="sidebar-wrapper">
 
-    </div>
-    <div class="social-icons">
-      <a href="#" class="social-link" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-        </svg>
-      </a>
-      <a href="#" class="social-link" aria-label="Twitter">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-      </a>
-      <a href="#" class="social-link" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
-        </svg>
-      </a>
+      <div class="sidebar-opt">
+        <div id="menu-items"></div>
+      </div>
+      <div class="sidebar-toggle-btn">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
-  <!-- Sidenav area end -->
-
-
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
-    const menuitem = document.querySelector('#menue-items');
+    const menuItems = document.querySelector('#menu-items');
     const sidebar = document.querySelector('.sidebar');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       sidebar.classList.toggle('open');
-      if (sidebar.classList.contains('open')) {
-        menuitem.innerHTML =
-          `<nav class="nav-menu expanded-menu">
-            <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>`
-      } else {
-        menuitem.innerHTML = ''
-      }
 
+      if (sidebar.classList.contains('open')) {
+        menuItems.innerHTML = `
+        <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
+          <div class="menu-content">
+            <div class="menu-left">
+              <ul class="main-menu">
+                <li class="main-menu-item">Home</li>
+                <li class="main-menu-item" data-menu="about">About Ehcuae</li>
+                <li class="main-menu-item" data-menu="sectors">Bussiness Sectors</li>
+                <li class="main-menu-item" href="contact.html">Contact Us</li>
+                <li class="main-menu-item">About People</li>
+              </ul>
+            </div>
+            <div class="menu-right">
+              <ul class="sub-menu" id="sectors">
+                <li class="sub-menu-item" data-content="energy">Energy</li>
+                <li class="sub-menu-item" data-content="infra">Infrastructure</li>
+                <li class="sub-menu-item" data-content="safety">Safety</li>
+                <li class="sub-menu-item" data-content="tech">Technology</li>
+              </ul>
+              <ul class="sub-menu" id="about">
+                <li class="sub-menu-item" data-content="energy">Who are we?</li>
+                <li class="sub-menu-item" data-content="infra">What our mission?</li>
+                <li class="sub-menu-item" data-content="safety">What our vision?</li>
+                <li class="sub-menu-item" data-content="safety">What our values?</li>
+              </ul>
+              <div class="content-description">
+                <h2>Energy</h2>
+                <p>Managing a broad portfolio of assets operating in key sectors...</p>
+              </div>
+            </div>
+          </div>`;
+
+        initializeMenu();
+      } else {
+        menuItems.innerHTML = '';
+      }
+    });
+
+    function initializeMenu() {
+      const mainMenuItems = document.querySelectorAll('.main-menu-item');
+      const subMenuItems = document.querySelectorAll('.sub-menu-item');
+      const contentDescription = document.querySelector('.content-description');
+
+      const content = {
+        energy: { title: 'Energy', description: 'Delivering sustainable and innovative energy solutions, from renewable systems to efficient power management, for a greener future.' },
+        infra: { title: 'Infrastructure', description: 'Creating resilient and sustainable infrastructure for urban, industrial, and transportation needs with precision and expertise.' },
+        safety: { title: 'Safety', description: 'Committed to delivering advanced solutions that prioritize safety, ensuring a secure and protected environment in every sector we serve.' },
+        tech: { title: 'Technology', description: 'Empowering businesses with cutting-edge IT systems, automation, and digital tools for effective digital transformation.' }
+      };
+
+      // Handle main menu item click
+      mainMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          mainMenuItems.forEach(i => i.classList.remove('active')); // Deselect all main menu items
+          item.classList.add('active'); // Select clicked item
+
+          // Display corresponding submenu
+          const menuId = item.dataset.menu;
+          document.querySelectorAll('.sub-menu').forEach(menu => menu.classList.remove('active'));
+          document.getElementById(menuId)?.classList.add('active');
+        });
+      });
+
+      // Handle submenu item hover
+      subMenuItems.forEach(item => {
+        // Hover to show content
+        item.addEventListener('mouseenter', () => {
+          const { title, description } = content[item.dataset.content];
+          contentDescription.querySelector('h2').textContent = title;
+          contentDescription.querySelector('p').textContent = description;
+          contentDescription.classList.add('active'); // Show description on hover
+        });
+
+        // Leave to hide content if not clicked
+        item.addEventListener('mouseleave', () => {
+          if (!item.classList.contains('selected')) { // Only clear if not selected
+            contentDescription.querySelector('h2').textContent = '';
+            contentDescription.querySelector('p').textContent = '';
+            contentDescription.classList.remove('active');
+          }
+        });
+
+        // Click to select and persist content
+        item.addEventListener('click', () => {
+          // Deselect all other submenu items
+          subMenuItems.forEach(i => i.classList.remove('selected'));
+
+          item.classList.add('selected'); // Mark clicked item as selected
+
+          const { title, description } = content[item.dataset.content];
+          contentDescription.querySelector('h2').textContent = title;
+          contentDescription.querySelector('p').textContent = description;
+          contentDescription.classList.add('active'); // Keep content active after click
+        });
+      });
+
+    }
+  </script> -->
+
+
+
+  <!-- <button class="menu-trigger">☰</button> -->
+  <button class="menu-trigger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="fullscreen-menu">
+    <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e" alt="Background" class="menu-background">
+
+    <div class="menu-content">
+      <div class="menu-left">
+        <img src="assets/imgs/logo/EHC-Black-trans.png" alt="ehucae" class="logo">
+        <ul class="main-menu">
+          <li class="main-menu-item" data-menu="about">About ADQ</li>
+          <li class="main-menu-item active" data-menu="value">Value Creation</li>
+          <li class="main-menu-item" data-menu="portfolio">Portfolio</li>
+          <li class="main-menu-item" data-menu="investors">Investors</li>
+          <li class="main-menu-item" data-menu="media">Media and Insights</li>
+        </ul>
+        <div class="social-links">
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">𝕏</a>
+          <a href="#" class="social-link">ig</a>
+        </div>
+      </div>
+      <div class="menu-right">
+        <ul class="sub-menu active" id="value-submenu">
+          <li class="sub-menu-item" data-content="overview">Overview</li>
+          <li class="sub-menu-item" data-content="sustainable">Sustainable Investing</li>
+          <li class="sub-menu-item" data-content="digital">Digital Transformation</li>
+          <li class="sub-menu-item" data-content="talent">Talent Management</li>
+          <li class="sub-menu-item" data-content="innovation">Innovation and R&D</li>
+        </ul>
+        <div class="content-description">
+          <h2>Sustainable Investing</h2>
+          <p>Managing a broad portfolio of assets operating in key sectors of Abu Dhabi's economy uniquely positions us
+            to influence sustainable outcomes for our nation – ultimately making a positive impact on the communities
+            where we operate and improving the quality of life for future generations.</p>
+        </div>
+      </div>
+    </div>
+    <button class="close-btn">×</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuTrigger = document.querySelector('.menu-trigger');
+      const menu = document.querySelector('.fullscreen-menu');
+      const menuCloseButton = document.querySelector('.close-btn');
+      const mainMenuItems = document.querySelectorAll('.main-menu-item');
+      const subMenuItems = document.querySelectorAll('.sub-menu-item');
+      const contentDescription = document.querySelector('.content-description');
+
+      const content = {
+        overview: {
+          title: 'Overview',
+          description: 'ADQ is a long-term investment company with a broad portfolio of major enterprises spanning key sectors of Abu Dhabi\'s diversified economy.'
+        },
+        sustainable: {
+          title: 'Sustainable Investing',
+          description: 'Managing a broad portfolio of assets operating in key sectors of Abu Dhabi\'s economy uniquely positions us to influence sustainable outcomes for our nation – ultimately making a positive impact on the communities where we operate and improving the quality of life for future generations.'
+        },
+        digital: {
+          title: 'Digital Transformation',
+          description: 'We are driving digital transformation across our portfolio companies to enhance operational efficiency and create new business opportunities.'
+        },
+        talent: {
+          title: 'Talent Management',
+          description: 'Our talent management strategy focuses on attracting, developing, and retaining top talent to drive innovation and growth across our portfolio.'
+        },
+        innovation: {
+          title: 'Innovation and R&D',
+          description: 'We invest in research and development to foster innovation and create long-term value for our stakeholders and the communities we serve.'
+        }
+      };
+
+      // Open Menu
+      menuTrigger.addEventListener('click', () => {
+        menu.classList.add('active');
+        contentDescription.classList.add('active');
+      });
+
+      // Close Menu
+      menuCloseButton.addEventListener('click', () => {
+        menu.classList.remove('active');
+        contentDescription.classList.remove('active');
+      });
+
+      // Main Menu Item Click - Switch Active State
+      mainMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Deactivate all main menu items
+          mainMenuItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+
+          // Handle Submenu Activation
+          const menuId = item.dataset.menu + '-submenu';
+          document.querySelectorAll('.sub-menu').forEach(menu => {
+            menu.classList.remove('active');
+          });
+          document.getElementById(menuId)?.classList.add('active');
+        });
+      });
+
+      // Submenu Item Hover - Show Content Description
+      subMenuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const contentKey = item.dataset.content;
+          const { title, description } = content[contentKey];
+
+          contentDescription.querySelector('h2').textContent = title;
+          contentDescription.querySelector('p').textContent = description;
+          contentDescription.classList.add('active');
+        });
+
+        // Hide Description When Hover Ends
+        item.addEventListener('mouseleave', () => {
+          contentDescription.classList.remove('active');
+        });
+      });
+
+      // Submenu Item Click - Update Active State
+      subMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Only update description content on click
+          const contentKey = item.dataset.content;
+          const { title, description } = content[contentKey];
+
+          contentDescription.querySelector('h2').textContent = title;
+          contentDescription.querySelector('p').textContent = description;
+          contentDescription.classList.add('active');
+        });
+      });
     });
   </script>
+
   <!-- Header area end -->
 
   <div class="has-smooth" id="has_smooth"></div>
@@ -221,8 +427,7 @@
           <!-- hero area start  -->
           <div class="container large hero-area-wrapper">
             <video id="backgroundVideo" autoplay muted class="background-video">
-              <source src="https://videos.pexels.com/video-files/1851190/1851190-uhd_2560_1440_25fps.mp4"
-                type="video/mp4">
+              <source src="assets/hero-video/intro-video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <script>
@@ -277,7 +482,7 @@
                         started</span><i class="fa-solid fa-play"></i></a>
                   </div>
                 </div>
-                <div class="feature-content">
+                <!-- <div class="feature-content">
                   <div class="bg cf_image overflow-hidden">
                     <img src="assets/imgs/gallery/img-s-82.webp" data-speed="0.9" alt="image">
                   </div>
@@ -292,7 +497,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </section>
           </div>
@@ -399,6 +604,35 @@
           </section>
           <!-- info area end  -->
 
+          <!-- counter area start  -->
+          <div class="container large">
+            <section class="counter-area">
+              <div class="container">
+                <div class="counter-area-inner section-spacing">
+                  <div class="counters-grid">
+                    <div class="counter-item has_fade_anim" data-fade-from="left">
+                      <h2 class="title wc-counter">25k</h2>
+                      <p class="text">Project <br> completed</p>
+                    </div>
+                    <div class="counter-item has_fade_anim" data-fade-from="left">
+                      <h2 class="title wc-counter">8k</h2>
+                      <p class="text">Happy <br> customers</p>
+                    </div>
+                    <div class="counter-item has_fade_anim" data-fade-from="left">
+                      <h2 class="title wc-counter">15</h2>
+                      <p class="text">Years <br> experiences</p>
+                    </div>
+                    <div class="counter-item has_fade_anim" data-fade-from="left">
+                      <h2 class="title wc-counter">98</h2>
+                      <p class="text">Awards <br> achievement</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- counter area end  -->
+
           <!-- feature area start  -->
           <div class="container large">
             <section class="feature-area">
@@ -412,38 +646,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="section-content showcase container">
-                    <div class="showcase-panel">
-                      <div class="showcase-content active"
-                        data-background-image="assets/imgs/gallery/energy_sector_sample.jpg" data-index="0">
-
-                        <h3 class="title">ENERGY</h3>
-                        <button href="#" class="try-button">Learn more</button>
-                      </div>
-                      <div class="showcase-content" data-background-image="assets/imgs/gallery/infra_sector_sample.jpg"
-                        data-index="1">
-
-                        <h3 class="title">INFRASTRUCTURE</h3>
-                        <button href="#" class="try-button">Learn more</button>
-                      </div>
-                      <div class="showcase-content"
-                        data-background-image="assets/imgs/gallery/service_sector_sample.jpg" data-index="2">
-
-                        <h3 class="title">SAFETY</h3>
-                        <button href="#" class="try-button">Learn more</button>
-                      </div>
-                      <div class="showcase-content" data-background-image="assets/imgs/gallery/tech_sector_sample.jpg"
-                        data-index="3">
-
-                        <h3 class="title">TECHNOLOGY</h3>
-                        <button href="#" class="try-button">Learn more</button>
-                      </div>
-                    </div>
-
-
-                    <div class="features-panel features-wrapper">
-                      <div class="feature-item feature-box active has_fade_anim" data-fade-from="left"
-                        data-fade-offset="70" data-index="0">
+                  <div class="showcase container">
+                    <div class="features-panel">
+                      <div class="feature-item active has_fade_anim" data-fade-from="left" data-fade-offset="70"
+                        data-index="0">
                         <div class="thumb">
                           <img src="assets/imgs/logo/sector-11.png" alt="feature icon">
                         </div>
@@ -455,7 +661,7 @@
                         </div>
                       </div>
 
-                      <div class="feature-item feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70"
+                      <div class="feature-item has_fade_anim" data-fade-from="left" data-fade-offset="70"
                         data-index="1">
                         <div class="thumb">
                           <img src="assets/imgs/logo/sector-22.png" alt="feature icon">
@@ -468,7 +674,7 @@
                         </div>
                       </div>
 
-                      <div class="feature-item feature-box has_fade_anim " data-fade-from="left" data-fade-offset="70"
+                      <div class="feature-item has_fade_anim " data-fade-from="left" data-fade-offset="70"
                         data-index="2">
                         <div class="thumb">
                           <img src="assets/imgs/logo/sector-33.png" alt="feature icon">
@@ -480,7 +686,7 @@
                             protected environment in every sector we serve.</p>
                         </div>
                       </div>
-                      <div class="feature-item feature-box has_fade_anim" data-fade-from="left" data-fade-offset="70"
+                      <div class="feature-item has_fade_anim" data-fade-from="left" data-fade-offset="70"
                         data-index="3">
                         <div class="thumb">
                           <img src="assets/imgs/logo/sector-44.png" alt="feature icon">
@@ -493,7 +699,32 @@
                         </div>
                       </div>
                     </div>
+                    <div class="showcase-panel">
+                      <div class="showcase-content active"
+                        data-background-image="assets/imgs/gallery/energy_sector_sample.jpg" data-index="0">
 
+                        <h3 class="title">ENERGY</h3>
+                        <a href="energy-details.html"><button class="try-button">Learn more</button></a>
+                      </div>
+                      <div class="showcase-content" data-background-image="assets/imgs/gallery/infra_sector_sample.jpg"
+                        data-index="1">
+
+                        <h3 class="title">INFRASTRUCTURE</h3>
+                        <a href="infrastructure-details.html"><button class="try-button">Learn more</button></a>
+                      </div>
+                      <div class="showcase-content"
+                        data-background-image="assets/imgs/gallery/service_sector_sample.jpg" data-index="2">
+
+                        <h3 class="title">SAFETY</h3>
+                        <a href="safety-details.html"><button class="try-button">Learn more</button></a>
+                      </div>
+                      <div class="showcase-content" data-background-image="assets/imgs/gallery/tech_sector_sample.jpg"
+                        data-index="3">
+
+                        <h3 class="title">TECHNOLOGY</h3>
+                        <a href="technology-details.html"><button class="try-button">Learn more</button></a>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- <div class="section-content">
@@ -551,7 +782,46 @@
             </section>
           </div>
           <!-- feature area end  -->
-
+          <!-- awards area start  -->
+          <div class="container large mt-4">
+            <section class="awards-area">
+              <div class="area-bg">
+                <img src="assets/imgs/gallery/img-s-6.webp" alt="gallery image">
+              </div>
+              <div class="container">
+                <div class="awards-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="subtitle-wrapper">
+                        <span class="section-subtitle has-right-line has_fade_anim">Awards</span>
+                      </div>
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">We believe in <br>
+                          quality, not quantity</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-content">
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
+                        while
+                        deploying production-ready code. Our
+                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
+                        way.
+                      </p>
+                    </div>
+                    <div class="awards-list has_fade_anim">
+                      <ul>
+                        <li><img src="assets/imgs/gallery/img-s-7.webp" alt="award image"></li>
+                        <li><img src="assets/imgs/gallery/img-s-8.webp" alt="award image"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- awards area end  -->
           <!-- service area start  -->
           <!-- service area end  -->
 
@@ -564,7 +834,63 @@
             </div>
           </div>
           -->
-
+          <!-- client area start  -->
+          <div class="clients-area">
+            <div class="container">
+              <div class="clients-area-inner">
+                <div class="section-header">
+                  <div class="section-title-wrapper">
+                    <div class="title-wrapper">
+                      <h2 class="section-title has_word_anim">We worked with the world’s best companies</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="client-slider has_fade_anim mb-4">
+                  <div class="swiper client-slider-active">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-13.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/aldar.png" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-14.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/anastasia.png" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-15.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/aswaaq.png" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-16.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/bloom.png" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-17.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/dubai-properties.png" alt="client image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="client-box">
+                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-18.webp" alt="client image"> -->
+                          <img class="show-dark" src="assets/imgs/client/ducab.png" alt="client image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- client area end  -->
 
           <!-- Resources -->
           <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -790,63 +1116,7 @@
           </script>
           <!-- video area end  -->
 
-          <!-- client area start  -->
-          <div class="clients-area">
-            <div class="container">
-              <div class="clients-area-inner">
-                <div class="section-header">
-                  <div class="section-title-wrapper">
-                    <div class="title-wrapper">
-                      <h2 class="section-title has_word_anim">We worked with the world’s best companies</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="client-slider has_fade_anim mb-4">
-                  <div class="swiper client-slider-active">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-13.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/aldar.png" alt="client image">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-14.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/anastasia.png" alt="client image">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-15.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/aswaaq.png" alt="client image">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-16.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/bloom.png" alt="client image">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-17.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/dubai-properties.png" alt="client image">
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="client-box">
-                          <!-- <img class="show-light" src="assets/imgs/brand/img-s-18.webp" alt="client image"> -->
-                          <img class="show-dark" src="assets/imgs/client/ducab.png" alt="client image">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- client area end  -->
+
 
 
           <!-- faq area start  -->
@@ -1034,21 +1304,10 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
+    // Cursor hover effects (if needed)
     const cursor = document.querySelector('.cursor1');
-    // document.addEventListener('mousemove', (e) => {
-    //     gsap.to(cursor, {
-    //         x: e.clientX - 10,
-    //         y: e.clientY - 10,
-    //         duration: 0.3
-    //     });
-    //     gsap.to(cursorDot, {
-    //         x: e.clientX - 2,
-    //         y: e.clientY - 2,
-    //         duration: 0.1
-    //     });
-    // });
 
-    // Particle animation
+    // Particle animation function
     function createParticles(containerId, count) {
       const container = document.getElementById(containerId);
       for (let i = 0; i < count; i++) {
@@ -1076,27 +1335,27 @@
     createParticles('mission-particles', 100);
     createParticles('values-particles', 100);
 
-    // Scroll animations
+    // Scroll animations with 50vh trigger
     document.querySelectorAll('.section22').forEach(section => {
       const img = section.querySelector('img');
       const title = section.querySelector('h2');
       const text = section.querySelector('p');
       const path = section.querySelector('path');
 
-      const tl = gsap.timeline({
+      gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top center",
-          end: "bottom center",
+
+          start: "top center", // Starts animation when the top of the section reaches 50% of viewport height
+          end: "+=50",
           toggleActions: "play none none reverse"
         }
-      });
-
-      tl.from(img, {
-        scale: 1.2,
-        duration: 1.5,
-        ease: "power2.out"
       })
+        .from(img, {
+          scale: 1.2,
+          duration: 1.5,
+          ease: "power2.out"
+        })
         .to(title, {
           y: 0,
           opacity: 1,
@@ -1117,7 +1376,7 @@
         }, "-=1");
     });
 
-    // Hover effects
+    // Image hover effects
     document.querySelectorAll('.image-container22').forEach(container => {
       container.addEventListener('mouseenter', () => {
         gsap.to(cursor, {
@@ -1141,6 +1400,7 @@
         });
       });
     });
+
   </script>
 </body>
 
