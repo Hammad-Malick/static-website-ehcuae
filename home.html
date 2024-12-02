@@ -46,7 +46,7 @@
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/imgs/logo/bubble-drop.png" width="200" alt="site-logo">
+        <img src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
         <div class="txt-loading">
           <!-- <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
@@ -149,7 +149,7 @@
   <!-- search modal end -->
 
   <!-- Sidenav area start -->
-  <!-- <nav class="sidebar">
+  <nav class="sidebar">
     <div class="sidebar-wrapper">
 
       <div class="sidebar-opt">
@@ -176,40 +176,41 @@
 
       if (sidebar.classList.contains('open')) {
         menuItems.innerHTML = `
-        <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
-          <div class="menu-content">
-            <div class="menu-left">
-              <ul class="main-menu">
-                <li class="main-menu-item">Home</li>
-                <li class="main-menu-item" data-menu="about">About Ehcuae</li>
-                <li class="main-menu-item" data-menu="sectors">Bussiness Sectors</li>
-                <li class="main-menu-item" href="contact.html">Contact Us</li>
-                <li class="main-menu-item">About People</li>
-              </ul>
-            </div>
-            <div class="menu-right">
-              <ul class="sub-menu" id="sectors">
-                <li class="sub-menu-item" data-content="energy">Energy</li>
-                <li class="sub-menu-item" data-content="infra">Infrastructure</li>
-                <li class="sub-menu-item" data-content="safety">Safety</li>
-                <li class="sub-menu-item" data-content="tech">Technology</li>
-              </ul>
-              <ul class="sub-menu" id="about">
-                <li class="sub-menu-item" data-content="energy">Who are we?</li>
-                <li class="sub-menu-item" data-content="infra">What our mission?</li>
-                <li class="sub-menu-item" data-content="safety">What our vision?</li>
-                <li class="sub-menu-item" data-content="safety">What our values?</li>
-              </ul>
-              <div class="content-description">
-                <h2>Energy</h2>
-                <p>Managing a broad portfolio of assets operating in key sectors...</p>
-              </div>
-            </div>
-          </div>`;
+      <div class="menu-content">
+        <div class="menu-left">
+          <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
+          <ul class="main-menu">
+            <li class="main-menu-item" data-link="home.html">Home</li>
+            <li class="main-menu-item" data-link="about.html">About Ehcuae</li>
+            <li class="main-menu-item" data-menu="sectors">Bussiness Sectors</li>
+            <li class="main-menu-item" data-link="contact.html" >Contact Us</li>
+            <li class="main-menu-item" data-link="team.html">Out Team</li>
+          </ul>
+        </div>
+        <div class="menu-right">
+          <ul class="sub-menu" id="sectors">
+            <li class="sub-menu-item" data-content="energy">Energy</li>
+            <li class="sub-menu-item" data-content="infra">Infrastructure</li>
+            <li class="sub-menu-item" data-content="safety">Safety</li>
+            <li class="sub-menu-item" data-content="tech">Technology</li>
+          </ul>
+          <ul class="sub-menu" id="about">
+            <li class="sub-menu-item" data-content="who">Who are we?</li>
+            <li class="sub-menu-item" data-content="mission">What our mission?</li>
+            <li class="sub-menu-item" data-content="vision">What our vision?</li>
+            <li class="sub-menu-item" data-content="values">What our values?</li>
+          </ul>
+          <div class="content-description">
+            <h2>Energy</h2>
+            <p>Managing a broad portfolio of assets operating in key sectors...</p>
+          </div>
+              <div id="sideimage" class="right-detail-image"></div>
+        </div>
+      </div>`;
 
-        initializeMenu();
+        initializeMenu(); // Initialize after adding dynamic HTML
       } else {
-        menuItems.innerHTML = '';
+        menuItems.innerHTML = ''; // Clear menu content on close
       }
     });
 
@@ -217,22 +218,47 @@
       const mainMenuItems = document.querySelectorAll('.main-menu-item');
       const subMenuItems = document.querySelectorAll('.sub-menu-item');
       const contentDescription = document.querySelector('.content-description');
+      const sideImage = document.querySelector('#sideimage');
 
       const content = {
-        energy: { title: 'Energy', description: 'Delivering sustainable and innovative energy solutions, from renewable systems to efficient power management, for a greener future.' },
-        infra: { title: 'Infrastructure', description: 'Creating resilient and sustainable infrastructure for urban, industrial, and transportation needs with precision and expertise.' },
-        safety: { title: 'Safety', description: 'Committed to delivering advanced solutions that prioritize safety, ensuring a secure and protected environment in every sector we serve.' },
-        tech: { title: 'Technology', description: 'Empowering businesses with cutting-edge IT systems, automation, and digital tools for effective digital transformation.' }
+        energy: {
+          title: 'Energy',
+          description: 'Delivering sustainable and innovative energy solutions for a greener future.',
+          img: 'assets/imgs/gallery/energy_sector_sample.jpg',
+          link: 'energy-details.html'
+        },
+        infra: {
+          title: 'Infrastructure',
+          description: 'Creating resilient and sustainable infrastructure with precision and expertise.',
+          img: 'assets/imgs/gallery/infra_sector_sample.jpg',
+          link: 'infrastructure-details.html'
+        },
+        safety: {
+          title: 'Safety',
+          description: 'Prioritizing safety, ensuring secure environments across sectors.',
+          img: 'assets/imgs/gallery/service_sector_sample.jpg',
+          link: 'safety-details.html'
+        },
+        tech: {
+          title: 'Technology',
+          description: 'Empowering businesses with digital tools and effective transformation.',
+          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
+          link: 'technology-details.html'
+        }
       };
 
       // Handle main menu item click
       mainMenuItems.forEach(item => {
         item.addEventListener('click', () => {
-          mainMenuItems.forEach(i => i.classList.remove('active')); // Deselect all main menu items
-          item.classList.add('active'); // Select clicked item
+          mainMenuItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
 
           // Display corresponding submenu
           const menuId = item.dataset.menu;
+          if (item.dataset.link) {
+            location.href = item.dataset.link;
+            return;
+          }
           document.querySelectorAll('.sub-menu').forEach(menu => menu.classList.remove('active'));
           document.getElementById(menuId)?.classList.add('active');
         });
@@ -240,176 +266,42 @@
 
       // Handle submenu item hover
       subMenuItems.forEach(item => {
-        // Hover to show content
         item.addEventListener('mouseenter', () => {
-          const { title, description } = content[item.dataset.content];
+          const { title, description, img } = content[item.dataset.content];
           contentDescription.querySelector('h2').textContent = title;
           contentDescription.querySelector('p').textContent = description;
-          contentDescription.classList.add('active'); // Show description on hover
+          sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
+          contentDescription.classList.add('active');
         });
 
-        // Leave to hide content if not clicked
+        // Leave to hide content unless clicked
         item.addEventListener('mouseleave', () => {
-          if (!item.classList.contains('selected')) { // Only clear if not selected
-            contentDescription.querySelector('h2').textContent = '';
-            contentDescription.querySelector('p').textContent = '';
-            contentDescription.classList.remove('active');
+          if (!item.classList.ge('active')) {
+            clearContent();
           }
         });
 
-        // Click to select and persist content
+        // Click to persist content
         item.addEventListener('click', () => {
-          // Deselect all other submenu items
-          subMenuItems.forEach(i => i.classList.remove('selected'));
-
-          item.classList.add('selected'); // Mark clicked item as selected
-
-          const { title, description } = content[item.dataset.content];
-          contentDescription.querySelector('h2').textContent = title;
-          contentDescription.querySelector('p').textContent = description;
-          contentDescription.classList.add('active'); // Keep content active after click
+          window.location.href = content[item.dataset.content].link;
+          // subMenuItems.forEach(i => i.classList.remove('active'));
+          // item.classList.add('active');
+          // const { title, description, img } = content[item.dataset.content];
+          // contentDescription.querySelector('h2').textContent = title;
+          // contentDescription.querySelector('p').textContent = description;
+          // sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
+          // contentDescription.classList.add('active');
         });
       });
 
-    }
-  </script> -->
-
-
-
-  <!-- <button class="menu-trigger">☰</button> -->
-  <button class="menu-trigger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="fullscreen-menu">
-    <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e" alt="Background" class="menu-background">
-
-    <div class="menu-content">
-      <div class="menu-left">
-        <img src="assets/imgs/logo/EHC-Black-trans.png" alt="ehucae" class="logo">
-        <ul class="main-menu">
-          <li class="main-menu-item" data-menu="about">About ADQ</li>
-          <li class="main-menu-item active" data-menu="value">Value Creation</li>
-          <li class="main-menu-item" data-menu="portfolio">Portfolio</li>
-          <li class="main-menu-item" data-menu="investors">Investors</li>
-          <li class="main-menu-item" data-menu="media">Media and Insights</li>
-        </ul>
-        <div class="social-links">
-          <a href="#" class="social-link">in</a>
-          <a href="#" class="social-link">𝕏</a>
-          <a href="#" class="social-link">ig</a>
-        </div>
-      </div>
-      <div class="menu-right">
-        <ul class="sub-menu active" id="value-submenu">
-          <li class="sub-menu-item" data-content="overview">Overview</li>
-          <li class="sub-menu-item" data-content="sustainable">Sustainable Investing</li>
-          <li class="sub-menu-item" data-content="digital">Digital Transformation</li>
-          <li class="sub-menu-item" data-content="talent">Talent Management</li>
-          <li class="sub-menu-item" data-content="innovation">Innovation and R&D</li>
-        </ul>
-        <div class="content-description">
-          <h2>Sustainable Investing</h2>
-          <p>Managing a broad portfolio of assets operating in key sectors of Abu Dhabi's economy uniquely positions us
-            to influence sustainable outcomes for our nation – ultimately making a positive impact on the communities
-            where we operate and improving the quality of life for future generations.</p>
-        </div>
-      </div>
-    </div>
-    <button class="close-btn">×</button>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuTrigger = document.querySelector('.menu-trigger');
-      const menu = document.querySelector('.fullscreen-menu');
-      const menuCloseButton = document.querySelector('.close-btn');
-      const mainMenuItems = document.querySelectorAll('.main-menu-item');
-      const subMenuItems = document.querySelectorAll('.sub-menu-item');
-      const contentDescription = document.querySelector('.content-description');
-
-      const content = {
-        overview: {
-          title: 'Overview',
-          description: 'ADQ is a long-term investment company with a broad portfolio of major enterprises spanning key sectors of Abu Dhabi\'s diversified economy.'
-        },
-        sustainable: {
-          title: 'Sustainable Investing',
-          description: 'Managing a broad portfolio of assets operating in key sectors of Abu Dhabi\'s economy uniquely positions us to influence sustainable outcomes for our nation – ultimately making a positive impact on the communities where we operate and improving the quality of life for future generations.'
-        },
-        digital: {
-          title: 'Digital Transformation',
-          description: 'We are driving digital transformation across our portfolio companies to enhance operational efficiency and create new business opportunities.'
-        },
-        talent: {
-          title: 'Talent Management',
-          description: 'Our talent management strategy focuses on attracting, developing, and retaining top talent to drive innovation and growth across our portfolio.'
-        },
-        innovation: {
-          title: 'Innovation and R&D',
-          description: 'We invest in research and development to foster innovation and create long-term value for our stakeholders and the communities we serve.'
-        }
-      };
-
-      // Open Menu
-      menuTrigger.addEventListener('click', () => {
-        menu.classList.add('active');
-        contentDescription.classList.add('active');
-      });
-
-      // Close Menu
-      menuCloseButton.addEventListener('click', () => {
-        menu.classList.remove('active');
+      function clearContent() {
+        contentDescription.querySelector('h2').textContent = '';
+        contentDescription.querySelector('p').textContent = '';
+        sideImage.innerHTML = '';
         contentDescription.classList.remove('active');
-      });
+      }
+    }
 
-      // Main Menu Item Click - Switch Active State
-      mainMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-          // Deactivate all main menu items
-          mainMenuItems.forEach(i => i.classList.remove('active'));
-          item.classList.add('active');
-
-          // Handle Submenu Activation
-          const menuId = item.dataset.menu + '-submenu';
-          document.querySelectorAll('.sub-menu').forEach(menu => {
-            menu.classList.remove('active');
-          });
-          document.getElementById(menuId)?.classList.add('active');
-        });
-      });
-
-      // Submenu Item Hover - Show Content Description
-      subMenuItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          const contentKey = item.dataset.content;
-          const { title, description } = content[contentKey];
-
-          contentDescription.querySelector('h2').textContent = title;
-          contentDescription.querySelector('p').textContent = description;
-          contentDescription.classList.add('active');
-        });
-
-        // Hide Description When Hover Ends
-        item.addEventListener('mouseleave', () => {
-          contentDescription.classList.remove('active');
-        });
-      });
-
-      // Submenu Item Click - Update Active State
-      subMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-          // Only update description content on click
-          const contentKey = item.dataset.content;
-          const { title, description } = content[contentKey];
-
-          contentDescription.querySelector('h2').textContent = title;
-          contentDescription.querySelector('p').textContent = description;
-          contentDescription.classList.add('active');
-        });
-      });
-    });
   </script>
 
   <!-- Header area end -->
@@ -437,24 +329,19 @@
                 video.play();
               });
             </script>
-            <section class="hero-area">
+            <section class="hero-area"  style="position: relative">
+              <div class="thumb img_anim_reveal pt-2" style="position: absolute">
+                <img src="assets/imgs/logo/EHC-Black-trans.png" width="300" alt="site-logo">
+              </div>
               <div class="container">
-                <div class="hero-area-inner">
-                  <div class="shape-1">
-                    <img class="show-light" src="assets/imgs/shape/img-s-74.webp" alt="image">
-                    <img class="show-dark" src="assets/imgs/shape/img-s-74-light.webp" alt="image">
-                  </div>
+                <div class="hero-area-inner" >
                   <div class="section-header">
                     <div class="customer-wrapper-box">
-                      <div class="customer-wrapper" style="position: relative;top: -149px;left: -203px;">
-                        <div class="thumb img_anim_reveal">
-                          <!-- <img class="show-light" src="assets/imgs/client/img-s-3.webp" alt="image">
-                          <img class="show-dark" src="assets/imgs/client/img-s-3-light.webp" alt="image"> -->
+                      <div class="customer-wrapper" >
+                        <!-- <div class="thumb img_anim_reveal">
                           <img src="assets/imgs/logo/EHC-Black-trans.png" width="300" alt="site-logo">
-                        </div>
-                        <!-- <p class="text has_fade_anim" data-fade-from="left"><span class="text-underline">We have
-                            18k+</span> customers <br>
-                          word-wide</p> -->
+                        </div> -->
+                       
                       </div>
                     </div>
                     <div class="section-title-wrapper">

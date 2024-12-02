@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="assets/css/showcase-panel.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/master-ai-agency.css">
   <link rel="stylesheet" href="assets/css/left-fixed-header.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/vission-section.css">
@@ -34,19 +33,18 @@
 
 
 <body class="font-heading-instumentsans-medium dark">
-  <!-- Preloader -->
   <div id="preloader">
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/imgs/logo/bubble-drop.png" alt="site-logo">
+        <img src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
         <div class="txt-loading">
-          <span data-text="E" class="characters">E</span>
+          <!-- <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
           <span data-text="C" class="characters">C</span>
           <span data-text="U" class="characters">U</span>
           <span data-text="A" class="characters">A</span>
-          <span data-text="E" class="characters">E</span>
+          <span data-text="E" class="characters">E</span> -->
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -143,62 +141,160 @@
 
   <!-- Sidenav area start -->
   <nav class="sidebar">
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div id="menue-items">
+    <div class="sidebar-wrapper">
 
-    </div>
-    <div class="social-icons">
-      <a href="#" class="social-link" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-        </svg>
-      </a>
-      <a href="#" class="social-link" aria-label="Twitter">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-      </a>
-      <a href="#" class="social-link" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
-        </svg>
-      </a>
+      <div class="sidebar-opt">
+        <div id="menu-items"></div>
+      </div>
+      <div class="sidebar-toggle-btn">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
-  <!-- Sidenav area end -->
-
-
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
-    const menuitem = document.querySelector('#menue-items');
+    const menuItems = document.querySelector('#menu-items');
     const sidebar = document.querySelector('.sidebar');
 
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('open');
       sidebar.classList.toggle('open');
-      if (sidebar.classList.contains('open')) {
-        menuitem.innerHTML =
-          `<nav class="nav-menu expanded-menu">
-            <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>`
-      } else {
-        menuitem.innerHTML = ''
-      }
 
+      if (sidebar.classList.contains('open')) {
+        menuItems.innerHTML = `
+      <div class="menu-content">
+        <div class="menu-left">
+          <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
+          <ul class="main-menu">
+            <li class="main-menu-item" data-link="home.html">Home</li>
+            <li class="main-menu-item" data-link="about.html">About Ehcuae</li>
+            <li class="main-menu-item" data-menu="sectors">Bussiness Sectors</li>
+            <li class="main-menu-item" data-link="contact.html" >Contact Us</li>
+            <li class="main-menu-item" data-link="team.html">Out Team</li>
+          </ul>
+        </div>
+        <div class="menu-right">
+          <ul class="sub-menu" id="sectors">
+            <li class="sub-menu-item" data-content="energy">Energy</li>
+            <li class="sub-menu-item" data-content="infra">Infrastructure</li>
+            <li class="sub-menu-item" data-content="safety">Safety</li>
+            <li class="sub-menu-item" data-content="tech">Technology</li>
+          </ul>
+          <ul class="sub-menu" id="about">
+            <li class="sub-menu-item" data-content="who">Who are we?</li>
+            <li class="sub-menu-item" data-content="mission">What our mission?</li>
+            <li class="sub-menu-item" data-content="vision">What our vision?</li>
+            <li class="sub-menu-item" data-content="values">What our values?</li>
+          </ul>
+          <div class="content-description">
+            <h2>Energy</h2>
+            <p>Managing a broad portfolio of assets operating in key sectors...</p>
+          </div>
+              <div id="sideimage" class="right-detail-image"></div>
+        </div>
+      </div>`;
+
+        initializeMenu(); // Initialize after adding dynamic HTML
+      } else {
+        menuItems.innerHTML = ''; // Clear menu content on close
+      }
     });
+
+    function initializeMenu() {
+      const mainMenuItems = document.querySelectorAll('.main-menu-item');
+      const subMenuItems = document.querySelectorAll('.sub-menu-item');
+      const contentDescription = document.querySelector('.content-description');
+      const sideImage = document.querySelector('#sideimage');
+
+      const content = {
+        energy: {
+          title: 'Energy',
+          description: 'Delivering sustainable and innovative energy solutions for a greener future.',
+          img: 'assets/imgs/gallery/energy_sector_sample.jpg',
+          link: 'energy-details.html'
+        },
+        infra: {
+          title: 'Infrastructure',
+          description: 'Creating resilient and sustainable infrastructure with precision and expertise.',
+          img: 'assets/imgs/gallery/infra_sector_sample.jpg',
+          link: 'infrastructure-details.html'
+        },
+        safety: {
+          title: 'Safety',
+          description: 'Prioritizing safety, ensuring secure environments across sectors.',
+          img: 'assets/imgs/gallery/service_sector_sample.jpg',
+          link: 'safety-details.html'
+        },
+        tech: {
+          title: 'Technology',
+          description: 'Empowering businesses with digital tools and effective transformation.',
+          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
+          link: 'technology-details.html'
+        }
+      };
+
+      // Handle main menu item click
+      mainMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          mainMenuItems.forEach(i => i.classList.remove('active'));
+          item.classList.add('active');
+
+          // Display corresponding submenu
+          const menuId = item.dataset.menu;
+          if (item.dataset.link) {
+            location.href = item.dataset.link;
+            return;
+          }
+          document.querySelectorAll('.sub-menu').forEach(menu => menu.classList.remove('active'));
+          document.getElementById(menuId)?.classList.add('active');
+        });
+      });
+
+      // Handle submenu item hover
+      subMenuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          const { title, description, img } = content[item.dataset.content];
+          contentDescription.querySelector('h2').textContent = title;
+          contentDescription.querySelector('p').textContent = description;
+          sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
+          contentDescription.classList.add('active');
+        });
+
+        // Leave to hide content unless clicked
+        item.addEventListener('mouseleave', () => {
+          if (!item.classList.ge('active')) {
+            clearContent();
+          }
+        });
+
+        // Click to persist content
+        item.addEventListener('click', () => {
+          window.location.href = content[item.dataset.content].link;
+          // subMenuItems.forEach(i => i.classList.remove('active'));
+          // item.classList.add('active');
+          // const { title, description, img } = content[item.dataset.content];
+          // contentDescription.querySelector('h2').textContent = title;
+          // contentDescription.querySelector('p').textContent = description;
+          // sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
+          // contentDescription.classList.add('active');
+        });
+      });
+
+      function clearContent() {
+        contentDescription.querySelector('h2').textContent = '';
+        contentDescription.querySelector('p').textContent = '';
+        sideImage.innerHTML = '';
+        contentDescription.classList.remove('active');
+      }
+    }
+
   </script>
+
   <!-- Header area end -->
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
@@ -214,7 +310,7 @@
           <section class="service-details-area">
             <div class="container">
               <div class="thumb-main">
-                <img src="assets/imgs/gallery/img-s-88.webp" class="has_fade_anim" data-delay="0.30"
+                <img src="assets/imgs/gallery/main-energy-sample.jpg" class="has_fade_anim" data-delay="0.30"
                   data-fade-offset="0" alt="image">
                 <div class="hero-social">
                   <p class="title">Follow</p>
@@ -229,34 +325,25 @@
               <div class="section-title-box">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper">
-                    <h1 class="section-title has_fade_anim" data-on-scroll="0">Interaction <br>
-                      design</h1>
+                    <h1 class="section-title has_fade_anim" data-on-scroll="0">EHC <br>
+                      Energy</h1>
                   </div>
-                </div>
-                <div class="feature-list has_fade_anim" data-on-scroll="0" data-delay="0.45">
-                  <ul>
-                    <li>API Development</li>
-                    <li>WordPress</li>
-                    <li>Cloud Migration</li>
-                  </ul>
-                  <ul>
-                    <li>Front End Development</li>
-                    <li>JavaScript</li>
-                    <li>Fluter Framework</li>
-                  </ul>
                 </div>
               </div>
               <div class="text-wrapper has_fade_anim">
-                <p class="text">We’re looking for a Junior - Mid-level Designer to join our team. You’ll support the
-                  execution of graphic and digital design projects, working closely with the internal team of creatives,
-                  project managers, the Creative Director and development team to blend user needs and business goals
-                  into seamless, effective design experiences. You will need to demonstrate a fundamental understanding
-                  of design principles, an openness to learn and take direction, along with a strong aesthetic design
-                  intuition.
+                <p class="text">Al Fanar Group, headquartered in Abu Dhabi, is a leading
+                  organization in the gas sector, specializing in contracting,
+                  distribution, trading, operations, and maintenance. Established
+                  three decades ago, the group has played a vital role in the
+                  development of the UAE’s gas infrastructure and its economic
+                  growth..
                 </p>
-                <p class="text">Internal team of creatives, project managers, the Creative Director and development team
-                  to blend user needs and business goals into seamless, effective design experiences. You will need to
-                  demonstrate a fundamental understanding of design principles</p>
+                <p class="text">Renowned for its commitment to quality and innovation, Al
+                  Fanar has a proven track record of executing large-scale projects
+                  in collaboration with leading partners. The group focuses on
+                  enhancing urban development and ensuring customer
+                  satisfaction while prioritizing sustainability and integrating
+                  modern and advanced technologies into its operations.</p>
               </div>
             </div>
             <div class="steps-wrapper-box has_fade_anim">
@@ -264,28 +351,24 @@
                 <div class="working-steps-box">
                   <div class="working-steps">
                     <div class="working-step">
-                      <h2 class="title">Planning and <br>
-                        sketching</h2>
-                      <p class="text">Modern and unique design practically point of view, it risks not meeting the huge
-                        expectations</p>
+                      <h2 class="title">Energy Audit and <br> Planning</h2>
+                      <p class="text">Comprehensive assessment of energy needs and resources to ensure efficient project
+                        planning and compliance with regulations.</p>
                     </div>
                     <div class="working-step">
-                      <h2 class="title">Team <br>
-                        working</h2>
-                      <p class="text">Modern and unique design practically point of view, it risks not meeting the huge
-                        expectations</p>
+                      <h2 class="title">Team <br> Collaboration</h2>
+                      <p class="text">Cross-disciplinary collaboration to integrate innovative solutions, optimize
+                        processes, and enhance project execution.</p>
                     </div>
                     <div class="working-step">
-                      <h2 class="title">Flowchart and <br>
-                        wireframe</h2>
-                      <p class="text">Modern and unique design practically point of view, it risks not meeting the huge
-                        expectations</p>
+                      <h2 class="title">Infrastructure <br> Development</h2>
+                      <p class="text">Designing and building sustainable energy systems, focusing on renewable energy
+                        sources and efficient distribution networks.</p>
                     </div>
                     <div class="working-step">
-                      <h2 class="title">User experience <br>
-                        Testing</h2>
-                      <p class="text">Modern and unique design practically point of view, it risks not meeting the huge
-                        expectations</p>
+                      <h2 class="title">Performance <br> Testing and Monitoring</h2>
+                      <p class="text">Thorough testing of energy systems and continuous monitoring to ensure optimal
+                        performance and sustainability.</p>
                     </div>
                   </div>
                 </div>
@@ -293,9 +376,9 @@
             </div>
             <div class="container">
               <div class="thumb-gallery has_fade_anim">
-                <img src="assets/imgs/gallery/img-s-89.webp" alt="image">
-                <img src="assets/imgs/gallery/img-s-90.webp" alt="image">
-                <img src="assets/imgs/gallery/img-s-91.webp" alt="image">
+                <img src="assets/imgs/gallery/energy-g-1.jpg" alt="image">
+                <img src="assets/imgs/gallery/energy-g-2.jpg" alt="image">
+                <img src="assets/imgs/gallery/energy-g-3.jpg" alt="image">
               </div>
             </div>
 
@@ -309,9 +392,10 @@
                 <div class="section-header">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim"> We replace unreliable wirefreme and expensive agencies
-                        for one of the
-                        best organized layer.</h2>
+                      <h2 class="section-title has_fade_anim">
+                        We replace outdated energy systems and costly solutions with innovative, sustainable, and
+                        reliable power solutions.
+                      </h2>
                     </div>
                   </div>
                 </div>
@@ -322,19 +406,24 @@
                   </div>
                   <div class="content-last">
                     <div class="thumb has_fade_anim">
-                      <img class="main-image" src="assets/imgs/gallery/img-s-92.webp" alt="image">
+                      <img class="main-image" src="assets/imgs/gallery/energy-g-4.jpg" alt="image">
                       <div class="shape-1">
                         <img src="assets/imgs/shape/img-s-85.webp" alt="image">
                       </div>
                     </div>
                     <div class="text-wrapper has_fade_anim">
-                      <p class="text">Receive your design within a few business days, and be updated on the process.
-                        Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation.
-                        Logo, type, look, feel, tone, movement, content - we've got it covered.</p>
-                      <p class="text">Getting your brand message out there. We create dynamic campaign creative that
-                        engages audiences, wherever they are most talented. Bring your brand to life, communicate your
-                        value proposition with agile setup across creativity.</p>
+                      <p class="text">
+                        Receive project updates and insights within a few business days, ensuring full transparency.
+                        From renewable energy solutions to efficient power management, we cover everything you need for
+                        a sustainable, innovative energy strategy.
+                      </p>
+                      <p class="text">
+                        Bringing energy solutions to life. We design impactful projects that deliver value and engage
+                        stakeholders. Communicate your sustainability vision and drive innovation with agile execution
+                        across all phases of development.
+                      </p>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -345,165 +434,11 @@
 
 
           <!-- faq area start  -->
-          <section class="faq-area">
-            <div class="container">
-              <div class="faq-area-inner section-spacing-top">
-                <div class="section-content">
-                  <div class="thumb">
-                    <img src="assets/imgs/gallery/img-s-87.webp" class="has_fade_anim" data-fade-from="left"
-                      alt="image">
-                  </div>
-                  <div class="content-last has_fade_anim">
-                    <div class="section-title-wrapper">
-                      <div class="title-wrapper">
-                        <h2 class="section-title">Product making for
-                          friendly users</h2>
-                      </div>
-                    </div>
-                    <div class="accordion-wrapper">
-                      <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#flush-collapseOne" aria-expanded="false"
-                              aria-controls="flush-collapseOne">Design should enrich our day</button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">We deploy world-class creative design, team on demand. that can
-                              design surest measure’s of success is when a client partner with more than once build ship
-                              scale.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                              aria-controls="flush-collapseTwo">Bring their individual experience and creative</button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse show"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">We deploy world-class creative design, team on demand. that can
-                              design surest measure’s of success is when a client partner with more than once build ship
-                              scale.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#flush-collapseThree" aria-expanded="false"
-                              aria-controls="flush-collapseThree">Human centred design to challenges</button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">We deploy world-class creative design, team on demand. that can
-                              design surest measure’s of success is when a client partner with more than once build ship
-                              scale.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#flush-collapseFour" aria-expanded="false"
-                              aria-controls="flush-collapseFour">Design should enrich our day</button>
-                          </h2>
-                          <div id="flush-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">We deploy world-class creative design, team on demand. that can
-                              design surest measure’s of success is when a client partner with more than once build ship
-                              scale.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#flush-collapseFive" aria-expanded="false"
-                              aria-controls="flush-collapseFive">Developing core web applications</button>
-                          </h2>
-                          <div id="flush-collapseFive" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">We deploy world-class creative design, team on demand. that can
-                              design surest measure’s of success is when a client partner with more than once build ship
-                              scale.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
           <!-- faq area end  -->
 
           <!-- client area start  -->
-          <div class="client-area has_fade_anim">
-            <div class="container">
-              <div class="client-area-inner section-spacing">
-                <div class="client-area-text">
-                  <h2 class="text">We worked with largest
-                    global brands</h2>
-                </div>
-                <div class="clients-wrapper-box">
-                  <div class="clients-wrapper">
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-1.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-1-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-2.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-2-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-3.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-3-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-4.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-4-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-5.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-5-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-6.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-6-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-7.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-7-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-8.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-8-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-9.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-9-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-10.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-10-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-11.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-11-light.webp" alt="client image">
-                    </div>
-                    <div class="client-box">
-                      <img class="show-light" src="assets/imgs/brand/img-s-12.webp" alt="client image">
-                      <img class="show-dark" src="assets/imgs/brand/img-s-12-light.webp" alt="client image">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <!-- client area end  -->
 
           <!-- contact area start  -->
@@ -517,7 +452,7 @@
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
                       <h2 class="section-title has_fade_anim">Start your experience
-                        with Arolax</h2>
+                        with Ehcuae</h2>
                     </div>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
@@ -532,144 +467,7 @@
           <!-- contact area end  -->
 
           <!-- pricing area start  -->
-          <section class="pricing-area">
-            <div class="container">
-              <div class="pricing-area-inner section-spacing">
-                <div class="section-header">
-                  <div class="section-title-wrapper">
-                    <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim">Special offer! choose
-                        your pack today</h2>
-                    </div>
-                  </div>
-                </div>
-                <div class="pricing-wrapper-box">
-                  <div class="pricing-wrapper">
-                    <div class="pricing-box has_fade_anim" data-delay="0.15">
-                      <span class="tag">Basic</span>
-                      <h3 class="price">$9.00</h3>
-                      <div class="feature-list">
-                        <ul>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Unlimited cards
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Automated management
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            SOX compliance
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Enterprise ERP integrations
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Limited tools
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Local video issuance
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip bordered"> <span
-                          data-text="Learn More">Learn More</span></a>
-                    </div>
-                    <div class="pricing-box has_fade_anim" data-delay="0.30">
-                      <span class="tag">Standard</span>
-                      <h3 class="price">$29.00</h3>
-                      <div class="feature-list">
-                        <ul>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Unlimited cards
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Automated management
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            SOX compliance
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Enterprise ERP integrations
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Limited tools
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Local video issuance
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip bordered"> <span
-                          data-text="Learn More">Learn More</span></a>
-                    </div>
-                    <div class="pricing-box has_fade_anim" data-delay="0.45">
-                      <span class="tag">Premium</span>
-                      <h3 class="price">$69.00</h3>
-                      <div class="feature-list">
-                        <ul>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Unlimited cards
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Automated management
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            SOX compliance
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Enterprise ERP integrations
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Unlimited tools
-                          </li>
-                          <li>
-                            <img class="show-light" src="assets/imgs/icon/check-2.webp" alt="icon image">
-                            <img class="show-dark" src="assets/imgs/icon/check-2-light.webp" alt="icon image">
-                            Local video issuance
-                          </li>
-                        </ul>
-                      </div>
-                      <a href="contact.html" class="wc-btn wc-btn-primary btn-text-flip bordered"> <span
-                          data-text="Learn More">Learn More</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
           <!-- pricing area end  -->
 
         </main>
@@ -697,27 +495,21 @@
               </div>
               <div class="footer-cta">
                 <div class="footer-widget-wrapper">
-                  <h2 class="title">London</h2>
-                  <ul class="footer-nav-list">
-                    <li>Baltia Squar, Mark Street, <br>
-                      London</li>
-                  </ul>
+                  <h2 class="title">UAE</h2>
+                
                 </div>
                 <div class="footer-widget-wrapper">
-                  <h2 class="title">New York</h2>
-                  <ul class="footer-nav-list">
-                    <li>Nenuya Centre, Elia Street <br>
-                      New York, USA</li>
-                  </ul>
+                  <h2 class="title">Oman</h2>
+                  
                 </div>
                 <div class="footer-widget-wrapper newsletter">
-                  <form action="#" class="subscribe-form">
+                  <!-- <form action="#" class="subscribe-form">
                     <div class="input-field">
                       <input type="email" placeholder="Enter your email">
                       <button type="submit" class="subscribe-btn"><img src="assets/imgs/icon/arrow-light.webp"
                           alt="icon"></button>
                     </div>
-                  </form>
+                  </form> -->
                 </div>
               </div>
             </div>
@@ -727,13 +519,11 @@
               <div class="copyright-area-inner">
                 <div class="copyright-text">
                   <p class="text">© 2022 - 2025 | Alrights reserved <br>
-                    by <a href="https://themeforest.net/user/crowdytheme" target="_blank">crowdyTheme</a></p>
+                    by <a href="home.html" target="_blank">Ehcuae</a></p>
                 </div>
                 <ul class="footer-nav-list">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Career</a></li>
-                  <li><a href="#">Sitemap</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
                 </ul>
               </div>
             </div>
