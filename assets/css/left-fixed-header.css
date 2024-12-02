@@ -43,7 +43,7 @@
     padding: 10px;
 }
 
-.menu-toggle span {
+.dark .menu-toggle span {
     display: block;
     width: 40px;
     height: 4px;
@@ -51,7 +51,15 @@
     margin: 5px 0;
     transition: 0.3s;
 }
+.menu-toggle span {
 
+    background-color: black;
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
 
 
 .social-icons {
@@ -97,7 +105,9 @@
 .menu-toggle.open span:first-child {
     transform: rotate(45deg) translate(5px, 5px);
 }
-
+.menu-toggle.open span{
+    background-color: white;
+}
 .menu-toggle.open span:nth-child(2) {
     opacity: 0;
 }

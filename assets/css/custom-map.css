@@ -1,0 +1,158 @@
+.map-body {
+    background-color: #0a0f1d;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.world-map {
+    width: 100%;
+    height: auto;
+}
+
+.map-path {
+    fill: #2a9b9d;
+    stroke: #2a9d8f;
+    stroke-width: 1;
+    opacity: 0.3;
+}
+
+.location-point {
+    fill: #2a9d8f;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.location-point:hover {
+    fill: #4dd4c5;
+}
+
+.location-area {
+    fill: #2a9d8f;
+    opacity: 0.2;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.location-area:hover {
+    opacity: 0.4;
+}
+
+.country-names {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.country-name {
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.country-name:hover {
+    opacity: 1;
+}
+
+.modal-map {
+    position: absolute;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    color: #0a0f1d;
+    display: none;
+}
+
+.modal-header-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-title-map {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal-close-map {
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.fact-title-map {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.fact-content-map {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.know-more-btn-map {
+    background: #2a9d8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.know-more-btn-map:hover {
+    background: #238579;
+}
+
+.navigation-map {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.nav-button-map {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    pointer-events: auto;
+    transition: background 0.3s ease;
+}
+
+.nav-button-map:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

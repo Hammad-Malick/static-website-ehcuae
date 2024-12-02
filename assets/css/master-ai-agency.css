@@ -8920,7 +8920,7 @@ section {
 }
 
 .body-ai-agency {
-    padding-bottom: 50px
+    /* padding-bottom: 50px */
 }
 
 @media(max-width: 1870px) {
@@ -9001,7 +9001,7 @@ section {
 .footer-area {
     background-color: var(--black);
     padding: 0 45px;
-    border-radius: 20px
+
 }
 
 .dark .footer-area {
@@ -10211,78 +10211,72 @@ section {
     line-height: 1.3
 }
 
-@media only screen and (min-width: 1200px) {
-    .client-area-inner {
-        padding-top: 0
-    }
+.clients-area {
+    background-color: var(--black)
 }
 
-.client-area .section-title {
-    font-size: 24px;
-    line-height: 1.25;
-    margin-top: -10px;
-    max-width: 345px
+.dark .clients-area {
+    background-color: #1b1b1b
 }
 
-.client-area .clients-wrapper-box {
-    margin-top: 54px
+.clients-area-inner {
+    padding: 55px 0;
+    position: relative;
+    padding-inline-start: 120px;
+    margin-inline-end: calc((100vw - var(--container-max-widths))/-2)
 }
 
 @media only screen and (max-width: 1399px) {
-    .client-area .clients-wrapper-box {
-        margin-top: 44px
-    }
-}
-
-@media only screen and (max-width: 1199px) {
-    .client-area .clients-wrapper-box {
-        margin-top: 34px
-    }
-}
-
-.client-area .clients-wrapper {
-    display: grid;
-    gap: 40px 60px;
-    grid-template-columns: repeat(4, 230px);
-    justify-content: space-between
-}
-
-@media only screen and (max-width: 1199px) {
-    .client-area .clients-wrapper {
-        grid-template-columns: repeat(4, 180px)
+    .clients-area-inner {
+        padding: 35px 0;
+        padding-inline-start: 80px
     }
 }
 
 @media only screen and (max-width: 991px) {
-    .client-area .clients-wrapper {
-        grid-template-columns: repeat(2, 1fr)
+    .clients-area-inner {
+        padding-inline-start: 0;
+        margin-inline-end: 0
     }
 }
 
-@media(max-width: 575px) {
-    .client-area .clients-wrapper {
-        grid-template-columns: repeat(1, 1fr)
+.clients-area-inner .shape-1 {
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    top: 0;
+    inset-inline-end: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+@media only screen and (max-width: 991px) {
+    .clients-area-inner .shape-1 {
+        display: none
     }
 }
 
-.client-area .client-box .title {
-    font-size: 18px
+.clients-area-inner .shape-1 img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
 }
 
-.client-area .client-box .content {
-    margin-top: 28px
+.dir-rtl .clients-area-inner .shape-1 img {
+    transform: rotateY(180deg)
 }
 
-@media only screen and (max-width: 1199px) {
-    .client-area .client-box .content {
-        margin-top: 23px
-    }
+.client-slider-active .swiper-slide {
+    width: auto
 }
 
-.client-area .client-box .text {
-    font-size: 14px;
-    line-height: 1.28;
-    margin-top: 14px
+.client-slider .swiper-wrapper {
+    transition-timing-function: linear
+}
+
+.client-box img {
+    opacity: .4
 }
 
 .faq-area {
