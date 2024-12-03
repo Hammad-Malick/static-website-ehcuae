@@ -187,10 +187,12 @@
           <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
           <ul class="main-menu">
             <li class="main-menu-item" data-link="home.html">Home</li>
-            <li class="main-menu-item" data-link="about.html">About Ehcuae</li>
+            <li class="main-menu-item" data-menu="about">About Us</li>
             <li class="main-menu-item" data-menu="sectors">Business Units</li>
             <li class="main-menu-item" data-link="contact.html" >Contact Us</li>
             <li class="main-menu-item" data-link="team.html">Out Team</li>
+            <li class="main-menu-item" data-link="team.html">Blogs</li>
+            <li class="main-menu-item" data-link="team.html">Latest News</li>
           </ul>
         </div>
         <div class="menu-right">
@@ -201,16 +203,19 @@
             <li class="sub-menu-item" data-content="tech">Technology</li>
           </ul>
           <ul class="sub-menu" id="about">
-            <li class="sub-menu-item" data-content="who">Who are we?</li>
-            <li class="sub-menu-item" data-content="mission">What our mission?</li>
-            <li class="sub-menu-item" data-content="vision">What our vision?</li>
-            <li class="sub-menu-item" data-content="values">What our values?</li>
+            <li class="sub-menu-item" data-content="who">Who we are</li>
+            <li class="sub-menu-item" data-content="mission">Mission and vision</li>
+            <li class="sub-menu-item" data-content="leader">Leader ship</li>
+            <li class="sub-menu-item" data-content="manageing">Manageing director and group cheif</li>
+            <li class="sub-menu-item" data-content="journey">Journey</li>
           </ul>
           <div class="content-description">
             <h2>Energy</h2>
             <p>Managing a broad portfolio of assets operating in key sectors...</p>
           </div>
-              <div id="sideimage" class="right-detail-image"></div>
+        </div>
+        <div class="sub-menu-details">
+            <div id="sideimage" class="right-detail-image"></div>
         </div>
       </div>`;
 
@@ -250,6 +255,36 @@
           description: 'Empowering businesses with digital tools and effective transformation.',
           img: 'assets/imgs/gallery/tech_sector_sample.jpg',
           link: 'technology-details.html'
+        },
+        who: {
+          title: 'Who we are',
+          description: 'Delivering sustainable and innovative energy solutions for a greener future.',
+          img: 'assets/imgs/gallery/energy_sector_sample.jpg',
+          link: 'energy-details.html'
+        },
+        mission: {
+          title: 'Mission and vision',
+          description: 'Creating resilient and sustainable infrastructure with precision and expertise.',
+          img: 'assets/imgs/gallery/infra_sector_sample.jpg',
+          link: 'infrastructure-details.html'
+        },
+        leader: {
+          title: 'Leader ship',
+          description: 'Prioritizing safety, ensuring secure environments across sectors.',
+          img: 'assets/imgs/gallery/service_sector_sample.jpg',
+          link: 'safety-details.html'
+        },
+        manageing: {
+          title: 'Manageing director and group cheif',
+          description: 'Empowering businesses with digital tools and effective transformation.',
+          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
+          link: 'technology-details.html'
+        },
+        journey: {
+          title: 'Journey',
+          description: 'Empowering businesses with digital tools and effective transformation.',
+          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
+          link: 'technology-details.html'
         }
       };
 
@@ -282,7 +317,7 @@
 
         // Leave to hide content unless clicked
         item.addEventListener('mouseleave', () => {
-          if (!item.classList.ge('active')) {
+          if (!item.classList.contains('active')) {
             clearContent();
           }
         });
@@ -309,6 +344,7 @@
     }
 
   </script>
+
 
   <!-- Header area end -->
   <div class="has-smooth" id="has_smooth"></div>

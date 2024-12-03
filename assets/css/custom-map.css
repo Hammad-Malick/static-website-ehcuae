@@ -2,7 +2,6 @@
     background-color: #0a0f1d;
     color: white;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,8 +15,11 @@
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 1400px;
-    margin: auto;
+    overflow: hidden;
+    height: 70vh;
+    /* margin-top: -270px; */
+    /* max-width: 1400px; */
+    box-shadow: inset 1px 5px 20px 20px #000000;
 }
 
 .world-map {
@@ -95,6 +97,7 @@
 .modal-title-map {
     font-size: 24px;
     font-weight: bold;
+    color: black;
 }
 
 .modal-close-map {
