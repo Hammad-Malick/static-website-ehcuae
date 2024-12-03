@@ -1,27 +1,28 @@
 .sidebar {
-    z-index: 99;
+    z-index: 1;
     position: fixed;
     right: 0;
     top: 0;
     width: 80px;
-    height: 100vh;
+    height: 2vh;
     background-color: transparent;
     transition: ease-in-out 1s;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 
 
 }
-.sidebar-toggle-btn{
-    position: absolute;
-    right: 0;
+
+.sidebar-toggle-btn {
+
 }
+
+
 .sidebar-wrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
     position: relative;
 }
 
@@ -41,6 +42,21 @@
     border: none;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
+    right: 78px;
+    top: 27px;
+    transition: ease-in-out 1s;
+    
+}
+.menu-toggle.open {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 78px;
+    top: 77px;
+
 }
 
 .dark .menu-toggle span {
@@ -51,6 +67,7 @@
     margin: 5px 0;
     transition: 0.3s;
 }
+
 .menu-toggle span {
 
     background-color: black;
@@ -100,14 +117,18 @@
     transition: ease-in-out 1s;
     padding-left: 20px;
     align-items: start;
+    z-index: 99;
+    height: 100vh;
 }
 
 .menu-toggle.open span:first-child {
     transform: rotate(45deg) translate(5px, 5px);
 }
-.menu-toggle.open span{
+
+.menu-toggle.open span {
     background-color: white;
 }
+
 .menu-toggle.open span:nth-child(2) {
     opacity: 0;
 }
@@ -190,24 +211,28 @@
 }
 
 .menu-left {
-    width: 16rem;
+    width: 100%;
     padding-right: 4rem;
 }
 
 .menu-right {
-    width: 20rem;
+    width: 100%;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 115px 0 15px 52px;
+    padding: 157px 0 15px 52px;
     position: relative;
 }
 
 .logo {
-    width: 120px;
+    width: 200px;
     margin-bottom: 4rem;
 }
 
 .main-menu {
     list-style: none;
+}
+
+#menu-items {
+    width: 100%;
 }
 
 .main-menu-item {
@@ -251,10 +276,16 @@
     opacity: 1;
 }
 
+.sub-menu-details {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
 .content-description {
     position: absolute;
     bottom: 4rem;
-    max-width: 400px;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
@@ -332,20 +363,21 @@
 
 .right-detail-image {
     position: absolute;
-    width: 100%;
+    width: 29vw;
+    height: 84vh;
+    overflow: hidden;
 }
 
 
-@media only screen and (max-width: 700px) {
-    .right-detail-image{
+@media only screen and (max-width: 800px) {
+    .right-detail-image {
         display: none;
     }
-    .content-description{
-        display: none;
-    }
+
 }
-@media only screen and (max-width: 520px) {
-   .menu-content{
-    flex-direction: column;
-   }
+    @media only screen and (max-width: 520px) {
+  
+        .menu-content {
+        flex-direction: column;
+    }
 }

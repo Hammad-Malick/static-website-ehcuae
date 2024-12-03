@@ -10212,24 +10212,24 @@ section {
 }
 
 .clients-area {
-    background-color: var(--black)
+    background-color: var(--white)
 }
 
 .dark .clients-area {
-    background-color: #1b1b1b
+    background-color: var(--white)
 }
 
 .clients-area-inner {
     padding: 55px 0;
     position: relative;
-    padding-inline-start: 120px;
+    /* padding-inline-start: 120px; */
     margin-inline-end: calc((100vw - var(--container-max-widths))/-2)
 }
 
 @media only screen and (max-width: 1399px) {
     .clients-area-inner {
         padding: 35px 0;
-        padding-inline-start: 80px
+        /* padding-inline-start: 80px */
     }
 }
 
