@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,8 +15,7 @@
 .map-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    height: 70vh;
+    /* overflow: hidden; */
     /* margin-top: -270px; */
     /* max-width: 1400px; */
     box-shadow: inset 1px 5px 20px 20px #000000;
@@ -32,12 +31,40 @@
     stroke: #2a9d8f;
     stroke-width: 1;
     opacity: 0.3;
+    pointer-events: none;
 }
 
 .location-point {
     fill: #2a9d8f;
     cursor: pointer;
     transition: fill 0.3s ease;
+}
+
+.highlight-ring {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.6);
+    stroke-width: 2;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+/* Animation for the expanding glowing ring effect */
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+        stroke-width: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+        stroke-width: 1;
+        /* Expand the ring */
+    }
+
+    100% {
+        opacity: 0.3;
+        stroke-width: 0.5;
+    }
 }
 
 .location-point:hover {
@@ -158,4 +185,22 @@
 
 .nav-button-map:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+.country-image {
+    background-image: url(https://bennettfeely.com/clippy/pics/pittsburgh.jpg);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-size: cover;
+    background-position: center center;
+    width: 7rem;
+    height: 7rem;
+    transform: rotate(90deg);
+    position: absolute;
+    top: -142px;
+    display: none;
+    transition: ease-in-out 1s;
+
+}
+.country-image.active{
+    display: flex;
 }
