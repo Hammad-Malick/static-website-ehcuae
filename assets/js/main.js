@@ -39,14 +39,28 @@
 
   // 02. Preloader
   $(document).ready(function () {
-     setTimeout(() => {
-       $('#container').addClass('loaded');
-       if ($('#container').hasClass('loaded')) {
-         $('#preloader').delay(1000).queue(function () {
-           $(this).remove();
-         });
-       }
-     }, 1500);
+    let isPreloader = localStorage.getItem('isPreloader');
+    if(isPreloader){
+      setTimeout(() => {
+        $('#container').addClass('loaded');
+        if ($('#container').hasClass('loaded')) {
+          $('#preloader').delay(1000).queue(function () {
+            $(this).remove();
+          });
+        }
+      }, 1500);
+    }else{
+      localStorage.setItem('isPreloader', true);
+      setTimeout(() => {
+        $('#container').addClass('loaded');
+        if ($('#container').hasClass('loaded')) {
+          $('#preloader').delay(1000).queue(function () {
+            $(this).remove();
+          });
+        }
+      }, 6000);
+
+    }
   });
 
   // Register GSAP Plugins
