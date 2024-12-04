@@ -10276,7 +10276,8 @@ section {
 }
 
 .client-box img {
-    opacity: .4
+    opacity: .4;
+    width: 180px;
 }
 
 .faq-area {

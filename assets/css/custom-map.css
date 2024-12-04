@@ -1,5 +1,5 @@
 .map-body {
-    background-color: #0a0f1d;
+    background-color: white;
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
@@ -18,7 +18,7 @@
     /* overflow: hidden; */
     /* margin-top: -270px; */
     /* max-width: 1400px; */
-    box-shadow: inset 1px 5px 20px 20px #000000;
+    box-shadow: inset 1px 5px 20px 20px #6b6b6b;
 }
 
 .world-map {
@@ -27,22 +27,22 @@
 }
 
 .map-path {
-    fill: #2a9b9d;
-    stroke: #2a9d8f;
+    /* fill: #2a9b9d; */
+    stroke: black;
     stroke-width: 1;
     opacity: 0.3;
     pointer-events: none;
 }
 
 .location-point {
-    fill: #2a9d8f;
+    fill: black;
     cursor: pointer;
     transition: fill 0.3s ease;
 }
 
 .highlight-ring {
     fill: none;
-    stroke: rgba(255, 255, 255, 0.6);
+    stroke: rgba(0, 0, 0, 0.829);
     stroke-width: 2;
     opacity: 0;
     animation: pulse 2s infinite;
@@ -68,7 +68,7 @@
 }
 
 .location-point:hover {
-    fill: #4dd4c5;
+    fill: rgb(0, 0, 0);
 }
 
 .location-area {
@@ -93,11 +93,12 @@
 }
 
 .country-name {
-    color: white;
-    font-size: 14px;
+    color: #000000;
+    font-size: 24px;
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    font-weight: 700;
 }
 
 .country-name:hover {
@@ -188,18 +189,36 @@
 }
 
 .country-image {
-    background-image: url(https://bennettfeely.com/clippy/pics/pittsburgh.jpg);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background-size: cover;
-    background-position: center center;
-    width: 7rem;
-    height: 7rem;
-    transform: rotate(90deg);
+    /* background-image: url(https://bennettfeely.com/clippy/pics/pittsburgh.jpg); */
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+    border-radius: 50%;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100px;
+    height: 100px;
+    /* transform: rotate(90deg); */
     position: absolute;
-    top: -142px;
+    top: -107px;
     display: none;
     transition: ease-in-out 1s;
 
+}
+@media screen and (max-width: 768px) {
+    .country-image {
+        /* background-image: url(https://bennettfeely.com/clippy/pics/pittsburgh.jpg); */
+        /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+        border-radius: 50%;
+        background-size: cover !important;
+        background-position: center center !important;
+        width: 100px;
+        height: 100px;
+        /* transform: rotate(90deg); */
+        position: absolute;
+        top: -107px;
+        display: none;
+        transition: ease-in-out 1s;
+    
+    }
 }
 .country-image.active{
     display: flex;
