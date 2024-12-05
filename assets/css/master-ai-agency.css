@@ -10272,7 +10272,8 @@ section {
 }
 
 .client-slider .swiper-wrapper {
-    transition-timing-function: linear
+    transition-timing-function: linear;
+    align-items: center;
 }
 
 .client-box img {
@@ -11072,6 +11073,15 @@ section {
 
 .counter-area .counter-item .title {
     font-size: 100px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__zJOFi3ef7eGRIlVWo2DKdUXKrCq8dBwtQ&s');
+    /* Your image here */
+    /* background-size: ; */
+    background-clip: text;
+    /* Clip the image to the text */
+    color: transparent;
+    /* Make the text color transparent */
+    -webkit-background-clip: text;
+    /* Safari/Chrome support */
     padding-bottom: 10px
 }
 
@@ -11098,4 +11108,5 @@ section {
         font-size: 16px
     }
 }
+
 /* counter area ends */
