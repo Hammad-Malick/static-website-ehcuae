@@ -743,8 +743,8 @@
                     <h3> Our Partners</h3>
                     <div class="client-slider has_fade_anim">
                       <div class="swiper client-slider-active">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                        <div class="swiper-wrapper" id="client-slider">
+                          <!-- <div class="swiper-slide">
                             <div class="client-box">
                               <img src="assets/imgs/client/black-(1).png" alt="client image">
                             </div>
@@ -798,7 +798,7 @@
                             <div class="client-box">
                               <img src="assets/imgs/client/black-(10).png" alt="client image">
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -807,6 +807,24 @@
               </div>
             </div>
           </div>
+
+          <script>
+            function clientSlider() {
+              var sliderEl = document.getElementById('client-slider');
+
+              for (let i = 0; i < 51; i++) {
+                sliderEl.innerHTML += `
+                  <div class="swiper-slide">
+                    <div class="client-box">
+                      <img src="assets/imgs/client/logo-c-${i + 1}.png" alt="client image">
+                    </div>
+                  </div>
+                `;
+              }
+
+            }
+            clientSlider(); 
+          </script>
           <!-- client area end  -->
           <!-- awards area start  -->
           <div class="container large mt-4 mb-4">
