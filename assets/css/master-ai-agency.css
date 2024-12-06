@@ -10826,7 +10826,16 @@ section {
 /* custome css end*/
 
 .clients-area-inner {
-    padding-top: 98px
+    padding-top: 50px
+}
+.clients-area-inner h3 {
+    color: black;
+    width: 87%;
+    font-weight: 800;
+    /* align-items: center; */
+    text-align: center;
+    padding: 17px 80px 36px 80px;
+
 }
 
 @media only screen and (max-width: 1919px) {
@@ -11052,11 +11061,18 @@ section {
 .counter-area-inner {
     border-bottom: 1px solid var(--border)
 }
-
+.counter-area{
+    background: #ffffff;
+}
 .counter-area .counters-grid {
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+.counter-area .counters-grid .saperator {
+    border-left: 3px solid #9d9d9d;
+    height: 162px;
+    width: 10px;
 }
 
 @media only screen and (max-width: 767px) {

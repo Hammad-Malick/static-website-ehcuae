@@ -18,7 +18,7 @@
     /* overflow: hidden; */
     /* margin-top: -270px; */
     /* max-width: 1400px; */
-    box-shadow: inset 1px 5px 20px 20px #303030;
+    /* box-shadow: inset 1px 5px 20px 20px #303030; */
 }
 
 .world-map {
@@ -30,7 +30,7 @@
     /* fill: #2a9b9d; */
     stroke: transparent;
     stroke-width: 1;
-    opacity: 0.9;
+    opacity: 1;
     pointer-events: none;
 }
 

@@ -546,7 +546,7 @@
           <!-- info area end  -->
 
           <!-- counter area start  -->
-          <div class="container large">
+          <div class="container-fluid">
             <section class="counter-area">
               <div class="container">
                 <div class="counter-area-inner section-spacing">
@@ -555,14 +555,17 @@
                       <h2 class="title wc-counter">25k</h2>
                       <p class="text">Project <br> completed</p>
                     </div>
+                    <span class="saperator"></span>
                     <div class="counter-item has_fade_anim" data-fade-from="left">
                       <h2 class="title wc-counter">8k</h2>
                       <p class="text">Happy <br> customers</p>
                     </div>
+                    <span class="saperator"></span>
                     <div class="counter-item has_fade_anim" data-fade-from="left">
                       <h2 class="title wc-counter">15</h2>
                       <p class="text">Years <br> experiences</p>
                     </div>
+                    <span class="saperator"></span>
                     <div class="counter-item has_fade_anim" data-fade-from="left">
                       <h2 class="title wc-counter">98</h2>
                       <p class="text">Awards <br> achievement</p>
@@ -731,59 +734,13 @@
             </section>
           </div>
           <!-- feature area end  -->
-          <!-- awards area start  -->
-          <div class="container large mt-4 mb-4">
-            <section class="awards-area">
-              <div class="area-bg">
-                <img src="assets/imgs/gallery/3d-logo-with-pattern.png" alt="gallery image">
-              </div>
-              <div class="container">
-                <div class="awards-area-inner section-spacing">
-                  <div class="section-header">
-                    <div class="section-title-wrapper">
-                      <div class="subtitle-wrapper">
-                        <span class="section-subtitle has-right-line has_fade_anim">Awards</span>
-                      </div>
-                      <div class="title-wrapper">
-                        <h2 class="section-title has_fade_anim">We believe in <br>
-                          quality, not quantity</h2>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="section-content">
-                    <div class="text-wrapper">
-                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
-                        while
-                        deploying production-ready code. Our
-                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
-                        way.
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <!-- awards area end  -->
-          <!-- service area start  -->
-          <!-- service area end  -->
-
-          <!-- video area start  -->
-          <!-- <div class="container large">
-            <div class="video-area">
-              <div class="area-bg">
-                <img src="assets/imgs/gallery/img-s-84.webp" alt="image">
-              </div>
-            </div>
-          </div>
-          -->
-          <!-- client area start  -->
+                   <!-- client area start  -->
           <div class="clients-area mt-4 mb-4">
             <div class="container-hd">
               <div class="clients-area">
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                   <div class="clients-area-inner">
+                    <h3> Our Partners</h3>
                     <div class="client-slider has_fade_anim">
                       <div class="swiper client-slider-active">
                         <div class="swiper-wrapper">
@@ -851,6 +808,59 @@
             </div>
           </div>
           <!-- client area end  -->
+          <!-- awards area start  -->
+          <div class="container large mt-4 mb-4">
+            <section class="awards-area">
+              <div class="area-bg">
+                <img src="assets/imgs/gallery/3d-logo-with-pattern.png" alt="gallery image">
+              </div>
+              <div class="container">
+                <div class="awards-area-inner section-spacing">
+                  <div class="section-header">
+                    <div class="section-title-wrapper">
+                      <div class="subtitle-wrapper">
+                        <span class="section-subtitle has-right-line has_fade_anim">updates</span>
+                      </div>
+                      <div class="title-wrapper">
+                        <h2 class="section-title has_fade_anim">Latest News</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="section-content">
+                    <div class="text-wrapper">
+                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
+                        while
+                        deploying production-ready code. Our
+                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
+                        way.
+                      </p>
+                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
+                        while
+                        deploying production-ready code. Our
+                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
+                        way.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- awards area end  -->
+          <!-- service area start  -->
+          <!-- service area end  -->
+
+          <!-- video area start  -->
+          <!-- <div class="container large">
+            <div class="video-area">
+              <div class="area-bg">
+                <img src="assets/imgs/gallery/img-s-84.webp" alt="image">
+              </div>
+            </div>
+          </div>
+          -->
+  
           <!-- video area end  -->
           <div class="map-body">
             <div class="map-container">
@@ -2076,6 +2086,7 @@
   </script>
   <script>
     var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
       loop: false,  // Turn off loop to avoid issues with first and last slides
       slidesPerView: 4,
       spaceBetween: 20,
