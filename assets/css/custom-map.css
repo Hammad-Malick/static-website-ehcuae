@@ -1,7 +1,7 @@
 .map-body {
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     display: flex;
     flex-direction: column;
     align-items: center;
