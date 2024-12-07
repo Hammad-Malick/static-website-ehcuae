@@ -9571,6 +9571,7 @@ section {
 
 .info-area {
     /* padding-top: 120px */
+    position: relative;
 }
 
 @media only screen and (max-width: 991px) {

@@ -485,8 +485,13 @@
 
           <!-- info area start  -->
           <section class="info-area">
+            <div class="video-background">
+              <video autoplay loop muted playsinline>
+                <source src="assets/bg-videos/sector-bg.mp4" type="video/mp4">
+              </video>
+            </div>
             <section class="section22 vision">
-              <div class="particles22" id="vision-particles"></div>
+              <!-- <div class="particles22" id="vision-particles"></div> -->
               <div class="content22">
                 <div class="image-container22">
                   <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7" alt="Sustainable Energy">
@@ -498,13 +503,13 @@
                     sustainable growth through innovation & a strategically diversified portfolio.</p>
                 </div>
               </div>
-              <svg class="line-drawing" viewBox="0 0 100 100">
+              <!-- <svg class="line-drawing" viewBox="0 0 100 100">
                 <path d="M10,50 Q50,10 90,50 T90,50" />
-              </svg>
+              </svg> -->
             </section>
 
             <section class="section22 mission">
-              <div class="particles22" id="mission-particles"></div>
+              <!-- <div class="particles22" id="mission-particles"></div> -->
               <div class="content22 reverse">
                 <div class="image-container22">
                   <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Industrial Excellence">
@@ -516,13 +521,13 @@
                     by creating a resilient and sustainable portfolio for long-term growth & shareholder's value.</p>
                 </div>
               </div>
-              <svg class="line-drawing" viewBox="0 0 100 100">
+              <!-- <svg class="line-drawing" viewBox="0 0 100 100">
                 <path d="M20,20 Q50,90 80,20" />
-              </svg>
+              </svg> -->
             </section>
 
             <section class="section22 values">
-              <div class="particles22" id="values-particles"></div>
+              <!-- <div class="particles22" id="values-particles"></div> -->
               <div class="content22">
                 <div class="image-container22">
                   <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" alt="Corporate Values">
@@ -534,9 +539,9 @@
                     maintaining unwavering integrity in every endeavor to create lasting impact.</p>
                 </div>
               </div>
-              <svg class="line-drawing" viewBox="0 0 100 100">
+              <!-- <svg class="line-drawing" viewBox="0 0 100 100">
                 <path d="M10,90 Q50,10 90,90" />
-              </svg>
+              </svg> -->
             </section>
 
             <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -890,13 +895,17 @@
 
               <svg class="world-map" viewBox="250 100 1100 700" width="1200" height="500">
                 <circle class="highlight-ring" cx="900" cy="500" r="8"></circle>
-                <circle class="location-point" cx="900" cy="500" r="5" data-country="UAE" style="pointer-events: all;"></circle>
-                <circle class="highlight-ring"  cx="635" cy="180" r="8"></circle>
-                <circle class="location-point" cx="635" cy="180" r="5" data-country="ROMANIA" style="pointer-events: all;"></circle>
-                <circle class="highlight-ring"  cx="827" cy="510" r="8"></circle>
-                <circle class="location-point" cx="827" cy="510" r="5" data-country="SAUDI ARABIA" style="pointer-events: all;" cz="999"></circle>
+                <circle class="location-point" cx="900" cy="500" r="5" data-country="UAE" style="pointer-events: all;">
+                </circle>
+                <circle class="highlight-ring" cx="635" cy="180" r="8"></circle>
+                <circle class="location-point" cx="635" cy="180" r="5" data-country="ROMANIA"
+                  style="pointer-events: all;"></circle>
+                <circle class="highlight-ring" cx="827" cy="510" r="8"></circle>
+                <circle class="location-point" cx="827" cy="510" r="5" data-country="SAUDI ARABIA"
+                  style="pointer-events: all;" cz="999"></circle>
                 <circle class="highlight-ring" cx="940" cy="520" r="8"></circle>
-                <circle class="location-point" cx="940" cy="520" r="5" data-country="OMAN" style="pointer-events: all;"></circle>
+                <circle class="location-point" cx="940" cy="520" r="5" data-country="OMAN" style="pointer-events: all;">
+                </circle>
                 <path class="map-path" fill="#EAEAEA" opacity="1.000000" stroke="none"
                   d=" M1124.573486,263.764038   C1126.757812,263.331573 1129.484619,262.291718 1130.376953,263.152832   C1132.001831,264.720886 1133.405396,267.490387 1133.225586,269.616852   C1133.104370,271.048584 1129.799683,273.543365 1128.461792,273.231934   C1126.383789,272.748138 1124.383423,270.523529 1123.128662,268.543518   C1122.556763,267.640961 1123.844482,265.560120 1124.573486,263.764038  z" />
                 <path class="map-path" fill="#ECECEC" opacity="1.000000" stroke="none"
@@ -4754,9 +4763,9 @@
       }
     }
 
-    createParticles('vision-particles', 100);
-    createParticles('mission-particles', 100);
-    createParticles('values-particles', 100);
+    // createParticles('vision-particles', 100);
+    // createParticles('mission-particles', 100);
+    // createParticles('values-particles', 100);
 
     // Scroll animations with 50vh trigger
     document.querySelectorAll('.section22').forEach(section => {
