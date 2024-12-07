@@ -10220,7 +10220,7 @@ section {
 }
 
 .clients-area-inner {
-    padding: 55px 0;
+    /* padding: 55px 0; */
     position: relative;
     /* padding-inline-start: 120px; */
     margin-inline-end: calc((100vw - var(--container-max-widths))/-2)
@@ -10825,16 +10825,18 @@ section {
 
 /* custome css end*/
 
-.clients-area-inner {
+/* .clients-area-inner {
     padding-top: 50px
-}
-.clients-area-inner h3 {
+} */
+.clients-area-inner h2 {
+    position: absolute;
+    top: 10px;
     color: black;
     width: 87%;
     font-weight: 800;
     /* align-items: center; */
     text-align: center;
-    padding: 17px 80px 36px 80px;
+    /* padding: 17px 80px 36px 80px; */
 
 }
 
@@ -10858,7 +10860,7 @@ section {
     text-align: center;
     display: inline-block;
     background-color: var(--white);
-    padding: 0 22px;
+    /* padding: 0 22px; */
     margin-top: 0
 }
 
