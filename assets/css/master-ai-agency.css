@@ -10257,8 +10257,8 @@ section {
 }
 
 .clients-area-inner .shape-1 img {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     -o-object-fit: cover;
     object-fit: cover
 }
@@ -10277,8 +10277,8 @@ section {
 }
 
 .client-box img {
-    opacity: .4;
-    width: 180px;
+    /* opacity: .4; */
+    /* width: 180px; */
 }
 
 .faq-area {

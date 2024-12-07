@@ -816,13 +816,15 @@
               var sliderEl = document.getElementById('client-slider');
 
               for (let i = 0; i < 51; i++) {
-                sliderEl.innerHTML += `
-                  <div class="swiper-slide">
-                    <div class="client-box">
-                      <img src="assets/imgs/client/logo-c-${i + 1}.png" alt="client image">
+                if(i != 37){
+                  sliderEl.innerHTML += `
+                    <div class="swiper-slide">
+                      <div class="client-box">
+                        <img src="assets/imgs/client/logo-c-${i + 1}.png" alt="client image">
+                      </div>
                     </div>
-                  </div>
-                `;
+                  `;
+                }
               }
 
             }
