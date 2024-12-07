@@ -34,7 +34,7 @@
 }
 .map-container .map-image {
     position: relative;
-    background-image: url('./../imgs/gallery/custom-map.jpg');
+    /* background-image: url('./../imgs/gallery/custom-map.jpg'); */
 
     height: 100vh;
 }
@@ -61,27 +61,27 @@
 .highlight-ring {
     fill: none;
     stroke: rgba(255, 255, 255, 0.829);
-    stroke-width: 2;
+    stroke-width: 4;
     opacity: 0;
-    animation: pulse 2s infinite;
+    animation: pulse 1s infinite;
 }
 
 /* Animation for the expanding glowing ring effect */
 @keyframes pulse {
     0% {
-        opacity: 0.3;
-        stroke-width: 0.5;
+        opacity: 0.5;
+        stroke-width: 2;
     }
 
     50% {
         opacity: 1;
-        stroke-width: 1;
+        stroke-width: 4;
         /* Expand the ring */
     }
 
     100% {
-        opacity: 0.3;
-        stroke-width: 0.5;
+        opacity: 0.5;
+        stroke-width: 2;
     }
 }
 
