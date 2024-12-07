@@ -591,11 +591,11 @@
                     </div>
                   </div>
                   <div class="showcase container">
-                    <div class="swiper-container ">
+                    <!-- <div class="swiper-container "> -->
 
 
-                      <div class="features-panel swiper-wrapper">
-                        <div class="feature-item swiper-slide active has_fade_anim" data-fade-from="left"
+                      <div class="features-panel">
+                        <div class="feature-item  active has_fade_anim" data-fade-from="left"
                           data-fade-offset="70" data-index="0">
                           <div>
                             <img src="assets/imgs/logo/sector-11.png" width="200" alt="feature icon">
@@ -605,7 +605,7 @@
                           </div>
                         </div>
 
-                        <div class="feature-item swiper-slide has_fade_anim" data-fade-from="left" data-fade-offset="70"
+                        <div class="feature-item has_fade_anim" data-fade-from="left" data-fade-offset="70"
                           data-index="1">
                           <div>
                             <img src="assets/imgs/logo/sector-22.png" width="260" alt="feature icon">
@@ -616,7 +616,7 @@
                           </div>
                         </div>
 
-                        <div class="feature-item swiper-slide has_fade_anim " data-fade-from="left"
+                        <div class="feature-item has_fade_anim " data-fade-from="left"
                           data-fade-offset="70" data-index="2">
                           <div>
                             <img src="assets/imgs/logo/sector-33.png" width="200" alt="feature icon">
@@ -626,7 +626,7 @@
                             
                           </div>
                         </div>
-                        <div class="feature-item swiper-slide has_fade_anim" data-fade-from="left" data-fade-offset="70"
+                        <div class="feature-item has_fade_anim" data-fade-from="left" data-fade-offset="70"
                           data-index="3">
                           <div>
                             <img src="assets/imgs/logo/sector-44.png" width="200" alt="feature icon">
@@ -637,7 +637,7 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    <!-- </div> -->
                     <div class="showcase-panel">
                       <div class="showcase-content active"
                         data-background-image="assets/imgs/gallery/energy_sector_sample.jpg" data-index="0">
@@ -676,12 +676,12 @@
                         <a href="technology-details.html"><button class="try-button">Learn more</button></a>
                       </div>
                     </div>
-                    <div class="swiper-pagination">
+                    <!-- <div class="swiper-pagination">
 
                       <div class="swiper-button-next"></div>
                       <div class="swiper-button-prev"></div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- <div class="section-content">
                     <div class="feature-thumb">
                       <div class="thumb">
@@ -886,11 +886,11 @@
           <div class="map-body">
             <div class="map-container">
               <div class="map-image">
-                <span class="uae-marker maerker"></span>
-                <span class="uae-marker maerker"></span>
-                <span class="uae-marker maerker"></span>
-                <span class="uae-marker maerker"></span>
-                <img src="assets/imgs/gallery/custom-map.jpg" alt="">
+                <span class="uae-marker marker"></span>
+                <span class="oman-marker marker"></span>
+                <span class="romania-marker marker"></span>
+                <span class="saudi-marker marker"></span>
+                <!-- <img src="assets/imgs/gallery/custom-map.jpg" alt=""> -->
               </div>
               <div class="country-names">
                 <span class="country-name" id="uae">
@@ -1332,69 +1332,69 @@
 
   </script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      loop: false,  // Turn off loop to avoid issues with first and last slides
-      slidesPerView: 4,
-      spaceBetween: 20,
-      paginationClickable: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        1920: {
-          slidesPerView: 4,
-          spaceBetween: 30
-        },
-        1028: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        },
-        780: {
-          slidesPerView: 2,
-          spaceBetween: 30
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 10
-        }
-      },
-      simulateTouch: false,
-      touchStartPreventDefault: false,
-      on: {
-        slideChange: function () {
-          // Update the buttons based on the current slide
-          updateNavigationButtons();
-        },
-        resize: function () {
-          // Recheck the button states after resize
-          setTimeout(() => {
+    // var swiper = new Swiper('.swiper-container', {
+    //   direction: 'vertical',
+    //   loop: false,  // Turn off loop to avoid issues with first and last slides
+    //   slidesPerView: 4,
+    //   spaceBetween: 20,
+    //   paginationClickable: true,
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    //   breakpoints: {
+    //     1920: {
+    //       slidesPerView: 4,
+    //       spaceBetween: 30
+    //     },
+    //     1028: {
+    //       slidesPerView: 3,
+    //       spaceBetween: 30
+    //     },
+    //     780: {
+    //       slidesPerView: 2,
+    //       spaceBetween: 30
+    //     },
+    //     480: {
+    //       slidesPerView: 1,
+    //       spaceBetween: 10
+    //     }
+    //   },
+    //   simulateTouch: false,
+    //   touchStartPreventDefault: false,
+    //   on: {
+    //     slideChange: function () {
+    //       // Update the buttons based on the current slide
+    //       updateNavigationButtons();
+    //     },
+    //     resize: function () {
+    //       // Recheck the button states after resize
+    //       setTimeout(() => {
 
-            swiper.update(); // Update swiper to account for changed breakpoints
-            updateNavigationButtons();
-          }, 2000);
-        }
-      }
-    });
+    //         swiper.update(); // Update swiper to account for changed breakpoints
+    //         updateNavigationButtons();
+    //       }, 2000);
+    //     }
+    //   }
+    // });
 
-    // Function to update the navigation buttons' state
-    function updateNavigationButtons() {
-      if (swiper.isBeginning) {
-        document.querySelector('.swiper-button-prev').classList.add('swiper-button-disabled');
-      } else {
-        document.querySelector('.swiper-button-prev').classList.remove('swiper-button-disabled');
-      }
+    // // Function to update the navigation buttons' state
+    // function updateNavigationButtons() {
+    //   if (swiper.isBeginning) {
+    //     document.querySelector('.swiper-button-prev').classList.add('swiper-button-disabled');
+    //   } else {
+    //     document.querySelector('.swiper-button-prev').classList.remove('swiper-button-disabled');
+    //   }
 
-      if (swiper.isEnd) {
-        document.querySelector('.swiper-button-next').classList.add('swiper-button-disabled');
-      } else {
-        document.querySelector('.swiper-button-next').classList.remove('swiper-button-disabled');
-      }
-    }
+    //   if (swiper.isEnd) {
+    //     document.querySelector('.swiper-button-next').classList.add('swiper-button-disabled');
+    //   } else {
+    //     document.querySelector('.swiper-button-next').classList.remove('swiper-button-disabled');
+    //   }
+    // }
 
-    // Initial button state update
-    updateNavigationButtons();
+    // // Initial button state update
+    // updateNavigationButtons();
   </script>
 
 

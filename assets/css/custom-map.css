@@ -22,20 +22,20 @@
     /* box-shadow: inset 1px 5px 20px 20px #303030; */
 }
 
-.marker .uae {
+.marker.uae-marker {
     position: absolute;
-    background: #000000;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background: rgb(0 0 0);
+    right: 62rem;
+    z-index: 111;
+    width: 25px;
+    height: 25px;
+    bottom: 23rem;
+    border-radius: 25px;
 }
-
 .map-container .map-image {
     position: relative;
-    width: 100%;
+    background-image: url('./../imgs/gallery/custom-map.jpg');
+
     height: 100vh;
 }
 
