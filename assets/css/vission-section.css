@@ -22,18 +22,17 @@
     height: 100%;
 }
 .vision .image-container22{
-    clip-path: polygon(59% 0, 100% 0, 36% 100%, 1% 100%, 0 0);
+    clip-path: polygon(59% 0, 100% 0, 55% 100%, 1% 100%, 0 0);
 }
 .mission .image-container22{
-    clip-path: polygon(59% 0, 100% 0, 100% 100%, 59% 100%, 0 0);
+    clip-path: polygon(59% 0, 100% 0, 100% 100%, 55% 100%, 0 0);
 }
 .values .image-container22{
-    clip-path: polygon(59% 0, 100% 0, 36% 100%, 1% 100%, 0 0);
+    clip-path: polygon(59% 0, 100% 0, 55% 100%, 1% 100%, 0 0);
 }
 .content22 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
     align-items: center;
     position: relative;
     z-index: 2;
