@@ -11,7 +11,7 @@
     --secondary: #555555;
     --border: rgba(18, 18, 18, 0.08);
     --theme: #121212;
-    --black: #121212;
+    --black: #000000;
     --black-2: #555555;
     --white: #FFFFFF;
     --white-2: #999999;
@@ -3772,7 +3772,7 @@ p {
     line-height: 1.41;
     font-weight: 400;
     font-size: 18px;
-    color: var(--secondary)
+    color: var(--white)
 }
 
 strong {
@@ -4470,7 +4470,7 @@ h6 {
 }
 
 .dark .header-area.sticky {
-    background-color: #121212
+    background-color: var(--black)
 }
 
 .header-area.sticky .header-area__inner {
@@ -9297,6 +9297,7 @@ section {
     padding-bottom: 140px;
     position: relative;
     z-index: 1;
+    height: 100vh;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -9419,8 +9420,8 @@ section {
     width: fit-content;
     /* background-color: #f0f2f4; */
     z-index: 1;
-    background-color: rgb(51 51 51 / 44%);
-    backdrop-filter: blur(7.5px);
+    /* background-color: var(--black); */
+    /* backdrop-filter: blur(7.5px); */
     border-radius: 20px
 }
 
@@ -9769,7 +9770,7 @@ section {
 }
 
 .dark .feature-area {
-    background-color: #1b1b1b
+    background-color: var(--black)
 }
 
 @media only screen and (max-width: 991px) {
@@ -9864,7 +9865,7 @@ section {
 }
 
 .dark .feature-area .feature-thumb .btn-wrapper {
-    background-color: #1b1b1b
+    background-color: var(--black)
 }
 
 @media only screen and (max-width: 767px) {
@@ -10150,7 +10151,7 @@ section {
 }
 
 .dark .video-area .info-box {
-    background-color: #252525
+    background-color: var(--black)
 }
 
 @media only screen and (max-width: 1399px) {
@@ -10297,7 +10298,7 @@ section {
 }
 
 .dark .faq-area {
-    background-color: #1b1b1b
+    background-color: var(--black)
 }
 
 @media only screen and (max-width: 991px) {
@@ -10839,13 +10840,13 @@ section {
 } */
 .clients-area-inner h2 {
     position: absolute;
-    top: 10px;
+    /* top: 10px; */
     color: black;
     width: 87%;
     font-weight: 800;
     /* align-items: center; */
-    text-align: center;
-    /* padding: 17px 80px 36px 80px; */
+    /* text-align: center; */
+    padding: 17px 80px 36px 80px;
 
 }
 
@@ -10994,9 +10995,9 @@ section {
 }
 
 .awards-area .section-title-wrapper {
-    display: flex;
+    /* display: flex;
     align-items: flex-end;
-    gap: 50px
+    gap: 50px */
 }
 
 @media only screen and (max-width: 991px) {
@@ -11046,7 +11047,7 @@ section {
 
 .awards-area .section-content .text {
     max-width: 480px;
-    color: #999
+    color: #ffffff
 }
 
 .awards-area .section-content .awards-list {

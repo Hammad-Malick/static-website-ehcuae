@@ -1,6 +1,6 @@
 .map-body {
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     /* font-family: Arial, sans-serif; */
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 
 .marker.uae-marker {
     position: absolute;
-    background: rgb(0 0 0);
+    background: rgb(255, 255, 255);
     right: 62rem;
     z-index: 111;
     width: 25px;
@@ -53,7 +53,7 @@
 }
 
 .location-point {
-    fill: rgb(253, 253, 253);
+    fill: rgb(0, 0, 0);
     cursor: pointer;
     transition: fill 0.3s ease;
 }
@@ -111,7 +111,7 @@
 }
 
 .country-name {
-    color: #ffffff;
+    color: #000000;
     text-shadow: -1px 1px 20px #000000;
     font-size: 24px;
     cursor: pointer;
