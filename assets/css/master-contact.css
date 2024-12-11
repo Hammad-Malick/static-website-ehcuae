@@ -9422,20 +9422,20 @@ section {
 
 @media only screen and (max-width: 1399px) {
     .contact-area .section-content {
-        grid-template-columns: 1fr 640px
+        /* grid-template-columns: 1fr 640px */
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .contact-area .section-content {
-        grid-template-columns: 1fr 600px;
+        /* grid-template-columns: 1fr 600px; */
         margin-top: 42px
     }
 }
 
 @media only screen and (max-width: 991px) {
     .contact-area .section-content {
-        grid-template-columns: 1fr
+        /* grid-template-columns: 1fr */
     }
 }
 
