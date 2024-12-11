@@ -9217,6 +9217,19 @@ section {
 .hero-area .section-title {
     margin-top: 0
 }
+.hero-area .image-wrapper {
+    place-content: end;
+    height: 50vh;
+    background: url('./../imgs/gallery/contact-g-4.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.hero-area .image-wrapper .image-title {
+    background: #72727200;
+    backdrop-filter: blur(7.5px);
+    padding: 2rem 18rem;
+}
 
 .hero-area .contact-box {
     padding: 85px 30px 40px;
@@ -9397,7 +9410,7 @@ section {
 .contact-area .section-content {
     display: grid;
     gap: 40px 60px;
-    grid-template-columns: 1fr 740px;
+    grid-template-columns: 1fr;
     margin-top: 112px
 }
 
@@ -9431,7 +9444,7 @@ section {
     line-height: 1.25;
     font-weight: 500;
     color: var(--primary);
-    max-width: 360px
+    /* max-width: 360px */
 }
 
 .contact-area .contact-list {
@@ -9443,13 +9456,65 @@ section {
     line-height: 24px
 }
 
-.contact-area .contact-list li:not(:first-child) {
-    margin-top: 15px
-}
-
 .contact-area .contact-list li a {
     text-decoration: underline;
     text-underline-offset: 2px
 }
 
 /*# sourceMappingURL=master-contact.css.map */
+/* custom css start*/
+.contact-container {
+    border-radius: 10px;
+    padding: 40px;
+    padding-left: 0;
+    width: 100%;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-header {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    color: #a3a3a3;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contact-item p, .contact-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #89a594;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
+/* custom css ends*/

@@ -387,8 +387,8 @@
             </script>
             <section class="hero-area" style="position: relative">
               <div class="thumb img_anim_reveal pt-2"
-                style="position: absolute;position: absolute;left: 68px; top: 13px;">
-                <img src="assets/imgs/logo/EHC-Black-trans.png" width="200" alt="site-logo">
+                style="position: absolute;position: absolute;left: 68px; top: 20px;">
+                <img src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
               </div>
               <div class="container-fluid">
                 <div class="hero-area-inner" style="float: left;">
@@ -556,7 +556,7 @@
           <div class="container-fluid">
             <section class="counter-area">
               <div class="container">
-                <div class="counter-area-inner section-spacing">
+                <div class="counter-area-inner pt-4 pb-4">
                   <div class="counters-grid">
                     <div class="counter-item has_fade_anim" data-fade-from="left">
                       <h2 class="title wc-counter">25k</h2>
@@ -857,21 +857,37 @@
                     </div>
                   </div>
                   <div class="section-content">
-                    <div class="text-wrapper">
-                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
-                        while
-                        deploying production-ready code. Our
-                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
-                        way.
-                      </p>
-                      <p class="text has_fade_anim" data-fade-from="left">Easily create truly responsive components
-                        while
-                        deploying production-ready code. Our
-                        experts utilize tech trends, shaping designs that surpass expectations with innovative design
-                        way.
-                      </p>
-                    </div>
-
+                    <div class="news-grid">
+                      <article class="news-card  has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Corporate Building" class="news-image">
+                          <div class="news-content">
+                              <time class="news-date">December 10, 2023</time>
+                              <h3 class="news-headline">Al Fanar Group Announces Major Expansion in Abu Dhabi</h3>
+                              <p class="news-excerpt">Strategic expansion plan includes new residential developments and commercial projects across Abu Dhabi, reinforcing our commitment to the region's growth.</p>
+                              <a href="#" class="read-more">Read More</a>
+                          </div>
+                      </article>
+          
+                      <article class="news-card  has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Sustainable Technology" class="news-image">
+                          <div class="news-content">
+                              <time class="news-date">December 8, 2023</time>
+                              <h3 class="news-headline">Implementing Sustainable Solutions Across Portfolio</h3>
+                              <p class="news-excerpt">New initiative launches to implement cutting-edge sustainable technologies across our entire portfolio of properties and developments.</p>
+                              <a href="#" class="read-more">Read More</a>
+                          </div>
+                      </article>
+          
+                      <article class="news-card  has_fade_anim" data-fade-from="left" data-fade-offset="70">
+                          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" alt="Business Meeting" class="news-image">
+                          <div class="news-content">
+                              <time class="news-date">December 5, 2023</time>
+                              <h3 class="news-headline">Strategic Partnership with Global Tech Leaders</h3>
+                              <p class="news-excerpt">Al Fanar Group forms strategic partnerships with leading global technology providers to enhance our digital transformation journey.</p>
+                              <a href="#" class="read-more">Read More</a>
+                          </div>
+                      </article>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -4745,7 +4761,7 @@
     function createParticles(containerId, count) {
       const container = document.getElementById(containerId);
       for (let i = 0; i < count; i++) {
-        const particle = document.createElement('div');
+        // const particle = document.createElement('div');
         particle.className = 'particle22';
         particle.style.width = Math.random() * 3 + 'px';
         particle.style.height = particle.style.width;
@@ -4753,15 +4769,15 @@
         particle.style.top = Math.random() * 100 + '%';
         container.appendChild(particle);
 
-        gsap.to(particle, {
-          x: (Math.random() - 0.5) * 100,
-          y: (Math.random() - 0.5) * 100,
-          opacity: Math.random(),
-          duration: Math.random() * 3 + 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "none"
-        });
+        // gsap.to(particle, {
+        //   x: (Math.random() - 0.5) * 100,
+        //   y: (Math.random() - 0.5) * 100,
+        //   opacity: Math.random(),
+        //   duration: Math.random() * 3 + 2,
+        //   repeat: -1,
+        //   yoyo: true,
+        //   ease: "none"
+        // });
       }
     }
 
@@ -4836,72 +4852,33 @@
     });
 
   </script>
-  <script>
-    // var swiper = new Swiper('.swiper-container', {
-    //   direction: 'vertical',
-    //   loop: false,  // Turn off loop to avoid issues with first and last slides
-    //   slidesPerView: 4,
-    //   spaceBetween: 20,
-    //   paginationClickable: true,
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    //   breakpoints: {
-    //     1920: {
-    //       slidesPerView: 4,
-    //       spaceBetween: 30
-    //     },
-    //     1028: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 30
-    //     },
-    //     780: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 30
-    //     },
-    //     480: {
-    //       slidesPerView: 1,
-    //       spaceBetween: 10
-    //     }
-    //   },
-    //   simulateTouch: false,
-    //   touchStartPreventDefault: false,
-    //   on: {
-    //     slideChange: function () {
-    //       // Update the buttons based on the current slide
-    //       updateNavigationButtons();
-    //     },
-    //     resize: function () {
-    //       // Recheck the button states after resize
-    //       setTimeout(() => {
+<!-- latest news script -->
 
-    //         swiper.update(); // Update swiper to account for changed breakpoints
-    //         updateNavigationButtons();
-    //       }, 2000);
-    //     }
-    //   }
-    // });
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      // Hover animations for cards
+      const cards = document.querySelectorAll('.news-card');
+      cards.forEach(card => {
+          card.addEventListener('mouseenter', () => {
+              gsap.to(card.querySelector('.read-more'), {
+                  x: 5,
+                  duration: 0.3,
+                  ease: 'power2.out'
+              });
+          });
 
-    // // Function to update the navigation buttons' state
-    // function updateNavigationButtons() {
-    //   if (swiper.isBeginning) {
-    //     document.querySelector('.swiper-button-prev').classList.add('swiper-button-disabled');
-    //   } else {
-    //     document.querySelector('.swiper-button-prev').classList.remove('swiper-button-disabled');
-    //   }
+          card.addEventListener('mouseleave', () => {
+              gsap.to(card.querySelector('.read-more'), {
+                  x: 0,
+                  duration: 0.3,
+                  ease: 'power2.out'
+              });
+          });
+      });
+  });
+</script>
 
-    //   if (swiper.isEnd) {
-    //     document.querySelector('.swiper-button-next').classList.add('swiper-button-disabled');
-    //   } else {
-    //     document.querySelector('.swiper-button-next').classList.remove('swiper-button-disabled');
-    //   }
-    // }
-
-    // // Initial button state update
-    // updateNavigationButtons();
-  </script>
-
+<!-- latest news script ends -->
 
 
 </body>
