@@ -9185,7 +9185,20 @@ section {
     padding-top: 218px;
     padding-bottom: 133px
 }
-
+.hero-area .image-wrapper {
+    place-content: end;
+    height: 70vh;
+    background: url('./../imgs/gallery/about-banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.hero-area .image-wrapper .image-title {
+    background: #72727200;
+    backdrop-filter: blur(7.5px);
+    text-align: left;
+    padding: 2rem 18rem;
+}
 @media only screen and (max-width: 1919px) {
     .hero-area-inner {
         padding-top: 178px;
@@ -10066,7 +10079,14 @@ section {
 }
 
 .team-box .thumb img {
-    width: 100%
+    width: 100%;
+    filter: grayscale(1);
+    transition: all .3s ease
+}
+.team-box .thumb img:hover{
+    filter: none;
+    transform: scale(1.1);
+    transition: all .3s ease
 }
 
 .team-box .title {
