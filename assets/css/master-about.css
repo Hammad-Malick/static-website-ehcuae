@@ -10468,3 +10468,229 @@ section {
 }
 
 /*# sourceMappingURL=master-about.css.map */
+
+
+/* custom start */
+
+.directors-section {
+    width: 100%;
+    display: flex;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+.title-container {
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.section-description {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.carousel-container {
+    flex: 2;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: 0.5s ease;
+}
+
+.director-card {
+    min-width: calc(33.333% - 1.33rem);
+    opacity: 0.3;
+    transition: all 0.5s ease;
+}
+.director-card:hover .director-image {
+    filter: none;
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+.director-card.active {
+    opacity: 1;
+}
+
+.director-image-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background: #111;
+}
+
+.director-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.director-info {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.director-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.director-title {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-button.prev {
+    left: -25px;
+}
+
+.nav-button.next {
+    right: -25px;
+}
+
+.carousel-counter {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.counter-current {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .directors-section {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .director-card {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .director-card {
+        min-width: 100%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* rest team */
+
+
+.team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.team-member:hover .member-image {
+    filter: grayscale(0%);
+}
+
+.member-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* rest team ends */
+
+
+/* custom end */

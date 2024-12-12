@@ -328,7 +328,7 @@
 
         // Click to persist content
         item.addEventListener('click', () => {
-          window.location.href = content[item.dataset.content].link;
+         window.location.href = content[item.dataset.content].link + '#' + item.dataset.content;
           // subMenuItems.forEach(i => i.classList.remove('active'));
           // item.classList.add('active');
           // const { title, description, img } = content[item.dataset.content];

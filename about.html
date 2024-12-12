@@ -79,7 +79,7 @@
           <button class="active" data-mode="dark">dark</button>
         </div>
       </div>
-      
+
     </div>
   </div>
   <!-- Switcher Area End -->
@@ -329,7 +329,7 @@
 
         // Click to persist content
         item.addEventListener('click', () => {
-          window.location.href = content[item.dataset.content].link;
+         window.location.href = content[item.dataset.content].link + '#' + item.dataset.content;
           // subMenuItems.forEach(i => i.classList.remove('active'));
           // item.classList.add('active');
           // const { title, description, img } = content[item.dataset.content];
@@ -362,7 +362,7 @@
         <main>
 
           <!-- hero area start  -->
-          <section class="hero-area">
+          <section class="hero-area" id="mission">
             <div class="image-wrapper overflow-hidden">
               <h1 class="image-title section-title large has_fade_anim" style="z-index: 1;">Who we are</h1>
             </div>
@@ -430,7 +430,7 @@
           <!-- counter area end  -->
 
           <!-- awards area start  -->
-          <section class="awards-area">
+          <section class="awards-area" id="who">
             <div class="container">
               <div class="awards-area-inner section-spacing">
                 <div class="section-header">
@@ -646,13 +646,13 @@
           <!-- faq area end  -->
 
           <!-- team area start  -->
-          <section class="team-area">
+          <section class="team-area" id="leader">
             <div class="container">
               <div class="team-area-inner section-spacing">
                 <div class="section-header">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim">Our Expert Team</h2>
+                      <h2 class="section-title has_fade_anim">Our Leadership Team</h2>
                     </div>
                   </div>
                   <div class="text-wrapper">
@@ -665,17 +665,6 @@
                   <div class="team-wrapper">
                     <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.30">
                       <a href="team-details.html">
-                        <div class="thumb" style="background: #ffffff !important;">
-                          <img src="assets/imgs/team/Untitled-1.png" alt="team icon"> <!-- Sample Image -->
-                        </div>
-                        <div class="content">
-                          <h3 class="title">Mr. Khaled Ben Said</h3>
-                          <p class="text">Chief Operations Officer</p>
-                        </div>
-                      </a>
-                    </div>
-                    <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45">
-                      <a href="team-details.html">
                         <div class="thumb">
                           <img src="assets/imgs/team/Untitled-2.png" alt="team icon"> <!-- Sample Image -->
                         </div>
@@ -685,7 +674,19 @@
                           </p>
                         </div>
                       </a>
-                     
+
+                    </div>
+                    <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45">
+                      <a href="team-details.html">
+                        <div class="thumb" style="background: #ffffff !important;">
+                          <img src="assets/imgs/team/Untitled-1.png" alt="team icon"> <!-- Sample Image -->
+                        </div>
+                        <div class="content">
+                          <h3 class="title">Mr. Khaled Ben Said</h3>
+                          <p class="text">Chief Operations Officer</p>
+                        </div>
+                      </a>
+
                     </div>
                     <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.60">
                       <a href="team-details.html">
@@ -697,7 +698,7 @@
                           <p class="text">Chief Strategy Officer</p>
                         </div>
                       </a>
-                     
+
                     </div>
                   </div>
                 </div>
@@ -707,34 +708,133 @@
 
           <!-- team area end  -->
 
-          <!-- pricing area start  -->
 
-          <!-- pricing area end  -->
-
-          <!-- contact area start  -->
-          <!-- <section class="contact-area">
-            <div class="container">
-              <div class="contact-area-inner section-spacing">
-                <div class="shape-1">
-                  <img src="assets/imgs/shape/img-s-73.webp" alt="shape">
-                </div>
-                <div class="section-content">
-                  <div class="section-title-wrapper">
-                    <div class="title-wrapper">
-                      <h2 class="section-title has_fade_anim">Start your experience
-                        with Ehcuae</h2>
-                    </div>
+          <!--  directors area start -->
+          <section class="directors-section" id="manageing">
+            <div class="title-container">
+              <h2 class="section-title">Our Managing director and group chief</h2>
+              <p class="section-description">
+                Meet the visionary leaders who drive our success through innovation,
+                expertise, and unwavering commitment to excellence.
+              </p>
+            </div>
+            <div class="carousel-container">
+              <div class="carousel-track">
+                <div class="director-card">
+                  <div class="director-image-container">
+                    <img src="assets/imgs/gallery/about-p-1.webp" alt="Director 1" class="director-image">
                   </div>
-                  <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn wc-btn-underline btn-text-flip"> <span
-                        data-text="Let’s get in touch">Let’s get in touch</span> <img
-                        src="assets/imgs/icon/arrow-right-half-light.webp" alt="icon image"></a>
+                  <div class="director-info">
+                    <h3 class="director-name">James Wilson</h3>
+                    <p class="director-title">Chief Executive Officer</p>
+                  </div>
+                </div>
+                <div class="director-card">
+                  <div class="director-image-container">
+                    <img src="assets/imgs/gallery/about-p-1.webp" alt="Director 2" class="director-image">
+                  </div>
+                  <div class="director-info">
+                    <h3 class="director-name">Sarah Johnson</h3>
+                    <p class="director-title">Chief Operations Officer</p>
+                  </div>
+                </div>
+                <div class="director-card">
+                  <div class="director-image-container">
+                    <img src="assets/imgs/gallery/about-p-1.webp" alt="Director 3" class="director-image">
+                  </div>
+                  <div class="director-info">
+                    <h3 class="director-name">Michael Chen</h3>
+                    <p class="director-title">Chief Technology Officer</p>
+                  </div>
+                </div>
+                <div class="director-card">
+                  <div class="director-image-container">
+                    <img src="assets/imgs/gallery/about-p-1.webp" alt="Director 4" class="director-image">
+                  </div>
+                  <div class="director-info">
+                    <h3 class="director-name">Emily Brown</h3>
+                    <p class="director-title">Chief Financial Officer</p>
                   </div>
                 </div>
               </div>
+              <button class="nav-button prev">‹</button>
+              <button class="nav-button next">›</button>
+              <div class="carousel-counter">
+                <span class="counter-current">1</span>/<span class="counter-total">4</span>
+              </div>
             </div>
-          </section> -->
-          <!-- contact area end  -->
+          </section>
+          <!--  directors area end -->
+
+          <!-- rest of team start -->
+          <section class="team-section mt-5" id="ourTeam">
+            <div class="text-wrapper mb-5">
+              <h2 class="section-title">Our Team</h2>
+              <p class="text has_fade_anim">We deploy a highly skilled team, specializing in delivering scalable
+                solutions and innovative strategies. Our professionals bring diverse expertise, working together
+                to achieve measurable success in every project we undertake.</p>
+            </div>
+            <div class="team-grid">
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 1" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Alex Johnson</h3>
+                  <p class="member-title">Senior Developer</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 2" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Emma Williams</h3>
+                  <p class="member-title">UX Designer</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 3" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Daniel Lee</h3>
+                  <p class="member-title">Project Manager</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 4" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Sophia Chen</h3>
+                  <p class="member-title">Data Analyst</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 5" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Ryan Taylor</h3>
+                  <p class="member-title">Marketing Specialist</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 6" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Olivia Brown</h3>
+                  <p class="member-title">HR Manager</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 7" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Ethan Davis</h3>
+                  <p class="member-title">Financial Analyst</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <img src="assets/imgs/gallery/about-p-1.webp" alt="Team Member 8" class="member-image">
+                <div class="member-info">
+                  <h3 class="member-name">Ava Martinez</h3>
+                  <p class="member-title">Customer Support Lead</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- rest of team end -->
 
           <!-- client area start  -->
           <div class="client-area">
@@ -824,7 +924,7 @@
                     <h2>hello@ehcuae.com</h2>
                   </form>
                 </div>
-                      <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
+                <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
                   <img src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
                 </div> -->
               </div>
@@ -866,6 +966,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/offcanvas.js"></script>
+  <script src="assets/js/about-us-navigation.js"></script>
 
   <script>
 
@@ -885,7 +986,133 @@
     }
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM fully loaded and parsed');
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.director-card');
+      const prevBtn = document.querySelector('.nav-button.prev');
+      const nextBtn = document.querySelector('.nav-button.next');
+      const counterCurrent = document.querySelector('.counter-current');
+      const counterTotal = document.querySelector('.counter-total');
 
+      let currentIndex = 0;
+      const cardWidth = cards[0].offsetWidth;
+      const visibleCards = 3;
+      const totalSlides = Math.ceil(cards.length - visibleCards + 1);
+
+      // Initialize counter
+      counterTotal.textContent = totalSlides;
+
+      function updateCarousel() {
+        // Update transform
+        gsap.to(track, {
+          x: -currentIndex * (cardWidth + 32), // 32px is the gap
+          duration: 0.5,
+          ease: 'power2.out'
+        });
+
+        // Update active states
+        cards.forEach((card, index) => {
+          if (index >= currentIndex && index < currentIndex + visibleCards) {
+            card.classList.add('active');
+            gsap.to(card, { opacity: 1, duration: 0.5 });
+          } else {
+            card.classList.remove('active');
+            gsap.to(card, { opacity: 0.3, duration: 0.5 });
+          }
+        });
+
+        // Animate counter
+        gsap.to(counterCurrent, {
+          duration: 0.5,
+          snap: { textContent: 1 },
+          textContent: currentIndex + 1,
+          ease: 'power2.out'
+        });
+      }
+
+      // Navigation buttons
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - visibleCards) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      // Initial animations
+      gsap.from('.title-container', {
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+      });
+
+      gsap.from('.director-card', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        // stagger: 0.2,
+        ease: 'power3.out'
+      });
+      gsap.to('.director-card', {
+        y: 50,
+        opacity: 1,
+        duration: 1,
+        // stagger: 0.2,
+        ease: 'power3.out'
+      });
+
+      // Initialize carousel
+      updateCarousel();
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // GSAP Animations
+      gsap.from('.section-title', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+      });
+
+      gsap.from('.team-member', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+      });
+
+      // Hover animations
+      document.querySelectorAll('.team-member').forEach(member => {
+        member.addEventListener('mouseenter', () => {
+          gsap.to(member, {
+            scale: 1.05,
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+
+        member.addEventListener('mouseleave', () => {
+          gsap.to(member, {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
