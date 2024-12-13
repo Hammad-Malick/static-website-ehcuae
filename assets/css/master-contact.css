@@ -9219,7 +9219,7 @@ section {
 }
 .hero-area .image-wrapper {
     place-content: end;
-    height: 70vh;
+    height: 40vh;
     background: url('./../imgs/gallery/contact-g-4.jpg');
     background-size: cover;
     background-position: center center;

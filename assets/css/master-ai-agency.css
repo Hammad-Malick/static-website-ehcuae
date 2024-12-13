@@ -9299,6 +9299,10 @@ section {
     position: relative;
     z-index: 1;
     height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -11236,3 +11240,7 @@ section {
 
 
 /* latest news area ends */
+
+
+
+/* customheader */

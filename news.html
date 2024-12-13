@@ -32,7 +32,26 @@
 
 
 <body class="font-heading-beatricetrial-regular-2 dark">
+  <style>
+    .hero-area .section-title {
+      margin-top: 0
+    }
 
+    .hero-area .image-wrapper {
+      place-content: end;
+      height: 40vh;
+      background: url('assets/imgs/gallery/news-banner-g.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-area .image-wrapper .image-title {
+      background: #72727200;
+      backdrop-filter: blur(7.5px);
+      padding: 2rem 18rem;
+    }
+  </style>
   <!-- Preloader -->
   <div id="preloader">
     <div id="container" class="container-preloader">
@@ -64,24 +83,7 @@
   </div>
 
   <!-- Switcher Area Start -->
-  <div class="switcher__area">
-    <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
-      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="switcher__items">
-      <div class="switcher__item">
-        <div class="switch__title-wrap">
-          <p class="switcher__title">mode</p>
-        </div>
-        <div class="switcher__btn mode-type wc-col-2">
-          <button data-mode="light">light</button>
-          <button class="active" data-mode="dark">dark</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+
   <!-- Switcher Area End -->
 
   <!-- offcanvas start  -->
@@ -158,197 +160,77 @@
   <!-- search modal end -->
 
   <!-- Header area start -->
-  <nav class="sidebar">
-    <div class="sidebar-wrapper">
-
-      <div class="sidebar-opt">
-        <div id="menu-items"></div>
-      </div>
-      <div class="sidebar-toggle-btn">
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <!-- custom nav -->
+  <div class="custom-nav-header">
+    <!-- <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
+    <div class="header-icons">
+      <button class="icon-btn toggle-menu">
+        <i class="fas fa-bars"></i> <!-- Change this icon dynamically -->
+      </button>
     </div>
-  </nav>
+  </div>
+  <div class="menu-container">
+    <nav class="nav-menu">
+      <a href="home.html" class="nav-item">Home</a>
+      <a href="about.html" class="nav-item">About Us</a>
+      <a href="energy-details.html" class="nav-item">EHC verticals</a>
+      <a href="#" class="nav-item">Blogs</a>
+      <a href="news.html" class="nav-item">News</a>
+      <a href="contact.html" class="nav-item">Contact Us</a>
+    </nav>
+  </div>
 
   <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuItems = document.querySelector('#menu-items');
-    const sidebar = document.querySelector('.sidebar');
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleMenuButton = document.querySelector('.toggle-menu');
+      const menuContainer = document.querySelector('.menu-container');
+      const navItems = document.querySelectorAll('.nav-item');
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('open');
-      sidebar.classList.toggle('open');
+      // State to track whether the menu is open or closed
+      let menuOpen = false;
 
-      if (sidebar.classList.contains('open')) {
-        menuItems.innerHTML = `
-      <div class="menu-content">
-        <div class="menu-left">
-          <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo">
-          <ul class="main-menu">
-            <li class="main-menu-item" data-link="home.html">Home</li>
-            <li class="main-menu-item" data-menu="about">About Us</li>
-            <li class="main-menu-item" data-menu="sectors">Business Units</li>
-            <li class="main-menu-item" data-link="contact.html" >Contact Us</li>
+      toggleMenuButton.addEventListener('click', () => {
+        const tl = gsap.timeline();
 
-            <li class="main-menu-item">Blogs</li>
-            <li class="main-menu-item" data-link="news.html">News</li>
-          </ul>
-        </div>
-        <div class="menu-right">
-          <ul class="sub-menu" id="sectors">
-            <li class="sub-menu-item" data-content="energy">Energy</li>
-            <li class="sub-menu-item" data-content="infra">Infrastructure</li>
-            <li class="sub-menu-item" data-content="safety">Safety</li>
-            <li class="sub-menu-item" data-content="tech">Technology</li>
-          </ul>
-          <ul class="sub-menu" id="about">
-            <li class="sub-menu-item" data-content="who">Who we are</li>
-            <li class="sub-menu-item" data-content="mission">Mission and vision</li>
-            <li class="sub-menu-item" data-content="leader">Leader ship</li>
-            <li class="sub-menu-item" data-content="manageing">Manageing director and group cheif</li>
-                        <li class="sub-menu-item" data-content="ourTeam">Our team</li>                 
-                       <li class="sub-menu-item" data-content="journey">Journey</li>
-
-          </ul>
-          <div class="content-description">
-            <h2>Energy</h2>
-            <p>Managing a broad portfolio of assets operating in key sectors...</p>
-          </div>
-        </div>
-        <div class="sub-menu-details">
-            <div id="sideimage" class="right-detail-image"></div>
-        </div>
-      </div>`;
-
-        initializeMenu(); // Initialize after adding dynamic HTML
-      } else {
-        menuItems.innerHTML = ''; // Clear menu content on close
-      }
-    });
-
-    function initializeMenu() {
-      const mainMenuItems = document.querySelectorAll('.main-menu-item');
-      const subMenuItems = document.querySelectorAll('.sub-menu-item');
-      const contentDescription = document.querySelector('.content-description');
-      const sideImage = document.querySelector('#sideimage');
-
-      const content = {
-        energy: {
-          title: 'Energy',
-          description: 'Delivering sustainable and innovative energy solutions for a greener future.',
-          img: 'assets/imgs/gallery/energy_sector_sample.jpg',
-          link: 'energy-details.html'
-        },
-        infra: {
-          title: 'Infrastructure',
-          description: 'Creating resilient and sustainable infrastructure with precision and expertise.',
-          img: 'assets/imgs/gallery/infra_sector_sample.jpg',
-          link: 'infrastructure-details.html'
-        },
-        safety: {
-          title: 'Safety',
-          description: 'Prioritizing safety, ensuring secure environments across sectors.',
-          img: 'assets/imgs/gallery/service_sector_sample.jpg',
-          link: 'safety-details.html'
-        },
-        tech: {
-          title: 'Technology',
-          description: 'Empowering businesses with digital tools and effective transformation.',
-          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
-          link: 'technology-details.html'
-        },
-        who: {
-          title: 'Who we are',
-          description: 'Delivering sustainable and innovative energy solutions for a greener future.',
-          img: 'assets/imgs/gallery/energy_sector_sample.jpg',
-          link: 'about.html'
-        },
-        mission: {
-          title: 'Mission and vision',
-          description: 'Creating resilient and sustainable infrastructure with precision and expertise.',
-          img: 'assets/imgs/gallery/infra_sector_sample.jpg',
-          link: 'about.html'
-        },
-        leader: {
-          title: 'Leader ship',
-          description: 'Prioritizing safety, ensuring secure environments across sectors.',
-          img: 'assets/imgs/gallery/service_sector_sample.jpg',
-          link: 'about.html'
-        },
-        manageing: {
-          title: 'Manageing director and group cheif',
-          description: 'Empowering businesses with digital tools and effective transformation.',
-          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
-          link: 'about.html'
-        },
-        journey: {
-          title: 'Journey',
-          description: 'Empowering businesses with digital tools and effective transformation.',
-          img: 'assets/imgs/gallery/tech_sector_sample.jpg',
-          link: 'about.html'
+        if (!menuOpen) {
+          // Open menu animation
+          tl.to(menuContainer, {
+            x: '0%',
+            duration: 0.5,
+            ease: 'power3.out'
+          })
+            .to(navItems, {
+              opacity: 0.5,
+              x: 0,
+              duration: 0.5,
+              stagger: 0.05,
+              ease: 'power3.out'
+            });
+          toggleMenuButton.innerHTML = `<i class="fas fa-times"></i>`; // Change to close icon
+        } else {
+          // Close menu animation
+          tl.to(navItems, {
+            opacity: 0,
+            x: -30,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: 'power3.in'
+          })
+            .to(menuContainer, {
+              x: '-100%',
+              duration: 0.5,
+              ease: 'power3.in'
+            });
+          toggleMenuButton.innerHTML = `<i class="fas fa-bars"></i>`; // Change back to open icon
         }
-      };
 
-      // Handle main menu item click
-      mainMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-          mainMenuItems.forEach(i => i.classList.remove('active'));
-          item.classList.add('active');
-
-          // Display corresponding submenu
-          const menuId = item.dataset.menu;
-          if (item.dataset.link) {
-            location.href = item.dataset.link;
-            return;
-          }
-          document.querySelectorAll('.sub-menu').forEach(menu => menu.classList.remove('active'));
-          document.getElementById(menuId)?.classList.add('active');
-        });
+        // Toggle the menu state
+        menuOpen = !menuOpen;
       });
-
-      // Handle submenu item hover
-      subMenuItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          const { title, description, img } = content[item.dataset.content];
-          contentDescription.querySelector('h2').textContent = title;
-          contentDescription.querySelector('p').textContent = description;
-          sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
-          contentDescription.classList.add('active');
-        });
-
-        // Leave to hide content unless clicked
-        item.addEventListener('mouseleave', () => {
-          if (!item.classList.contains('active')) {
-            clearContent();
-          }
-        });
-
-        // Click to persist content
-        item.addEventListener('click', () => {
-         window.location.href = content[item.dataset.content].link + '#' + item.dataset.content;
-          // subMenuItems.forEach(i => i.classList.remove('active'));
-          // item.classList.add('active');
-          // const { title, description, img } = content[item.dataset.content];
-          // contentDescription.querySelector('h2').textContent = title;
-          // contentDescription.querySelector('p').textContent = description;
-          // sideImage.innerHTML = `<img src="${img}" alt="${title}" width="1200" class="right-detail-image">`;
-          // contentDescription.classList.add('active');
-        });
-      });
-
-      function clearContent() {
-        contentDescription.querySelector('h2').textContent = '';
-        contentDescription.querySelector('p').textContent = '';
-        sideImage.innerHTML = '';
-        contentDescription.classList.remove('active');
-      }
-    }
-
+    });
   </script>
+
+  <!-- custom nav end -->
 
   <!-- Header area end -->
 
@@ -361,7 +243,11 @@
         <div class="overlay-switcher-close"></div>
 
         <main>
-
+          <section class="hero-area" id="mission">
+            <div class="image-wrapper overflow-hidden">
+              <h1 class="image-title section-title large has_fade_anim" style="z-index: 1;">News & Updates</h1>
+            </div>
+          </section>
           <!-- featured area start  -->
           <section class="featured-area">
             <div class="container">
@@ -621,10 +507,10 @@
                     </p>
                   </div>
                   <form action="#" class="subscribe-form">
-                    <h2>hello@ehcuae.com</h2>
+                    <h2>info@ehcuae.com</h2>
                   </form>
                 </div>
-                      <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
+                <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
                   <img src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
                 </div> -->
               </div>
