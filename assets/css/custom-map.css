@@ -32,6 +32,7 @@
     bottom: 23rem;
     border-radius: 25px;
 }
+
 .map-container .map-image {
     position: relative;
     /* background-image: url('./../imgs/gallery/custom-map.jpg'); */
@@ -50,17 +51,67 @@
     stroke-width: 1;
     opacity: 1;
     pointer-events: none;
+
 }
 
 .location-point {
-    fill: rgb(0, 0, 0);
     cursor: pointer;
     transition: fill 0.3s ease;
+    opacity: 1;
 }
+
+.location-point:hover {
+    animation: none;
+}
+
+.bounce1 {
+    animation-delay: 5s;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+.bounce2 {
+    animation-delay: 5s;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+.bounce3 {
+    animation-delay: 5s;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.bounce4 {
+    animation-delay: 5s;
+    animation: bounce 1.8s infinite ease-in-out;
+}
+
+.bounce5 {
+    animation-delay: 5s;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 
 .highlight-ring {
     fill: none;
-    stroke:rgb(42 255 0);
+    stroke: rgb(42 255 0);
     stroke-width: 8;
     opacity: 0;
     animation: pulse 1s infinite;
