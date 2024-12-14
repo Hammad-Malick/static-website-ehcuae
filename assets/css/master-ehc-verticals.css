@@ -10170,7 +10170,7 @@ color: #ef7f1d;
 
 
 
-.nav-container {
+.nav-slided-container {
     position: relative;
     background: #ffffff;
     border-radius: 30px;
@@ -10179,13 +10179,13 @@ color: #ef7f1d;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.nav-items {
+.nav-slided-container .nav-slider-items {
     display: flex;
     position: relative;
     z-index: 1;
 }
 
-.nav-item {
+.nav-slided-container .nav-slider-item {
     flex: 1;
     padding: 15px 20px;
     text-align: center;
@@ -10198,11 +10198,11 @@ color: #ef7f1d;
     font-weight: 500;
 }
 
-.nav-item.active {
+.nav-slided-container .nav-slider-item.active {
     color: #fff;
 }
 
-.slider {
+.nav-slided-container .slider {
     position: absolute;
     height: calc(100% - 10px);
     top: 5px;

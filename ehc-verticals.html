@@ -247,20 +247,20 @@
 
           <!-- verticals area start  -->
           <div class="ehc-sections-container">
-            <nav class="nav-container">
-              <div class="nav-items">
-                <div class="nav-item active" href="#energy" data-index="0">Energy</div>
-                <div class="nav-item" href="#infrastructure" data-index="1">Infrastructure</div>
-                <div class="nav-item" href="#safety" data-index="2">Safety</div>
-                <div class="nav-item" href="#technology" data-index="3">Technology</div>
+            <nav class="nav-slided-container">
+              <div class="nav-slider-items">
+                <div class="nav-slider-item active" href="#energy" data-index="0">Energy</div>
+                <div class="nav-slider-item" href="#infrastructure" data-index="1">Infrastructure</div>
+                <div class="nav-slider-item" href="#safety" data-index="2">Safety</div>
+                <div class="nav-slider-item" href="#technology" data-index="3">Technology</div>
               </div>
               <div class="slider"></div>
             </nav>
             <script>
-              const navItems = document.querySelectorAll('.nav-item');
+              const navItems = document.querySelectorAll('.nav-slider-item');
               const slider = document.querySelector('.slider');
               let activeIndex = 0;
-              document.querySelectorAll('.nav-item').forEach(link => {
+              document.querySelectorAll('.nav-slider-item').forEach(link => {
                 link.addEventListener('click', (e) => {
                   e.preventDefault();
                   const targetId = e.target.getAttribute('href');
@@ -663,7 +663,7 @@
       gsap.from(section.querySelector('.ehc-title'), {
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
+          start: 'top center',
           toggleActions: 'play none none reverse'
         },
         y: 50,
