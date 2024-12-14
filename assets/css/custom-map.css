@@ -102,17 +102,19 @@
 
 .country-names {
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-around;
-    padding: 0 50px;
+    padding: 19px 50px;
+    background: #c8c8c85e;
+    backdrop-filter: blur(7.5px);
 }
 
 .country-name {
     color: #000000;
-    text-shadow: -1px 1px 20px #000000;
+    /* text-shadow: -1px 1px 20px #000000; */
     font-size: 24px;
     cursor: pointer;
     opacity: 1;
