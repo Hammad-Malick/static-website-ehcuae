@@ -3721,7 +3721,7 @@
 }
 
 body {
-    font-family: var(--font_kanit);
+    font-family: var(--font_aptos);
     line-height: 1
 }
 
@@ -3841,6 +3841,12 @@ h5 {
 h6 {
     font-size: 18px
 }
+@font-face {
+    font-family: "aptos";
+    src: url("../fonts/aptos-black/aptos-black.ttf");
+    font-weight: 400;
+    font-display: swap
+}
 
 @font-face {
     font-family: "recoleta";
@@ -3881,6 +3887,7 @@ h6 {
 }
 
 :root {
+    --font_aptos: "aptos";
     --font_recoleta: "recoleta";
     --font_teko: "Teko", sans-serif;
     --font_dmsans: "DM Sans", sans-serif;
@@ -3900,7 +3907,7 @@ h6 {
 .font-heading-recoleta-medium h4,
 .font-heading-recoleta-medium h5,
 .font-heading-recoleta-medium h6 {
-    font-family: var(--font_recoleta);
+    font-family:  var(--font_aptos);
     font-weight: 500;
     line-height: 1.05
 }
@@ -3911,7 +3918,7 @@ h6 {
 .font-heading-teko-bold h4,
 .font-heading-teko-bold h5,
 .font-heading-teko-bold h6 {
-    font-family: var(--font_teko);
+    font-family:  var(--font_aptos);
     font-weight: 700;
     line-height: .94
 }
@@ -3922,7 +3929,7 @@ h6 {
 .font-heading-dmsans-medium h4,
 .font-heading-dmsans-medium h5,
 .font-heading-dmsans-medium h6 {
-    font-family: var(--font_dmsans);
+    font-family:  var(--font_aptos);
     font-weight: 500;
     line-height: 1
 }
@@ -3933,7 +3940,7 @@ h6 {
 .font-heading-plusjakartasans-regular h4,
 .font-heading-plusjakartasans-regular h5,
 .font-heading-plusjakartasans-regular h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family:  var(--font_aptos);
     font-weight: 400;
     line-height: 1
 }
@@ -3944,7 +3951,7 @@ h6 {
 .font-heading-plusjakartasans-regular-2 h4,
 .font-heading-plusjakartasans-regular-2 h5,
 .font-heading-plusjakartasans-regular-2 h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family:  var(--font_aptos);
     font-weight: 400;
     line-height: 1.08
 }
@@ -3955,7 +3962,7 @@ h6 {
 .font-heading-beatricetrial-regular h4,
 .font-heading-beatricetrial-regular h5,
 .font-heading-beatricetrial-regular h6 {
-    font-family: var(--font_beatricetrial);
+    font-family:  var(--font_aptos);
     font-weight: 400;
     line-height: 1.07
 }
@@ -3966,7 +3973,7 @@ h6 {
 .font-heading-beatricetrial-regular-2 h4,
 .font-heading-beatricetrial-regular-2 h5,
 .font-heading-beatricetrial-regular-2 h6 {
-    font-family: var(--font_beatricetrial);
+    font-family:  var(--font_aptos);
     font-weight: 400;
     line-height: 1.08
 }
@@ -3977,7 +3984,7 @@ h6 {
 .font-heading-beatricetrial-medium h4,
 .font-heading-beatricetrial-medium h5,
 .font-heading-beatricetrial-medium h6 {
-    font-family: var(--font_beatricetrial);
+    font-family:  var(--font_aptos);
     font-weight: 500;
     line-height: 1.08
 }
@@ -3988,7 +3995,7 @@ h6 {
 .font-heading-khand-bold h4,
 .font-heading-khand-bold h5,
 .font-heading-khand-bold h6 {
-    font-family: var(--font_khand);
+    font-family:  var(--font_aptos);
     font-weight: 700;
     line-height: .88
 }
@@ -3999,7 +4006,7 @@ h6 {
 .font-heading-instumentsans-medium h4,
 .font-heading-instumentsans-medium h5,
 .font-heading-instumentsans-medium h6 {
-    font-family: var(--font_instrumentsans);
+    font-family:  var(--font_aptos);
     font-weight: 500;
     line-height: 1
 }
@@ -4010,7 +4017,7 @@ h6 {
 .font-heading-instumentsans-semibold h4,
 .font-heading-instumentsans-semibold h5,
 .font-heading-instumentsans-semibold h6 {
-    font-family: var(--font_instrumentsans);
+    font-family:  var(--font_aptos);
     font-weight: 600;
     line-height: 1
 }
@@ -4021,7 +4028,7 @@ h6 {
 .font-heading-spacegrotesk-bold h4,
 .font-heading-spacegrotesk-bold h5,
 .font-heading-spacegrotesk-bold h6 {
-    font-family: var(--font_spacegrotesk);
+    font-family:  var(--font_aptos);
     font-weight: 700;
     line-height: 1
 }
@@ -4032,7 +4039,7 @@ h6 {
 .font-heading-canelatrial-thin h4,
 .font-heading-canelatrial-thin h5,
 .font-heading-canelatrial-thin h6 {
-    font-family: var(--font_canelatrial);
+    font-family:  var(--font_aptos);
     font-weight: 300;
     line-height: 1.2
 }
@@ -4525,7 +4532,7 @@ h6 {
 
 .btn-close {
     content: "";
-    font-family: "icomoon";
+    font-family: var(--font_aptos);
     font-size: 16px;
     opacity: 1;
     filter: brightness(100) contrast(0);
@@ -6827,7 +6834,7 @@ section {
 
 .main-menu li.menu-item-has-children>a:after {
     content: "";
-    font-family: var(--font_awesome);
+    font-family: var(--font_aptos);
     margin-inline-start: 5px;
     font-weight: 600;
     font-size: 14px
@@ -8121,7 +8128,7 @@ section {
     top: 40%;
     z-index: 99;
     transform: translateY(-50%);
-    font-family: var(--font_primary);
+    font-family: var(--font_aptos);
     transition: all .3s
 }
 
@@ -8613,7 +8620,7 @@ section {
 .font-heading-Beatricetrial h4,
 .font-heading-Beatricetrial h5,
 .font-heading-Beatricetrial h6 {
-    font-family: var(--font_beatricetrial)
+    font-family:  var(--font_aptos)
 }
 
 .cf_feature.style-3 {
@@ -8973,13 +8980,14 @@ section {
 }
 
 .footer-area-inner {
-    display: grid;
+    display: grid
+;
     gap: 80px 50px;
     grid-template-columns: 365px 190px 190px 385px;
     justify-content: space-between;
     overflow: hidden;
-    padding-top: 130px;
-    padding-bottom: 130px
+    padding-top: 60px;
+    padding-bottom: 25px;
 }
 
 @media only screen and (max-width: 1919px) {
@@ -9243,7 +9251,7 @@ section {
 .featured-area .counter-box .number {
     font-size: 30px;
     line-height: 1;
-    font-family: var(--font_beatricetrial);
+    font-family:  var(--font_aptos);
     color: var(--primary)
 }
 

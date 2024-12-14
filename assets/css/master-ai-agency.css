@@ -9024,13 +9024,14 @@ section {
 }
 
 .footer-area-inner {
-    display: grid;
+    display: grid
+;
     gap: 80px 50px;
     grid-template-columns: 365px 190px 190px 385px;
     justify-content: space-between;
     overflow: hidden;
-    padding-top: 130px;
-    padding-bottom: 130px
+    padding-top: 60px;
+    padding-bottom: 25px;
 }
 
 @media only screen and (max-width: 1919px) {
@@ -9302,7 +9303,6 @@ section {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 @media only screen and (max-width: 1399px) {
@@ -9347,7 +9347,7 @@ section {
 }
 
 .hero-area .section-title {
-    max-width: 910px;
+    /* max-width: 910px; */
     font-size: 100px;
     line-height: .95;
     margin-top: -10px
@@ -11237,6 +11237,7 @@ section {
         font-size: 3rem;
     }
 }
+ 
 
 
 /* latest news area ends */
