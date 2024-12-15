@@ -463,14 +463,14 @@
                 <img src="assets/imgs/gallery/energy-v-b.jpg" alt="Technology" class="slide-bg">
                 <!-- <div class="overlay"></div> -->
                 <div class="content">
-                  <h2 class="header">EHC Verticals</h2>
+                  <h1 class="header">EHC Verticals</h1>
                   <div class="main-content">
                     <div class="counter">
                       <span>01</span>
                       <div class="counter-line"></div>
                       <span>04</span>
                     </div>
-                    <h1 class="title">Energy</h1>
+                    <h2 class="title">Energy</h2>
                     <a href="ehc-verticals.html" class="explore-btn">
                       EXPLORE
                       <span>→</span>
@@ -482,14 +482,14 @@
                 <img src="assets/imgs/gallery/infra-v-b.jpg" alt="Mobility" class="slide-bg">
                 <!-- <div class="overlay"></div> -->
                 <div class="content">
-                  <h2 class="header">EHC Verticals</h2>
+                  <h1 class="header">EHC Verticals</h1>
                   <div class="main-content">
                     <div class="counter">
                       <span>02</span>
                       <div class="counter-line"></div>
                       <span>04</span>
                     </div>
-                    <h1 class="title">Infrastructure</h1>
+                    <h2 class="title">Infrastructure</h2>
                     <a href="ehc-verticals.html" class="explore-btn">
                       EXPLORE
                       <span>→</span>
@@ -501,14 +501,14 @@
                 <img src="assets/imgs/gallery/safety-v-b.jpg" alt="Infrastructure" class="slide-bg">
                 <!-- <div class="overlay"></div> -->
                 <div class="content">
-                  <h2 class="header">EHC Verticals</h2>
+                  <h1 class="header">EHC Verticals</h1>
                   <div class="main-content">
                     <div class="counter">
                       <span>03</span>
                       <div class="counter-line"></div>
                       <span>04</span>
                     </div>
-                    <h1 class="title">Safety</h1>
+                    <h2 class="title">Safety</h2>
                     <a href="ehc-verticals.html" class="explore-btn">
                       EXPLORE
                       <span>→</span>
@@ -520,14 +520,14 @@
                 <img src="assets/imgs/gallery/tech-v-b.jpg" alt="Energy" class="slide-bg">
                 <!-- <div class="overlay"></div> -->
                 <div class="content">
-                  <h2 class="header">EHC Verticals</h2>
+                  <h1 class="header">EHC Verticals</h1>
                   <div class="main-content">
                     <div class="counter">
                       <span>04</span>
                       <div class="counter-line"></div>
                       <span>04</span>
                     </div>
-                    <h1 class="title">Technology</h1>
+                    <h2 class="title">Technology</h2>
                     <a href="ehc-verticals.html" class="explore-btn">
                       EXPLORE
                       <span>→</span>
@@ -957,40 +957,42 @@
                 });
               });
               countriesTabs.forEach(country => {
-
+                countriesTabs.forEach(countryTab => {
+                  // Hide all backgrounds first
+                  countryTab.children[0].style.display = 'none';
+                  countryTab.children[0].style.backgroundImage = '';  // Reset the background
+                });
                 country.addEventListener('click', (e) => {
-                  countriesTabs.forEach(country => {
-                    country.children[0].style.display = 'none';
-                  });
+
+                  // Show the clicked country's background
                   country.children[0].style.display = 'flex';
-                  switch (country.id) {
-                    case 'uae':
-                      country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/uae-land-mark.webp)';
 
-
-                      break;
-                    case 'romania':
-                      country.children[0].style.background = 'url(assets/imgs/gallery/romania-landmark.jpg)';
-
-                      break;
-                    case 'saudi':
-                      country.children[0].style.background = 'url(assets/imgs/gallery/saudi-landmark.jpg)';
-
-                      break;
-                    case 'oman':
-                      country.children[0].style.background = 'url(assets/imgs/gallery/oman-landmark.jpg)';
-
-                      break;
-                    case 'egypt':
-                      country.children[0].style.background = 'url(assets/imgs/gallery/oman-landmark.jpg)';
-
-                      break;
-
-                    default:
-                      break;
+                  // Check if the clicked country already has a background
+                  if (country.children[0].style.backgroundImage !== '') {
+                    // If it has a background, remove it
+                    country.children[0].style.backgroundImage = '';
+                  } else {
+                    // If it doesn't have a background, add the background based on the country
+                    switch (country.id) {
+                      case 'uae':
+                        country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/uae-land-mark.webp)';
+                        break;
+                      case 'romania':
+                        country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/romania-landmark.jpg)';
+                        break;
+                      case 'saudi':
+                        country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/saudi-landmark.jpg)';
+                        break;
+                      case 'oman':
+                        country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/oman-landmark.jpg)';
+                        break;
+                      case 'egypt':
+                        country.children[0].style.backgroundImage = 'url(assets/imgs/gallery/egypt-landmark.jpg)';
+                        break;
+                      default:
+                        break;
+                    }
                   }
-                  // country.children[0].style.background = 'url(assets/imgs/flags/' + country.innerHTML.toLowerCase() + '.png)';
-
                 });
               });
 
@@ -1086,7 +1088,7 @@
                 <div class="container">
                   <div class="copyright-area-inner">
                     <div class="copyright-text">
-                      <p class="text">© 2024-25 <a href="home.html" target="_blank">Ehuae</a>
+                      <p class="text">© 2024-25 <a href="home.html" target="_blank">Ehcuae</a>
                         company</p>
                     </div>
                   </div>

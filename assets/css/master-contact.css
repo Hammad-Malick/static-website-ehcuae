@@ -3721,7 +3721,7 @@
 }
 
 body {
-    font-family:  var(--font_aptos);
+    font-family:  var(--font_aptos_light);
     line-height: 1
 }
 
@@ -3848,6 +3848,12 @@ h6 {
     font-display: swap
 }
 @font-face {
+    font-family: "aptos-light";
+    src: url("../fonts/aptos-light/aptos-light.ttf");
+    font-weight: 400;
+    font-display: swap
+}
+@font-face {
     font-family: "recoleta";
     src: url("../fonts/recoleta/Latinotype - Recoleta Medium.otf");
     font-display: swap
@@ -3887,6 +3893,7 @@ h6 {
 
 :root {
     --font_aptos: "aptos";
+    --font_aptos_light: "aptos-light";
     --font_recoleta: "recoleta";
     --font_teko: "Teko", sans-serif;
     --font_dmsans: "DM Sans", sans-serif;
@@ -6834,7 +6841,7 @@ section {
 
 .main-menu li.menu-item-has-children>a:after {
     content: "";
-    font-family:  var(--font_aptos);
+    font-family:  var(--font_aptos_light);
     margin-inline-start: 5px;
     font-weight: 600;
     font-size: 14px
@@ -8128,7 +8135,7 @@ section {
     top: 40%;
     z-index: 99;
     transform: translateY(-50%);
-    font-family:  var(--font_aptos);
+    font-family:  var(--font_aptos_light);
     transition: all .3s
 }
 

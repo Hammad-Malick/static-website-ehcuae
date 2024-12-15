@@ -3722,7 +3722,7 @@
 }
 
 body {
-    font-family: var(--font_aptos);
+    font-family: var(--font_aptos_light);
     line-height: 1
 }
 
@@ -3855,6 +3855,12 @@ h6 {
     font-weight: 400;
     font-display: swap
 }
+@font-face {
+    font-family: "aptos-light";
+    src: url("../fonts/aptos-light/aptos-light.ttf");
+    font-weight: 400;
+    font-display: swap
+}
 
 @font-face {
     font-family: "beatricetrial";
@@ -3891,6 +3897,7 @@ h6 {
 :root {
     --font_recoleta: "recoleta";
     --font_aptos: "aptos";
+    --font_aptos_light: "aptos-light";
     --font_teko: "Teko", sans-serif;
     --font_dmsans: "DM Sans", sans-serif;
     --font_plusjakartasans: "Plus Jakarta Sans", sans-serif;
