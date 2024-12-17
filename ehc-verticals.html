@@ -37,7 +37,7 @@
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
+        <img loading="lazy" src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
         <div class="txt-loading">
           <!-- <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
@@ -143,7 +143,7 @@
   <!-- Sidenav area start -->
   <!-- custom nav -->
   <div class="custom-nav-header">
-    <!-- <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
+    <!-- <img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
     <div class="header-icons">
       <button class="icon-btn toggle-menu">
         <i class="fas fa-bars"></i> <!-- Change this icon dynamically -->
@@ -152,7 +152,7 @@
   </div>
   <div class="menu-container">
     <div class="top-sided-logo">
-      <img src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
+      <img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
     </div>
     <nav class="nav-menu">
       <a href="home.html" class="nav-item">Home</a>
@@ -256,65 +256,12 @@
               </div>
               <div class="slider"></div>
             </nav>
-            <script>
-              const navItems = document.querySelectorAll('.nav-slider-item');
-              const slider = document.querySelector('.slider');
-              let activeIndex = 0;
-              document.querySelectorAll('.nav-slider-item').forEach(link => {
-                link.addEventListener('click', (e) => {
-                  e.preventDefault();
-                  const targetId = e.target.getAttribute('href');
-                  gsap.to(window, {
-                    duration: 1,
-                    scrollTo: targetId,
-                    ease: "power2.inOut"
-                  });
-                });
-              });
-              function initSlider() {
-                const activeItem = navItems[0];
-                gsap.set(slider, {
-                  width: 465,
-                  x: 0
-                });
-              }
-
-              navItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                  if (activeIndex !== index) {
-                    updateNavigation(index);
-                  }
-                });
-              });
-
-              function updateNavigation(newIndex) {
-                navItems[activeIndex].classList.remove('active');
-                navItems[newIndex].classList.add('active');
-
-                gsap.to(slider, {
-                  x: navItems[newIndex].offsetLeft,
-                  width: navItems[newIndex].offsetWidth,
-                  duration: 0.5,
-                  ease: "power2.out"
-                });
-
-                activeIndex = newIndex;
-              }
-
-              window.addEventListener('load', initSlider);
-
-              window.addEventListener('resize', () => {
-                gsap.set(slider, {
-                  x: navItems[activeIndex].offsetLeft,
-                  width: navItems[activeIndex].offsetWidth
-                });
-              });
-            </script>
+          
             <!-- Energy Section -->
             <section class="ehc-section" id="energy">
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
-                  <img src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
+                  <img loading="lazy" src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
                     style="width: 200px; margin-bottom: 30px;">
                   <h2 class="ehc-section-title">Energy</h2>
                 </div>
@@ -379,19 +326,19 @@
               <div class="ehc-carousel-container">
                 <div class="ehc-carousel">
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da" alt="PAL Cooling">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="PAL Cooling">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">PAL Cooling Holding</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Kalyon Enerji">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Kalyon Enerji">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Kalyon Enerji</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7" alt="Energy Solutions">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Energy Solutions">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Energy Solutions</h3>
                     </div>
@@ -404,7 +351,7 @@
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
 
-                  <img src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction" class="ehc-company-logo"
+                  <img loading="lazy" src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction" class="ehc-company-logo"
                     style="width: 200px; margin-bottom: 300px;">
                   <h2 class="ehc-section-title">Infrastructure</h2>
                 </div>
@@ -451,19 +398,19 @@
               <div class="ehc-carousel-container">
                 <div class="ehc-carousel">
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5" alt="Construction Site">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Construction Site">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Innovative Construction</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12" alt="Engineering Design">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Engineering Design">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Advanced Engineering</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp"
                       alt="Infrastructure Project">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Infrastructure Solutions</h3>
@@ -477,7 +424,7 @@
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
 
-                  <img src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services" class="ehc-company-logo"
+                  <img loading="lazy" src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services" class="ehc-company-logo"
                     style="width: 200px; margin-bottom: 300px;">
                   <h2 class="ehc-section-title">Safety</h2>
                 </div>
@@ -513,20 +460,20 @@
               <div class="ehc-carousel-container">
                 <div class="ehc-carousel">
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559"
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp"
                       alt="Firefighting Equipment">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Advanced Firefighting Equipment</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1599059813005-11265ba4b4ce" alt="Emergency Response">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Emergency Response">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Rapid Emergency Response</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1582152629442-4a864303fb96" alt="Fire Safety Training">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Fire Safety Training">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Comprehensive Safety Training</h3>
                     </div>
@@ -538,7 +485,7 @@
             <section class="ehc-section" id="technology">
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
-                  <img src="assets/imgs/logo/isi.png" alt="International System Integration Company LLC"
+                  <img loading="lazy" src="assets/imgs/logo/isi.png" alt="International System Integration Company LLC"
                     class="ehc-company-logo" style="width: 200px; margin-bottom: 300px;">
                   <h2 class="ehc-section-title">Technology</h2>
                 </div>
@@ -573,19 +520,19 @@
               <div class="ehc-carousel-container">
                 <div class="ehc-carousel">
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="System Integration">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="System Integration">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Advanced System Integration</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Smart Systems">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Smart Systems">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Smart System Solutions</h3>
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3" alt="AI Integration">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="AI Integration">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">AI-Powered Technologies</h3>
                     </div>
@@ -606,7 +553,7 @@
               <div class="footer-area-inner">
                 <div class="footer-widget-wrapper">
                   <div class="footer-logo">
-                    <a href="home.html"><img src="assets/imgs/logo/EHC-Black-trans.png" width="400" alt="site-logo"></a>
+                    <a href="home.html"><img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="400" alt="site-logo"></a>
                   </div>
                   <p class="info-text">Enterprise Holding Company based on UAE / Abudhabi</p>
                   <ul class="social-links">
@@ -646,7 +593,7 @@
                   </form>
                 </div>
                 <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
-                  <img src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
+                  <img loading="lazy" src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
                 </div> -->
               </div>
               <div class="copyright-area">
@@ -688,7 +635,7 @@
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/offcanvas.js"></script>
 
-  <script>
+  <!-- <script>
     // energy script
     // testimonial slider
     if (('.testimonial-slider').length) {
@@ -720,77 +667,141 @@
       });
     }
 
-  </script>
+  </script> -->
   <script>
-  // Define the debounce function
-function debounce(func, delay) {
-  let timeout;
-  return function() {
-    clearTimeout(timeout);
-    timeout = setTimeout(func, delay);
-  };
-}
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+    // Carousel functionality
+    document.querySelectorAll('.ehc-carousel-container').forEach((container, index) => {
+      const carousel = container.querySelector('.ehc-carousel');
+      const items = carousel.querySelectorAll('.ehc-carousel-item');
+      const prevBtn = container.previousElementSibling.querySelector('.ehc-prev');
+      const nextBtn = container.previousElementSibling.querySelector('.ehc-next');
+      let position = 0;
 
-// Carousel functionality
-document.querySelectorAll('.ehc-carousel-container').forEach((container, index) => {
-  const carousel = container.querySelector('.ehc-carousel');
-  const items = carousel.querySelectorAll('.ehc-carousel-item');
-  const prevBtn = container.previousElementSibling.querySelector('.ehc-prev');
-  const nextBtn = container.previousElementSibling.querySelector('.ehc-next');
-  let position = 0;
+      function updateCarousel() {
+        gsap.to(carousel, {
+          duration: 0.5,
+          x: -position * (items[0].offsetWidth + 20),
+          ease: "power2.out"
+        });
+      }
 
-  function updateCarousel() {
-    gsap.to(carousel, {
-      duration: 0.5,
-      x: -position * (items[0].offsetWidth + 20),
-      ease: "power2.out"
+      prevBtn.addEventListener('click', () => {
+        position = (position - 1 + items.length) % items.length;
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        position = (position + 1) % items.length;
+        updateCarousel();
+      });
+
+      // Initialize GSAP timeline for this carousel
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        }
+      });
+
+      // Add animations
+      tl.from(items, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2
+      });
+
+      // Responsive handling
+      window.addEventListener('resize', updateCarousel);
     });
-  }
 
-  prevBtn.addEventListener('click', () => {
-    position = (position - 1 + items.length) % items.length;
-    updateCarousel();
-  });
+    // Section animations
+    document.querySelectorAll('.ehc-section').forEach((section, index) => {
+      gsap.from(section.querySelector('.ehc-section-title'), {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        }
+      });
 
-  nextBtn.addEventListener('click', () => {
-    position = (position + 1) % items.length;
-    updateCarousel();
-  });
-
-  window.addEventListener('resize', debounce(updateCarousel, 200)); // Throttle resize
-});
-
-// Section animations with ScrollTrigger optimizations
-document.querySelectorAll('.ehc-section').forEach((section, index) => {
-  gsap.from(section.querySelector('.ehc-section-title'), {
-    autoAlpha: 0,
-    y: 30,
-    duration: 1,
-    scrollTrigger: {
-      trigger: section,
-      start: "top bottom",
-      end: "bottom top",
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  gsap.from(section.querySelector('.ehc-section-description'), {
-    autoAlpha: 0,
-    y: 30,
-    duration: 1,
-    delay: 0.2,
-    scrollTrigger: {
-      trigger: section,
-      start: "top bottom",
-      end: "bottom top",
-      toggleActions: "play none none reverse"
-    }
-  });
-});
-
+      gsap.from(section.querySelector('.ehc-section-description'), {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
   </script>
+    <script>
+      /* for navigation */
+      const navItems = document.querySelectorAll('.nav-slider-item');
+      const slider = document.querySelector('.slider');
+      let activeIndex = 0;
+      document.querySelectorAll('.nav-slider-item').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = e.target.getAttribute('href');
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: targetId,
+            ease: "power2.inOut"
+          });
+        });
+      });
+      function initSlider() {
+        const activeItem = navItems[0];
+        gsap.set(slider, {
+          width: 500,
+          x: 0
+        });
+      }
+
+      navItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          if (activeIndex !== index) {
+            updateNavigation(index);
+          }
+        });
+      });
+
+      function updateNavigation(newIndex) {
+        navItems[activeIndex].classList.remove('active');
+        navItems[newIndex].classList.add('active');
+
+        gsap.to(slider, {
+          x: navItems[newIndex].offsetLeft,
+          width: navItems[newIndex].offsetWidth,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+
+        activeIndex = newIndex;
+      }
+
+      window.addEventListener('load', initSlider);
+
+      window.addEventListener('resize', () => {
+        gsap.set(slider, {
+          x: navItems[activeIndex].offsetLeft,
+          width: navItems[activeIndex].offsetWidth
+        });
+      });
+    </script>
 </body>
 
 </html>
