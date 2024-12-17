@@ -313,9 +313,11 @@
             <!-- Energy Section -->
             <section class="ehc-section" id="energy">
               <div class="ehc-section-content">
-                <img src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
-                  style="width: 200px; margin-bottom: 30px;">
-                <h2 class="ehc-section-title">Energy</h2>
+                <div class="ehc-section-header">
+                  <img src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
+                    style="width: 200px; margin-bottom: 30px;">
+                  <h2 class="ehc-section-title">Energy</h2>
+                </div>
                 <p class="ehc-section-description">
                   Al Fanar Group, headquartered in Abu Dhabi, is a leading
                   organization in the gas sector, specializing in contracting,
@@ -400,9 +402,12 @@
 
             <section class="ehc-section" id="infrastructure">
               <div class="ehc-section-content">
-                <img src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction" class="ehc-company-logo"
-                  style="width: 200px; margin-bottom: 300px;">
-                <h2 class="ehc-section-title">Infrastructure</h2>
+                <div class="ehc-section-header">
+
+                  <img src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction" class="ehc-company-logo"
+                    style="width: 200px; margin-bottom: 300px;">
+                  <h2 class="ehc-section-title">Infrastructure</h2>
+                </div>
                 <p class="ehc-section-description">
                   KAD Engineering and Construction is a leading company based in Abu Dhabi, specializing in
                   infrastructure development and construction. The firm operates across various sectors, includingKAD
@@ -470,9 +475,12 @@
 
             <section class="ehc-section" id="safety">
               <div class="ehc-section-content">
-                <img src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services" class="ehc-company-logo"
-                  style="width: 200px; margin-bottom: 300px;">
-                <h2 class="ehc-section-title">Safety</h2>
+                <div class="ehc-section-header">
+
+                  <img src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services" class="ehc-company-logo"
+                    style="width: 200px; margin-bottom: 300px;">
+                  <h2 class="ehc-section-title">Safety</h2>
+                </div>
                 <p class="ehc-section-description">
                   FOOJ Firefighting Services delivers comprehensive fire safety and emergency response solutions across
                   the United Arab Emirates.
@@ -529,9 +537,11 @@
 
             <section class="ehc-section" id="technology">
               <div class="ehc-section-content">
-                <img src="assets/imgs/logo/isi.png" alt="International System Integration Company LLC"
-                  class="ehc-company-logo" style="width: 200px; margin-bottom: 300px;">
-                <h2 class="ehc-section-title">Technology</h2>
+                <div class="ehc-section-header">
+                  <img src="assets/imgs/logo/isi.png" alt="International System Integration Company LLC"
+                    class="ehc-company-logo" style="width: 200px; margin-bottom: 300px;">
+                  <h2 class="ehc-section-title">Technology</h2>
+                </div>
                 <p class="ehc-section-description">
                   International System Integration Company LLC provides comprehensive system integration solutions
                   across the UAE, specializing in advanced technological implementations and smart systems.
@@ -712,84 +722,74 @@
 
   </script>
   <script>
-    // Initialize GSAP
-    gsap.registerPlugin(ScrollTrigger);
+  // Define the debounce function
+function debounce(func, delay) {
+  let timeout;
+  return function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(func, delay);
+  };
+}
 
-    // Carousel functionality
-    document.querySelectorAll('.ehc-carousel-container').forEach((container, index) => {
-      const carousel = container.querySelector('.ehc-carousel');
-      const items = carousel.querySelectorAll('.ehc-carousel-item');
-      const prevBtn = container.previousElementSibling.querySelector('.ehc-prev');
-      const nextBtn = container.previousElementSibling.querySelector('.ehc-next');
-      let position = 0;
+gsap.registerPlugin(ScrollTrigger);
 
-      function updateCarousel() {
-        gsap.to(carousel, {
-          duration: 0.5,
-          x: -position * (items[0].offsetWidth + 20),
-          ease: "power2.out"
-        });
-      }
+// Carousel functionality
+document.querySelectorAll('.ehc-carousel-container').forEach((container, index) => {
+  const carousel = container.querySelector('.ehc-carousel');
+  const items = carousel.querySelectorAll('.ehc-carousel-item');
+  const prevBtn = container.previousElementSibling.querySelector('.ehc-prev');
+  const nextBtn = container.previousElementSibling.querySelector('.ehc-next');
+  let position = 0;
 
-      prevBtn.addEventListener('click', () => {
-        position = (position - 1 + items.length) % items.length;
-        updateCarousel();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        position = (position + 1) % items.length;
-        updateCarousel();
-      });
-
-      // Initialize GSAP timeline for this carousel
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      });
-
-      // Add animations
-      tl.from(items, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.2
-      });
-
-      // Responsive handling
-      window.addEventListener('resize', updateCarousel);
+  function updateCarousel() {
+    gsap.to(carousel, {
+      duration: 0.5,
+      x: -position * (items[0].offsetWidth + 20),
+      ease: "power2.out"
     });
+  }
 
-    // Section animations
-    document.querySelectorAll('.ehc-section').forEach((section, index) => {
-      gsap.from(section.querySelector('.ehc-section-title'), {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      });
+  prevBtn.addEventListener('click', () => {
+    position = (position - 1 + items.length) % items.length;
+    updateCarousel();
+  });
 
-      gsap.from(section.querySelector('.ehc-section-description'), {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      });
-    });
+  nextBtn.addEventListener('click', () => {
+    position = (position + 1) % items.length;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', debounce(updateCarousel, 200)); // Throttle resize
+});
+
+// Section animations with ScrollTrigger optimizations
+document.querySelectorAll('.ehc-section').forEach((section, index) => {
+  gsap.from(section.querySelector('.ehc-section-title'), {
+    autoAlpha: 0,
+    y: 30,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top bottom",
+      end: "bottom top",
+      toggleActions: "play none none reverse"
+    }
+  });
+
+  gsap.from(section.querySelector('.ehc-section-description'), {
+    autoAlpha: 0,
+    y: 30,
+    duration: 1,
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: section,
+      start: "top bottom",
+      end: "bottom top",
+      toggleActions: "play none none reverse"
+    }
+  });
+});
+
   </script>
 </body>
 
