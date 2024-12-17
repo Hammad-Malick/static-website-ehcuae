@@ -58,7 +58,7 @@
 }
 
 .ehc-vertical .main-content {
-    max-width: 800px;
+    max-width: 650px;
     position: relative;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(7.5px);
@@ -131,7 +131,7 @@
     flex-direction: row;
     gap: 1rem;
     z-index: 10;
-    left: 53rem;
+    left: 44rem;
 }
 
 .ehc-vertical .nav-button {
@@ -155,9 +155,9 @@
 }
 .ehc-vertical .vertical-logo{
     position: absolute;
-    right: 1rem;
+    right: 1.9rem;
     top: 7rem;
-    transform: rotate(293deg);
+    /* transform: rotate(293deg); */
 }
 
 @media (max-width: 768px) {

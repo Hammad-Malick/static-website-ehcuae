@@ -9587,7 +9587,7 @@ section {
 }
 
 .about-area .section-title {
-    max-width: 545px
+    /* max-width: 545px */
 }
 
 .info-area {
@@ -11178,7 +11178,7 @@ section {
 
 .news-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 
