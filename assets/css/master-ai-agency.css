@@ -10864,16 +10864,17 @@ section {
 
 @media only screen and (max-width: 1919px) {
     .clients-area-inner {
-        padding-top: 78px
     }
 }
 
 @media only screen and (max-width: 1399px) {
     .clients-area-inner {
-        padding-top: 58px
     }
 }
 
+.clients-area-inner {
+    padding: 20px 0;
+}
 .clients-area .section-title {
     font-size: 14px;
     font-weight: 500;

@@ -9202,7 +9202,7 @@ section {
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
-    background: url('./../imgs/gallery/about-banner.jpg');
+    background: url('./../imgs/gallery/about-us-hbg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -9212,6 +9212,7 @@ section {
     backdrop-filter: blur(7.5px);
     text-align: left;
     padding: 2rem 18rem;
+    margin: 0;
 }
 @media only screen and (max-width: 1919px) {
     .hero-area-inner {

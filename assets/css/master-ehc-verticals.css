@@ -9238,7 +9238,7 @@ section {
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
-    background: url('./../imgs/gallery/contact-g-4.jpg');
+    background: url('./../imgs/gallery/verticals-d-hbg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -9485,22 +9485,6 @@ section {
 
 
 /* custom css */
-.hero-area .image-wrapper {
-    place-content: end;
-    height: 40vh;
-    background: url('./../imgs/gallery/about-banner.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.hero-area .image-wrapper .image-title {
-    background: #72727200;
-    backdrop-filter: blur(7.5px);
-    text-align: left;
-    padding: 2rem 18rem;
-}
-
 
 .vertical.section {
     /* padding: 6rem 4rem; */
