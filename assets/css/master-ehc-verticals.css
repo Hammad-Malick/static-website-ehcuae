@@ -9615,7 +9615,7 @@ section {
 }
 
 .energy .logo {
-    width: 80px;
+    width: 88px;
     height: auto;
 }
 
@@ -9856,7 +9856,7 @@ section {
 }
 
 .ehc-title {
-    font-size: 72px;
+    font-size: 100px;
     font-weight: bold;
     line-height: 1;
     margin-bottom: 40px;
@@ -9879,7 +9879,7 @@ section {
 }
 
 .ehc-title-safety {
-    background: url('./../imgs/gallery/safety-v-b.jpg');
+    background: url('./../imgs/gallery/safety-v-b-2.jpg');
     background-position: center center;
     background-size: cover;
     -webkit-background-clip: text;
@@ -9909,13 +9909,13 @@ section {
 
 .ehc-description {
     color: #fff;
-    font-size: 16px;
+    font-size: 35px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 .reverse .ehc-description {
     color: #000000;
-    font-size: 16px;
+    font-size: 35px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -9944,7 +9944,7 @@ section {
 
 .ehc-logo {
     /* height: 60px; */
-    width: 150px;
+    width: 188px;
     margin-bottom: 20px;
 }
 
@@ -10017,9 +10017,11 @@ section {
     text-align: center;
     margin-bottom: 40px;
 }
-
 .ehc-stats .title {
     color: #000;
+}
+.reverse .ehc-stats .title {
+    color: #ffffff;
 }
 
 .ehc-stats-infrastructure .ehc-stat {
@@ -10030,6 +10032,12 @@ section {
     font-size: 36px;
     font-weight: bold;
     color: #000;
+    margin-bottom: 5px;
+}
+.reverse .ehc-stat-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
     margin-bottom: 5px;
 }
 
@@ -10158,6 +10166,16 @@ section {
     color: #333;
     margin-bottom: 10px;
 }
+.reverse .ehc-service-item {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.reverse .title {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
 
 
 
@@ -10217,14 +10235,14 @@ section {
 }
 .logo-section {
     flex: 0 0 200px;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     align-items: center;
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 188px;
+    height: 188px;
     background-color: #3498db;
     border-radius: 50%;
     display: flex;
@@ -10248,4 +10266,26 @@ section {
 .content-section {
     flex: 1;
     padding: 20px;
+}
+.wc-btn{
+    background: #000 !important;
+    color: #ffffff !important;
+}
+.wc-btn .span{
+    color: #ffffff;
+}
+.wc-btn:hover{
+    background: #000 !important;
+    color: #ffffff !important;
+}
+.reverse .wc-btn{
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+.reverse .wc-btn .span{
+    color: #000000;
+}
+.reverse .wc-btn:hover{
+    background: #ffffff !important;
+    color: #000000 !important;
 }
