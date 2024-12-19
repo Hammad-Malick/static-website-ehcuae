@@ -10181,3 +10181,39 @@ section {
 
 
 /* aaaaaaaaaaa */
+
+
+.container-ehc {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.logo-section {
+    flex: 0 0 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.separator {
+    width: 2px;
+    /* height: 10rem; */
+    background-color: #000000;
+}
+
+.content-section {
+    flex: 1;
+    padding: 20px;
+}
