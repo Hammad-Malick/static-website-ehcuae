@@ -9824,6 +9824,21 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.ehc-left.reverse {
+    width: 50%;
+    background: #ffffff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ehc-right.reverse {
+    width: 50%;
+    background: #000000;
+    padding: 100px;
+    position: relative;
+}
 .ehc-left {
     width: 50%;
     background: #000;
@@ -9885,9 +9900,21 @@ section {
     background: #fff;
     margin: 30px 0;
 }
+.reverse .ehc-divider {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    margin: 30px 0;
+}
 
 .ehc-description {
     color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.reverse .ehc-description {
+    color: #000000;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -10211,6 +10238,11 @@ section {
     width: 2px;
     /* height: 10rem; */
     background-color: #000000;
+}
+.reverse .separator {
+    width: 2px;
+    /* height: 10rem; */
+    background-color: #ffffff;
 }
 
 .content-section {

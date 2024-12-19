@@ -256,7 +256,7 @@
               </div>
               <div class="slider"></div>
             </nav>
-          
+
             <!-- Energy Section -->
             <section class="ehc-section" id="energy">
               <div class="ehc-section-content">
@@ -349,7 +349,7 @@
                   </div>
                 </div>
                 <img loading="lazy" src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
-                style="width: 150px;">
+                  style="width: 150px;">
               </div>
             </section>
 
@@ -357,8 +357,8 @@
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
 
-                  <img loading="lazy" src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction" class="ehc-company-logo"
-                    style="width: 200px;">
+                  <img loading="lazy" src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction"
+                    class="ehc-company-logo" style="width: 200px;">
                   <h2 class="ehc-section-title">Infrastructure</h2>
                 </div>
                 <p class="ehc-section-description">
@@ -393,7 +393,7 @@
                   solutions, contributing to the growth and modernization of Abu
                   Dhabi's infrastructure
                   .
-                  
+
                 </p>
                 <div class="ehc-stats-grid">
                   <div class="ehc-stat-item">
@@ -433,8 +433,7 @@
                     </div>
                   </div>
                   <div class="ehc-carousel-item">
-                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp"
-                      alt="Infrastructure Project">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Infrastructure Project">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Infrastructure Solutions</h3>
                     </div>
@@ -447,8 +446,8 @@
               <div class="ehc-section-content">
                 <div class="ehc-section-header">
 
-                  <img loading="lazy" src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services" class="ehc-company-logo"
-                    style="width: 200px;">
+                  <img loading="lazy" src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services"
+                    class="ehc-company-logo" style="width: 200px;">
                   <h2 class="ehc-section-title">Safety</h2>
                 </div>
                 <p class="ehc-section-description">
@@ -489,8 +488,7 @@
               <div class="ehc-carousel-container">
                 <div class="ehc-carousel">
                   <div class="ehc-carousel-item">
-                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp"
-                      alt="Firefighting Equipment">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Firefighting Equipment">
                     <div class="ehc-carousel-item-content">
                       <h3 class="ehc-carousel-item-title">Advanced Firefighting Equipment</h3>
                     </div>
@@ -529,7 +527,7 @@
                   By seamlessly integrating AI into our processes, we ensure
                   our clients benefit from cutting-edge technology that
                   improves performance, safety, and reliability.
-                  
+
                 </p>
                 <div class="ehc-services-list">
                   <h3 class="ehc-subtitle">Services</h3>
@@ -591,9 +589,10 @@
               <div class="footer-area-inner">
                 <div class="footer-widget-wrapper">
                   <div class="footer-logo">
-                    <a href="home.html"><img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="400" alt="site-logo"></a>
+                    <a href="home.html"><img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="400"
+                        alt="site-logo"></a>
                   </div>
-                  <p class="info-text">Enterprise Holding Company based on UAE / Abudhabi</p>
+                  <p class="info-text">Enterprise Holding Company <br> UAE - Abudhabi</p>
                   <ul class="social-links">
                     <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i
                           class="fa-brands fa-facebook-f"></i></a></li>
@@ -626,9 +625,8 @@
                     <p class="text">Feel free to reach out if you want to collaborate with us, or simply have a chat.
                     </p>
                   </div>
-                  <form action="#" class="subscribe-form">
-                    <h4>info@ehcuae.com</h4>
-                  </form>
+           <spanaction="#" class="subscribe-form">info@ehcuae.com
+                  </span>
                 </div>
                 <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
                   <img loading="lazy" src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
@@ -785,61 +783,61 @@
       });
     });
   </script>
-    <script>
-      /* for navigation */
-      const navItems = document.querySelectorAll('.nav-slider-item');
-      const slider = document.querySelector('.slider');
-      let activeIndex = 0;
-      document.querySelectorAll('.nav-slider-item').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = e.target.getAttribute('href');
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: targetId,
-            ease: "power2.inOut"
-          });
+  <script>
+    /* for navigation */
+    const navItems = document.querySelectorAll('.nav-slider-item');
+    const slider = document.querySelector('.slider');
+    let activeIndex = 0;
+    document.querySelectorAll('.nav-slider-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: targetId,
+          ease: "power2.inOut"
         });
       });
-      function initSlider() {
-        const activeItem = navItems[0];
-        gsap.set(slider, {
-          width: 500,
-          x: 0
-        });
-      }
+    });
+    function initSlider() {
+      const activeItem = navItems[0];
+      gsap.set(slider, {
+        width: 500,
+        x: 0
+      });
+    }
 
-      navItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-          if (activeIndex !== index) {
-            updateNavigation(index);
-          }
-        });
+    navItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        if (activeIndex !== index) {
+          updateNavigation(index);
+        }
+      });
+    });
+
+    function updateNavigation(newIndex) {
+      navItems[activeIndex].classList.remove('active');
+      navItems[newIndex].classList.add('active');
+
+      gsap.to(slider, {
+        x: navItems[newIndex].offsetLeft,
+        width: navItems[newIndex].offsetWidth + 20,
+        duration: 0.5,
+        ease: "power2.out"
       });
 
-      function updateNavigation(newIndex) {
-        navItems[activeIndex].classList.remove('active');
-        navItems[newIndex].classList.add('active');
+      activeIndex = newIndex;
+    }
 
-        gsap.to(slider, {
-          x: navItems[newIndex].offsetLeft,
-          width: navItems[newIndex].offsetWidth + 20,
-          duration: 0.5,
-          ease: "power2.out"
-        });
+    window.addEventListener('load', initSlider);
 
-        activeIndex = newIndex;
-      }
-
-      window.addEventListener('load', initSlider);
-
-      window.addEventListener('resize', () => {
-        gsap.set(slider, {
-          x: navItems[activeIndex].offsetLeft,
-          width: navItems[activeIndex].offsetWidth
-        });
+    window.addEventListener('resize', () => {
+      gsap.set(slider, {
+        x: navItems[activeIndex].offsetLeft,
+        width: navItems[activeIndex].offsetWidth
       });
-    </script>
+    });
+  </script>
 </body>
 
 </html>
