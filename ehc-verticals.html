@@ -37,7 +37,7 @@
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <!-- <div class="spinner"></div> -->
-        <img src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
+        <img loading="lazy" src="assets/gif/simple-logo-loader.gif" width="200" alt="site-logo">
         <div class="txt-loading">
           <!-- <span data-text="E" class="characters">E</span>
           <span data-text="H" class="characters">H</span>
@@ -143,7 +143,7 @@
   <!-- Sidenav area start -->
   <!-- custom nav -->
   <div class="custom-nav-header">
-    <!-- <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
+    <!-- <img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
     <div class="header-icons">
       <button class="icon-btn toggle-menu">
         <i class="fas fa-bars"></i> <!-- Change this icon dynamically -->
@@ -152,7 +152,7 @@
   </div>
   <div class="menu-container">
     <div class="top-sided-logo">
-      <img src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
+      <img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
     </div>
     <nav class="nav-menu">
       <a href="home.html" class="nav-item">Home</a>
@@ -246,7 +246,7 @@
           <!-- hero area end  -->
 
           <!-- verticals area start  -->
-          <div class="ehc-sections-container" style="background: black;">
+          <div class="ehc-nav-sections-container">
             <nav class="nav-slided-container">
               <div class="nav-slider-items">
                 <div class="nav-slider-item active" href="#energy" data-index="0">Energy</div>
@@ -256,373 +256,327 @@
               </div>
               <div class="slider"></div>
             </nav>
-            <script>
-              const navItems = document.querySelectorAll('.nav-slider-item');
-              const slider = document.querySelector('.slider');
-              let activeIndex = 0;
-              document.querySelectorAll('.nav-slider-item').forEach(link => {
-                link.addEventListener('click', (e) => {
-                  e.preventDefault();
-                  const targetId = e.target.getAttribute('href');
-                  gsap.to(window, {
-                    duration: 1,
-                    scrollTo: targetId,
-                    ease: "power2.inOut"
-                  });
-                });
-              });
-              function initSlider() {
-                const activeItem = navItems[0];
-                gsap.set(slider, {
-                  width: 465,
-                  x: 0
-                });
-              }
 
-              navItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                  if (activeIndex !== index) {
-                    updateNavigation(index);
-                  }
-                });
-              });
-
-              function updateNavigation(newIndex) {
-                navItems[activeIndex].classList.remove('active');
-                navItems[newIndex].classList.add('active');
-
-                gsap.to(slider, {
-                  x: navItems[newIndex].offsetLeft,
-                  width: navItems[newIndex].offsetWidth,
-                  duration: 0.5,
-                  ease: "power2.out"
-                });
-
-                activeIndex = newIndex;
-              }
-
-              window.addEventListener('load', initSlider);
-
-              window.addEventListener('resize', () => {
-                gsap.set(slider, {
-                  x: navItems[activeIndex].offsetLeft,
-                  width: navItems[activeIndex].offsetWidth
-                });
-              });
-            </script>
             <!-- Energy Section -->
             <section class="ehc-section" id="energy">
-              <div class="ehc-left">
-                <div>
-                  <h1 class="ehc-title ehc-title-energy">EHC<br>ENERGY</h1>
-                  <!-- <div class="ehc-divider"></div> -->
-                  <p class="ehc-description">
-                    With over 35 years of expertise, EHC Energy is dedicated to having investments that advancing the
-                    UAE's energy sector by prioritizing sustainability and integrating cutting-edge technologies.
-                  </p>
-                  <!-- <p class="ehc-description">
-                    Renowned for its commitment to <span class="ehc-highlight">quality</span> and <span
-                      class="ehc-highlight">innovation</span>, Al Fanar has a proven track record of executing <span
-                      class="ehc-highlight">large-scale projects</span> in collaboration with <span
-                      class="ehc-highlight">leading partners</span>. The group focuses on enhancing urban development
-                    and ensuring customer satisfaction while prioritizing sustainability and integrating modern and
-                    advanced technologies into its operations.
-                  </p> -->
-                  <div style="display: flex; gap: 18px;">
-                    <div>
-                      <img src="assets/imgs/gallery/ver-d-e-1.jpg" alt="">
-                    </div>
-                    <div>
-                      <img style="width: 91rem;" src="assets/imgs/gallery/ver-d-e-2.jpg" alt="">
-                      <!-- <img src="assets/imgs/ehc/ehc-energy.png" alt=""> -->
-                    </div>
-                    <div>
-                      <img style="width: 112rem;" src="assets/imgs/gallery/ver-d-e-3.jpg" alt="">
-                      <!-- <img src="assets/imgs/ehc/ehc-energy.png" alt=""> -->
-                    </div>
-                  </div>
+              <div class="ehc-section-content">
+                <div class="ehc-section-header">
+                  <h2 class="ehc-section-title">Energy</h2>
                 </div>
-                <div>
+                <p class="ehc-section-description">
+                  Al Fanar Group, headquartered in Abu Dhabi, is a leading
+                  organization in the gas sector, specializing in contracting,
+                  distribution, trading, operations, and maintenance. Established
+                  three decades ago, the group has played a vital role in the
+                  development of the UAE’s gas infrastructure and its economic
+                  growth.
 
-                </div>
-              </div>
-              <div class="ehc-right">
-                <div class="container-ehc">
-                  <section class="logo-section">
-                    <img src="assets/imgs/logo/AL-Fanar.png" alt="Al Fanar Group">
-                  </section>
-                  <div class="separator"></div>
-                  <section class="content-section">
-                    <p>A UAE national company, offering comprehensive gas services, including operation, maintenance,
-                      metering, and billing. Providing consultation, design, and feasibility studies for gas projects
-                      and trade oil and gas equipment. Al Fanar Gas Group leads the industry in excellence and
-                      reliability.</p>
-                    <br>
-
-                    <div class="btn-wrapper has_fade_anim" data-ease="bounce">
-                      <a href="www.alfanargas.com" target="_blank" class="wc-btn wc-btn-primary btn-text-flip"> <span
-                          data-text="Learn more">Learn more</span></a>
-                    </div>
-                  </section>
-                </div>
-                <!-- <div class="ehc-logo-wrapper">
-                  <img src="assets/imgs/logo/AL-Fanar.png" width="100" alt="Al Fanar Group">
-                  <h2 class="ehc-company-name">AL FANAR<br>GROUP</h2>
-                </div> -->
-                <!-- <div class="ehc-header-line"></div> -->
-                <br>
-                <br>
-                <br>
-                <div class="ehc-stats">
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value " data-value="150000">0</div>
-                    <div class="ehc-stat-label">Residential Units</div>
+                </p>
+                <div class="ehc-stats-grid">
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">150,000+</span>
+                    <span class="ehc-stat-label">Residential Units</span>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value">UAE</div>
-                    <div class="ehc-stat-label">Abu Dhabi, Dubai & Northern Emirates</div>
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">UAE</span>
+                    <span class="ehc-stat-label">Abu Dhabi, Dubai & Northern Emirates</span>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value counter-green" data-value="1000">0</div>
-                    <h3 class="ehc-stat-label">Restaurants</h3>
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">1000+</span>
+                    <span class="ehc-stat-label">Restaurants</span>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value counter-green" data-value="200">0</div>
-                    <h3 class="ehc-stat-label">Hotels & Resorts</h3>
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">200+</span>
+                    <span class="ehc-stat-label">Hotels & Resorts</span>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value counter-green" data-value="40">0</div>
-                    <h3 class="ehc-stat-label">Malls</h3>
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">40+</span>
+                    <span class="ehc-stat-label">Malls</span>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value counter-green" data-value="117">0</div>
-                    <h3 class="ehc-stat-label">Under construction</h3>
+                  <div class="ehc-stat-item">
+                    <span class="ehc-stat-number">117</span>
+                    <span class="ehc-stat-label">Under Construction</span>
                   </div>
                 </div>
-
                 <div class="ehc-market-share">
-                  <div class="ehc-market-item">
-                    <span class="ehc-market-percentage">+80%</span>
-                    <span class="ehc-market-text">Abu Dhabi Market Share</span>
+                  <div class="ehc-share-item">
+                    <span class="ehc-share-number">+80%</span>
+                    <span class="ehc-share-label">Abu Dhabi Market Share</span>
                   </div>
-                  <div class="ehc-market-item">
-                    <span class="ehc-market-percentage">+18%</span>
-                    <span class="ehc-market-text">Dubai Market Share</span>
+                  <div class="ehc-share-item">
+                    <span class="ehc-share-number">+18%</span>
+                    <span class="ehc-share-label">Dubai Market Share</span>
                   </div>
                 </div>
-
-                <!-- <div class="ehc-images">
-                  <img src="path_to_city_image.jpg" alt="City View" class="ehc-image">
-                  <img src="path_to_waterfront_image.jpg" alt="Waterfront" class="ehc-image">
-                  <img src="path_to_ferrari_world_image.jpg" alt="Ferrari World" class="ehc-image">
-                </div> -->
-
-                <!-- <div class="ehc-years">
-                  <div class="ehc-years-circle">35+</div>
-                  <div class="ehc-years-text">Years of Legacy</div>
-                </div> -->
+                <div class="ehc-navigation">
+                  <button class="ehc-nav-button ehc-prev">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="ehc-nav-button ehc-next">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="ehc-carousel-container">
+                <div class="ehc-carousel">
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/ver-d-e-1.jpg" alt="PAL Cooling">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">PAL Cooling Holding</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/ver-d-e-2.jpg" alt="Kalyon Enerji">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Kalyon Enerji</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/ver-d-e-3.jpg" alt="Energy Solutions">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Energy Solutions</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/ver-d-e-4.jpg" alt="Energy Solutions">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Energy Solutions</h3>
+                    </div>
+                  </div>
+                </div>
+                <img loading="lazy" src="assets/imgs/logo/AL-Fanar.png" alt="" class="ehc-company-logo"
+                  style="width: 150px;">
               </div>
             </section>
 
-            <!-- Infrastructure Section -->
             <section class="ehc-section" id="infrastructure">
-              <div class="ehc-left reverse">
-                <div>
-                  <h1 class="ehc-title ehc-title-infrastructure">EHC<br>INFRASTRUCTURE</h1>
-                  <!-- <div class="ehc-divider"></div> -->
-                  <p class="ehc-description">
-                    EHC Infrastructure is a key division of EHC Investments, focusing on delivering comprehensive
-                    infrastructure solutions, that aligned with global best practices and UAE vision.
-                  </p>
-                  <!-- <p class="ehc-description">
-                    With over <span class="ehc-highlight">30 years of expertise</span>, KAD has successfully executed
-                    numerous strategic infrastructure projects in the UAE. The company is renowned for its commitment to
-                    <span class="ehc-highlight">quality</span> and adherence to <span
-                      class="ehc-highlight">international standards</span>, establishing itself as one of the most
-                    reliable contracting companies in the region. KAD places a strong emphasis on sustainable practices
-                    and innovative solutions, contributing to the growth and modernization of Abu Dhabi's
-                    infrastructure.
-                  </p> -->
+              <div class="ehc-section-content">
+                <div class="ehc-section-header">
+
+                  <img loading="lazy" src="assets/imgs/logo/KAD.png" alt="KAD Engineering & Construction"
+                    class="ehc-company-logo" style="width: 200px;">
+                  <h2 class="ehc-section-title">Infrastructure</h2>
                 </div>
+                <p class="ehc-section-description">
+                  KAD Engineering and Construction is a leading company based in Abu Dhabi, specializing in
+                  infrastructure development and construction. The firm operates across various sectors, includingKAD
+                  Engineering and Construction is
+                  a leading company based in
+                  Abu Dhabi
+                  , specializing in infrastructure development and
+                  construction
+                  . The firm operates across various sectors, including
+                  civil engineering, roads, utilities, oil
+                  & gas, and urban
+                  development
+                  .civil engineering, roads, utilities, oil
+                  & gas, and urban
+                  development
+                  .
+                </p>
+                <p class="ehc-section-description">
+                  With over 30 years of expertise
+                  , KAD has successfully executed
+                  numerous strategic infrastructure projects in the UAE
+                  . The
+                  company is renowned for its commitment to quality and
+                  adherence to international standards
+                  , establishing itself as one
+                  of the most reliable contracting companies in the region
+                  . KAD
+                  places
+                  a strong emphasis on sustainable practices and innovative
+                  solutions, contributing to the growth and modernization of Abu
+                  Dhabi's infrastructure
+                  .
 
-              </div>
-              <div class="ehc-right reverse">
-                <div class="container-ehc">
-                  <section class="logo-section">
-                    <img src="assets/imgs/logo/KAD.png" alt="KAD Engineering" class="ehc-logo">
-                  </section>
-                  <div class="separator"></div>
-                  <section class="content-section">
-                    <p>KAD Engineering and Construction is a leading company based in Abu Dhabi, specializing in
-                      infrastructure development and construction. The firm operates across various sectors, including
-                      civil engineering, roads, utilities, oil & gas, and urban development. The company has
-                      successfully delivered numerous large-scale and strategic projects across the UAE and the GCC
-                      region.</p>
-                    <br>
-
-                    <div class="btn-wrapper has_fade_anim" data-ease="bounce">
-                      <a href="https://www.kad.ae/" target="_blank" class="wc-btn wc-btn-primary btn-text-flip"> <span
-                          data-text="Learn more">Learn more</span></a>
-                    </div>
-                  </section>
-                </div>
-                <!-- <div class="ehc-logo-wrapper">
-                  <img src="assets/imgs/logo/KAD.png" alt="KAD Engineering" class="ehc-logo">
-                  <h2 class="ehc-company-name">KAD<br>ENGINEERING &<br>CONSTRUCTION</h2>
-                </div> -->
-                <!-- <div class="ehc-header-line"></div> -->
-                <br>
-                <br>
-                <br>
-
-                <div class="ehc-stats-infrastructure">
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-title">On-Going Projects</div>
-                    <div class="ehc-stat-value" data-value="275">0</div>
-                    <div class="ehc-stat-label">Millions AED</div>
+                </p>
+                <div class="ehc-stats-grid">
+                  <div class="ehc-stat-item">
+                    <div class="ehc-stat-label">On-Going Projects</div>
+                    <div class="ehc-stat-number" style="color: #333399;">275+ Millions AED</div>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-title">Pipeline Projects</div>
-                    <div class="ehc-stat-value" data-value="200">0</div>
-                    <div class="ehc-stat-label">Millions AED</div>
+                  <div class="ehc-stat-item">
+                    <div class="ehc-stat-label">Pipeline Projects</div>
+                    <div class="ehc-stat-number" style="color: #333399;">200+ Millions AED</div>
+                  </div>
+                </div>
+                <div class="ehc-navigation">
+                  <button class="ehc-nav-button ehc-prev">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="ehc-nav-button ehc-next">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="ehc-carousel-container">
+                <div class="ehc-carousel">
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Construction Site">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Innovative Construction</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Engineering Design">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Advanced Engineering</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Infrastructure Project">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Infrastructure Solutions</h3>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            <!-- Safety Section -->
             <section class="ehc-section" id="safety">
-              <div class="ehc-left">
-                <div>
-                  <h1 class="ehc-title ehc-title-safety">EHC<br>SAFETY</h1>
-                  <!-- <div class="ehc-divider"></div> -->
-                  <p class="ehc-description">
-                    EHC Safety is committed to elevating safety standards across its companies, leveraging the latest
-                    technologies to protect the UAE while actively contributing to the realization of the nation's
-                    visionary goals.
-                  </p>
-                  <div style="display: flex; gap: 18px;">
-                    <div>
-                      <img src="assets/imgs/gallery/ver-d-s-1.jpg" alt="">
-                    </div>
-                    <div>
-                      <img style="width: 106rem;" src="assets/imgs/gallery/ver-d-s-2.jpg" alt="">
-                      <!-- <img src="assets/imgs/ehc/ehc-energy.png" alt=""> -->
-                    </div>
-                    <div>
-                      <img style="width: 88rem;" src="assets/imgs/gallery/ver-d-s-3.jpg" alt="">
-                      <!-- <img src="assets/imgs/ehc/ehc-energy.png" alt=""> -->
-                    </div>
+              <div class="ehc-section-content">
+                <div class="ehc-section-header">
+
+                  <img loading="lazy" src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ Firefighting Services"
+                    class="ehc-company-logo" style="width: 200px;">
+                  <h2 class="ehc-section-title">Safety</h2>
+                </div>
+                <p class="ehc-section-description">
+                  FOOJ is a specialized firefighting company based in Abu
+                  Dhabi. The company focuses on managing and operating
+                  firefighting stations, offering tailored solutions for
+                  emergency response, fire engineering, and firefighting
+                  services. FOOJ provides comprehensive services, including
+                  fire risk assessments, building inspections, development
+                  and testing of pre-incident plans, and competency training
+                  programs for firefighting professionals.
+                </p>
+                <div class="ehc-location-info">
+                  <h3 class="ehc-subtitle">United Arab Emirates</h3>
+                  <div class="ehc-info-block">
+                    <h4 class="ehc-info-title" style="color: #ff6b00;">AGPS (TAQA Subsidiary)</h4>
+                    <p class="ehc-info-text">Al Taweelah - Shared Facility Co. (SFCo)</p>
                   </div>
-                  <!-- <p class="ehc-description">
-                    FOOJ provides comprehensive services, including <span class="ehc-highlight">fire risk
-                      assessments</span>, <span class="ehc-highlight">building inspections</span>, development and
-                    testing of <span class="ehc-highlight">pre-incident plans</span>, and <span
-                      class="ehc-highlight">competency training programs</span> for firefighting professionals.
-                  </p> -->
+                  <div class="ehc-info-block">
+                    <h4 class="ehc-info-title" style="color: #ff6b00;">AD Ports</h4>
+                    <p class="ehc-info-text">SPV has been created with ADPORTS for Fire and safety maintenance
+                      management</p>
+                  </div>
+                </div>
+                <div class="ehc-navigation">
+                  <button class="ehc-nav-button ehc-prev">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="ehc-nav-button ehc-next">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
                 </div>
               </div>
-              <div class="ehc-right">
-                <div class="container-ehc">
-                  <section class="logo-section">
-                    <img src="assets/imgs/logo/fooj.png" alt="FOOJ" class="ehc-logo">
-                  </section>
-                  <div class="separator"></div>
-                  <section class="content-section">
-                    <p>FOOJ specializes in managing and operating firefighting stations, offering comprehensive turnkey
-                      solutions for emergency response, fire engineering, training and firefighting services.</p>
-                    <br>
-
-                    <div class="btn-wrapper has_fade_anim" data-ease="bounce">
-                      <a href="https://www.fooj.ae/#Home" target="_blank" class="wc-btn wc-btn-primary btn-text-flip"> <span
-                          data-text="Learn more">Learn more</span></a>
+              <div class="ehc-carousel-container">
+                <div class="ehc-carousel">
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Firefighting Equipment">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Advanced Firefighting Equipment</h3>
                     </div>
-                  </section>
-                </div>
-                <!-- <div class="ehc-logo-wrapper">
-
-                  <img src="assets/imgs/logo/FOOJ_PNG.png" alt="FOOJ" class="ehc-logo">
-                  <h2 class="ehc-company-name">FOOJ<br>FIREFIGHTING<br>SERVICES</h2>
-                </div> -->
-                <!-- <div class="ehc-header-line"></div> -->
-                <br>
-                <br>
-                <br>
-
-                <div class="ehc-stats safety">
-                  <h2 class="title">United Arab Emirates</h2>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value">AGPS (TAQA Subsidiary)</div>
-                    <p>Al Taweelah - Shared Facility Co. (SFCo)</p>
                   </div>
-                  <div class="ehc-stat">
-                    <div class="ehc-stat-value">AD Ports</div>
-                    <p>SPV has been created with ADPORTS for Fire
-                      and safety maintenance management</p>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Emergency Response">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Rapid Emergency Response</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Fire Safety Training">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Comprehensive Safety Training</h3>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            <!-- Technology Section -->
             <section class="ehc-section" id="technology">
-              <div class="ehc-left reverse">
-                <div>
-                  <h1 class="ehc-title ehc-title-technology">EHC<br>TECHNOLOGY</h1>
-                  <!-- <div class="ehc-divider"></div> -->
-                  <p class="ehc-description">
-                    ISI is dedicated to provide <span class="ehc-highlight">innovative system integration
-                      solutions</span>, with a strong emphasis on incorporating AI to enhance functionality and
-                    efficiency.
-                  </p>
-                  <p class="ehc-description">
-                    IS expertise lies in designing and implementing <span class="ehc-highlight">advanced systems</span>
-                    that drive operational excellence across industries. By seamlessly integrating AI into our
-                    processes, we ensure our clients benefit from <span class="ehc-highlight">cutting-edge
-                      technology</span> that improves performance, safety, and reliability.
-                  </p>
+              <div class="ehc-section-content">
+                <div class="ehc-section-header">
+                  <img loading="lazy" src="assets/imgs/logo/isi.png" alt="International System Integration Company LLC"
+                    class="ehc-company-logo" style="width: 200px;">
+                  <h2 class="ehc-section-title">Technology</h2>
                 </div>
-              </div>
-              <div class="ehc-right reverse">
-                <div class="container-ehc">
-                  <section class="logo-section">
-                    <img src="assets/imgs/logo/isi.png" alt="ISI" class="ehc-logo">
-                  </section>
-                  <div class="separator"></div>
-                  <section class="content-section">
-                    <p>ISI specializes in innovative system integration, leveraging AI to enhance functionality,
-                      efficiency, and operational excellence across industries. By integrating advanced technology, ISI
-                      ensures improved performance, safety, and reliability for its client. </p><br>
+                <p class="ehc-section-description">
+                  ISI is dedicated to provide innovative system integration
+                  solutions, with a strong emphasis on incorporating AI to
+                  enhance functionality and efficiency.
+                </p>
+                <p class="ehc-section-description">
+                  IS expertise lies in designing and implementing advanced
+                  systems that drive operational excellence across industries.
+                  By seamlessly integrating AI into our processes, we ensure
+                  our clients benefit from cutting-edge technology that
+                  improves performance, safety, and reliability.
 
-                    <div class="btn-wrapper has_fade_anim" data-ease="bounce">
-                      <a href="https://isiuae.com/" target="_blank" class="wc-btn wc-btn-primary btn-text-flip"> <span
-                          data-text="Learn more">Learn more</span></a>
-                    </div>
-                  </section>
-                </div>
-                <!-- <div class="ehc-logo-wrapper">
-                    
-                  <img src="assets/imgs/logo/isi.png" alt="ISI" class="ehc-logo">
-                  <h2 class="ehc-company-name">INTERNATIONAL SYSTEM<br>INTEGRATION COMPANY LLC</h2>
-                </div> -->
-                <!-- <div class="ehc-header-line"></div> -->
-                <br>
-                <br>
-                <br>
-                <div class="ehc-stats technology">
-                  <h2 class="title">United Arab Emirates</h2>
-                  <h3 class="ehc-services-title">Services</h3>
+                </p>
+                <div class="ehc-services-list">
+                  <h3 class="ehc-subtitle">Services</h3>
                   <ul class="ehc-services">
-                    <li class="ehc-service-item">System Integrations</li>
-                    <li class="ehc-service-item">Alarm Terminal Equipment</li>
-                    <li class="ehc-service-item">Control Systems</li>
-                    <li class="ehc-service-item">Gas Detection Systems</li>
-                    <li class="ehc-service-item">SCADA and PLC</li>
-                    <li class="ehc-service-item">AI Capabilities Integration</li>
+                    <li>System Integrations</li>
+                    <li>Alarm Terminal Equipment</li>
+                    <li>Control Systems</li>
+                    <li>Gas Detection Systems</li>
+                    <li>SCADA and PLC</li>
+                    <li>AI Capabilities Integration</li>
                   </ul>
                 </div>
+                <div class="ehc-navigation">
+                  <button class="ehc-nav-button ehc-prev">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="ehc-nav-button ehc-next">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="ehc-carousel-container">
+                <div class="ehc-carousel">
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="System Integration">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Advanced System Integration</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="Smart Systems">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">Smart System Solutions</h3>
+                    </div>
+                  </div>
+                  <div class="ehc-carousel-item">
+                    <img loading="lazy" src="assets/imgs/gallery/about-g-4.webp" alt="AI Integration">
+                    <div class="ehc-carousel-item-content">
+                      <h3 class="ehc-carousel-item-title">AI-Powered Technologies</h3>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
+
           </div>
           <!-- verticals area end  -->
 
@@ -635,7 +589,8 @@
               <div class="footer-area-inner">
                 <div class="footer-widget-wrapper">
                   <div class="footer-logo">
-                    <a href="home.html"><img src="assets/imgs/logo/EHC-Black-trans.png" width="400" alt="site-logo"></a>
+                    <a href="home.html"><img loading="lazy" src="assets/imgs/logo/EHC-Black-trans.png" width="400"
+                        alt="site-logo"></a>
                   </div>
                   <p class="info-text">Enterprise Holding Company <br> UAE - Abudhabi</p>
                   <ul class="social-links">
@@ -670,18 +625,19 @@
                     <p class="text">Feel free to reach out if you want to collaborate with us, or simply have a chat.
                     </p>
                   </div>
-                  <spanaction="#" class="subscribe-form">info@ehcuae.com
-                    </span>
+                  <form action="#" class="subscribe-form">
+                    <h4>info@ehcuae.com</h4>
+                  </form>
                 </div>
                 <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
-                  <img src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
+                  <img loading="lazy" src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
                 </div> -->
               </div>
               <div class="copyright-area">
                 <div class="container">
                   <div class="copyright-area-inner">
                     <div class="copyright-text">
-                      <p class="text">© 2024-25 <a href="home.html" target="_blank">Ehuae</a>
+                      <p class="text">© 2024-25 <a href="home.html" target="_blank">Ehcuae</a>
                         company</p>
                     </div>
                   </div>
@@ -716,7 +672,7 @@
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/offcanvas.js"></script>
 
-  <script>
+  <!-- <script>
     // energy script
     // testimonial slider
     if (('.testimonial-slider').length) {
@@ -748,97 +704,138 @@
       });
     }
 
-  </script>
+  </script> -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    function animateNumber(element, start, end, duration) {
-      let startTimestamp = null;
-      const step = (timestamp) => {
-        if (!startTimestamp) startTimestamp = timestamp;
-        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        element.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
+    // Carousel functionality
+    document.querySelectorAll('.ehc-carousel-container').forEach((container, index) => {
+      const carousel = container.querySelector('.ehc-carousel');
+      const items = carousel.querySelectorAll('.ehc-carousel-item');
+      const prevBtn = container.previousElementSibling.querySelector('.ehc-prev');
+      const nextBtn = container.previousElementSibling.querySelector('.ehc-next');
+      let position = 0;
+
+      function updateCarousel() {
+        gsap.to(carousel, {
+          duration: 0.5,
+          x: -position * (items[0].offsetWidth + 20),
+          ease: "power2.out"
+        });
+      }
+
+      prevBtn.addEventListener('click', () => {
+        position = (position - 1 + items.length) % items.length;
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        position = (position + 1) % items.length;
+        updateCarousel();
+      });
+
+      // Initialize GSAP timeline for this carousel
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
         }
-      };
-      window.requestAnimationFrame(step);
-    }
+      });
 
-    document.querySelectorAll('.ehc-section').forEach(section => {
-      gsap.from(section.querySelector('.ehc-title'), {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top center',
-          toggleActions: 'play none none reverse'
-        },
+      // Add animations
+      tl.from(items, {
+        opacity: 0,
         y: 50,
+        duration: 1,
+        stagger: 0.2
+      });
+
+      // Responsive handling
+      window.addEventListener('resize', updateCarousel);
+    });
+
+    // Section animations
+    document.querySelectorAll('.ehc-section').forEach((section, index) => {
+      gsap.from(section.querySelector('.ehc-section-title'), {
         opacity: 0,
-        duration: 1
-      });
-
-      gsap.from(section.querySelector('.ehc-divider'), {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top center',
-          toggleActions: 'play none none reverse'
-        },
-        scaleX: 0,
-        duration: 1
-      });
-
-      gsap.from(section.querySelectorAll('.ehc-description'), {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top center',
-          toggleActions: 'play none none reverse'
-        },
         y: 30,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1
-      });
-
-      gsap.from(section.querySelector('.ehc-right'), {
+        duration: 1,
         scrollTrigger: {
           trigger: section,
-          start: 'top center',
-          toggleActions: 'play none none reverse'
-        },
-        x: 50,
-        opacity: 0,
-        duration: 1
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        }
       });
 
-      gsap.from(section.querySelectorAll('.ehc-pattern-dot'), {
+      gsap.from(section.querySelector('.ehc-section-description'), {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        delay: 0.2,
         scrollTrigger: {
           trigger: section,
-          start: 'top center',
-          toggleActions: 'play none none reverse'
-        },
-        scale: 0,
-        opacity: 0,
-        stagger: 0.05,
-        duration: 0.5
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        }
       });
-
-      section.querySelectorAll('.ehc-stat-value[data-value]').forEach(stat => {
-        ScrollTrigger.create({
-          trigger: stat,
-          start: 'top 80%',
-          onEnter: () => {
-            animateNumber(stat, 0, parseInt(stat.dataset.value), 2000);
-          }
+    });
+  </script>
+  <script>
+    /* for navigation */
+    const navItems = document.querySelectorAll('.nav-slider-item');
+    const slider = document.querySelector('.slider');
+    let activeIndex = 0;
+    document.querySelectorAll('.nav-slider-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href');
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: targetId,
+          ease: "power2.inOut"
         });
       });
     });
+    function initSlider() {
+      const activeItem = navItems[0];
+      gsap.set(slider, {
+        width: 500,
+        x: 0
+      });
+    }
 
-    document.querySelectorAll('.ehc-dot').forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        const section = dot.closest('.ehc-section');
-        const dots = section.querySelectorAll('.ehc-dot');
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
+    navItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        if (activeIndex !== index) {
+          updateNavigation(index);
+        }
+      });
+    });
+
+    function updateNavigation(newIndex) {
+      navItems[activeIndex].classList.remove('active');
+      navItems[newIndex].classList.add('active');
+
+      gsap.to(slider, {
+        x: navItems[newIndex].offsetLeft,
+        width: navItems[newIndex].offsetWidth + 20,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+
+      activeIndex = newIndex;
+    }
+
+    window.addEventListener('load', initSlider);
+
+    window.addEventListener('resize', () => {
+      gsap.set(slider, {
+        x: navItems[activeIndex].offsetLeft,
+        width: navItems[activeIndex].offsetWidth
       });
     });
   </script>
