@@ -9884,7 +9884,7 @@ section {
 
 .ehc-section {
     padding: 80px;
-    min-height: 100vh;
+    min-height: 83vh;
     display: flex;
     align-items: flex-start;
     gap: 60px;
@@ -9904,8 +9904,9 @@ section {
     gap: 10px;
     /* align-items: ; */
     margin-bottom: 30px;
-    
+
 }
+
 .ehc-section-header img {
     display: flex;
     flex-direction: row;
@@ -9921,7 +9922,7 @@ section {
 }
 
 .ehc-section-title {
-    font-size: 48px;
+    font-size: 100px;
     font-weight: 500;
     /* margin-bottom: 30px; */
     color: #fff;
@@ -9929,19 +9930,20 @@ section {
 
 .ehc-section-description {
     color: #888;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.6;
     margin-bottom: 40px;
 }
 
 .ehc-section:nth-child(odd) .ehc-section-title {
-    font-size: 48px;
+    font-size: 100px;
     font-weight: 500;
     /* margin-bottom: 30px; */
     color: #353535;
 }
+
 .ehc-section:nth-child(odd) .ehc-subtitle {
-    font-size: 48px;
+    font-size: 100px;
     font-weight: 500;
     margin-bottom: 30px;
     color: #353535;
@@ -9955,7 +9957,7 @@ section {
 }
 
 .ehc-carousel-container {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
     position: relative;
     overflow: hidden;
 }
@@ -9972,6 +9974,23 @@ section {
     aspect-ratio: 3/4;
     overflow: hidden;
     border-radius: 8px;
+}
+
+.ehc-carousel-item .btn-wrapper {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    transition: all .5s;
+}
+
+.ehc-carousel-item .btn-wrapper a {
+    color: #000 !important;
+}
+
+.ehc-carousel-item:hover .btn-wrapper {
+    transition: all .5s;
+    opacity: 1 !important;
 }
 
 .ehc-carousel-item img {
@@ -9993,6 +10012,10 @@ section {
 .ehc-carousel-item-title {
     font-size: 24px;
     font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
 }
 
 .ehc-navigation {
