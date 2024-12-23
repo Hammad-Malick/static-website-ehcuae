@@ -9202,9 +9202,9 @@ section {
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
-    background: url('./../imgs/gallery/main-infra-sample.webp');
+    background: url('./../imgs/gallery/main-infra-sample.jpg');
     background-size: cover;
-    background-position: 0px -19rem;
+    background-position: 0rem -46rem;
     background-repeat: no-repeat;
 }
 .hero-area .image-wrapper .image-title {
