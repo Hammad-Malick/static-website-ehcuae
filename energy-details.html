@@ -79,7 +79,7 @@
           <button class="active" data-mode="dark">dark</button>
         </div>
       </div>
-      
+
     </div>
   </div>
   <!-- Switcher Area End -->
@@ -158,8 +158,8 @@
   <!-- search modal end -->
 
   <!-- Sidenav area start -->
-   <!-- custom nav -->
-   <div class="custom-nav-header">
+  <!-- custom nav -->
+  <div class="custom-nav-header">
     <!-- <img src="assets/imgs/logo/EHC-Black-trans.png" alt="Ehcuae" class="logo"> -->
     <div class="header-icons">
       <button class="icon-btn toggle-menu">
@@ -167,7 +167,7 @@
       </button>
     </div>
   </div>
-   <div class="menu-container">
+  <div class="menu-container">
     <div class="top-sided-logo">
       <img src="assets/imgs/logo/EHC-Black-trans.png" width="250" alt="site-logo">
     </div>
@@ -175,29 +175,32 @@
       <a href="home.html" class="nav-item">Home</a>
       <a href="about.html" class="nav-item">Who We Are</a>
       <a href="ehc-verticals.html" class="nav-item">EHC verticals</a>
-      <a href="#" class="nav-item">Blogs</a>
+      <a href="blog.html" class="nav-item">Blogs</a>
       <a href="news.html" class="nav-item">News</a>
       <a href="contact.html" class="nav-item">Contact Us</a>
     </nav>
     <ul class="menu-social-links">
-      <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href="https://www.instagram.com/ehc.investment/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href="https://www.linkedin.com/company/ehc-investment/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      </li>
+      <li><a href="https://www.instagram.com/ehc.investment/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li><a href="https://www.linkedin.com/company/ehc-investment/" target="_blank"><i
+            class="fa-brands fa-linkedin"></i></a></li>
     </ul>
   </div>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleMenuButton = document.querySelector('.toggle-menu');
       const menuContainer = document.querySelector('.menu-container');
       const navItems = document.querySelectorAll('.nav-item');
-  
+
       // State to track whether the menu is open or closed
       let menuOpen = false;
-  
+
       toggleMenuButton.addEventListener('click', () => {
         const tl = gsap.timeline();
-  
+
         if (!menuOpen) {
           // Open menu animation
           tl.to(menuContainer, {
@@ -229,13 +232,13 @@
             });
           toggleMenuButton.innerHTML = `<i class="fas fa-bars"></i>`; // Change back to open icon
         }
-  
+
         // Toggle the menu state
         menuOpen = !menuOpen;
       });
     });
   </script>
-  
+
   <!-- custom nav end -->
 
 
@@ -427,12 +430,15 @@
                   </div>
                   <p class="info-text">Enterprise Holding Company <br> UAE - Abudhabi</p>
                   <ul class="social-links">
- <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.instagram.com/ehc.investment/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.linkedin.com/company/ehc-investment/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i
+                          class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/ehc.investment/" target="_blank"><i
+                          class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/ehc-investment/" target="_blank"><i
+                          class="fa-brands fa-linkedin"></i></a></li>
                   </ul>
                 </div>
-              
+
                 <div class="footer-widget-wrapper">
                   <h2 class="title">Company</h2>
                   <ul class="footer-nav-list">
@@ -441,10 +447,10 @@
                     <li><a href="ehc-verticals.html">EHC Verticals</a></li>
                   </ul>
                 </div>
-   <div class="footer-widget-wrapper">
+                <div class="footer-widget-wrapper">
                   <h2 class="title">Insights</h2>
                   <ul class="footer-nav-list">
-                    <li><a href="#">Blogs</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -455,10 +461,10 @@
                     <p class="text">Feel free to reach out if you want to collaborate with us, or simply have a chat.
                     </p>
                   </div>
-           <spanaction="#" class="subscribe-form">info@ehcuae.com
-                  </span>
+                  <spanaction="#" class="subscribe-form">info@ehcuae.com
+                    </span>
                 </div>
-                      <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
+                <!-- <div class="side-mounted-image" style="right:-98px;position: absolute;top: 1px;opacity: 0.2;">
                   <img src="assets/imgs/gallery/3d-logo-with-bubbles.png" alt="">
                 </div> -->
               </div>
