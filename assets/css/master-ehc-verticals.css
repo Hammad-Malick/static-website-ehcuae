@@ -9238,7 +9238,7 @@ section {
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
-    background: url('./../imgs/gallery/contact-g-4.jpg');
+    /* background: url('./../imgs/gallery/main-infra-sample.jpg'); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -9546,9 +9546,10 @@ section {
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
-    background: url('./../imgs/gallery/about-banner.jpg');
+    /* background: url('./../imgs/gallery/about-banner.jpg'); */
+    background: url('./../imgs/gallery/main-infra-sample.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: 0rem -46rem;
     background-repeat: no-repeat;
 }
 
@@ -10022,6 +10023,24 @@ section {
     display: flex;
     gap: 15px;
     margin-top: 40px;
+    position: relative;
+}
+
+.ehc-section:nth-child(odd) .ehc-navigation .btn-wrapper a {
+    color: #fff !important;
+    background: #000;
+  
+}
+.btn-wrapper{
+    position: absolute;
+    right:49px;
+    top: -17px;
+}
+
+.ehc-section:nth-child(even) .ehc-navigation .btn-wrapper a {
+    color: #000 !important;
+    background: #fff;
+
 }
 
 .ehc-nav-button {
