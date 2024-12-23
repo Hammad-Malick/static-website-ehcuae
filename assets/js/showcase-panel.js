@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelectorAll('.prev');
+    const nextBtn = document.querySelectorAll('.next');
     const progressBar = document.querySelector('.progress-bar');
     const totalSlides = slides.length;
     let currentSlideIndex = 0;
@@ -91,8 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event listeners for navigation buttons
-    prevBtn.addEventListener('click', () => updateSlide(-1));
-    nextBtn.addEventListener('click', () => updateSlide(1));
+    prevBtn.forEach(btn => btn.addEventListener('click', () => updateSlide(-1)));
+    nextBtn.forEach(btn => btn.addEventListener('click', () => updateSlide(1)));
+    
+    // .addEventListener('click', () => updateSlide(-1));
+    // nextBtn.addEventListener('click', () => updateSlide(1));
 
     // Initial setup for progress bar
     startProgressBar();
