@@ -11158,6 +11158,12 @@ section {
 
 
 /* latest news area strt */
+@media screen and (min-width: 780px) {
+    
+    .container.news{
+        margin: 10px 9rem;
+    }
+}
 
 .news-grid {
     display: grid;
