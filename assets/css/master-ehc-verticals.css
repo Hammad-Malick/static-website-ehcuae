@@ -9929,29 +9929,31 @@ section {
 .ehc-section-description {
     color: #888;
     font-size: 30px;
+    font-weight: 700;
     line-height: 1.6;
     margin-bottom: 40px;
 }
+@media only screen and (max-width: 767px) {
+    .ehc-section-description{
+        font-size: 20px !important;
+    }
+    .ehc-section-title {
+        font-size: 50px !important;
+    }
+}
 
 .ehc-section:nth-child(odd) .ehc-section-title {
-    font-size: 100px;
-    font-weight: 500;
     /* margin-bottom: 30px; */
     color: #353535;
 }
 
 .ehc-section:nth-child(odd) .ehc-subtitle {
-    font-size: 100px;
-    font-weight: 500;
-    margin-bottom: 30px;
+
     color: #353535;
 }
 
 .ehc-section:nth-child(even) .ehc-section-description {
     color: #888;
-    /* font-size: 16px; */
-    line-height: 1.6;
-    margin-bottom: 40px;
 }
 
 .ehc-carousel-container {
