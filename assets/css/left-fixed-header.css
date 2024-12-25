@@ -30,7 +30,8 @@
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
-.custom-nav-header .icon-btn i{
+
+.custom-nav-header .icon-btn i {
     padding: 10px;
     background: #0000002e;
     /* text-shadow: 1px -2px 20px black; */
@@ -112,6 +113,9 @@
     position: absolute;
     bottom: 60px;
 }
+.top-sided-logo img {
+    width: 300px;
+}
 @media screen and (max-width: 768px) {
     .menu-container {
         position: fixed;
@@ -130,5 +134,27 @@
         rotate: none;
         scale: none;
         transform: translate(-100%, 0px);
+    }
+
+    .nav-item {
+        font-size: 1.8rem;
+    }
+
+    .menu-social-links {
+        font-size: 1.8rem;
+    }
+
+    .top-sided-logo {
+        top: 16px;
+        left: 24px;
+
+    }
+
+    .top-sided-logo img {
+        width: 150px;
+    }
+
+    .custom-nav-header {
+        padding: 1.5rem 1.5rem;
     }
 }
