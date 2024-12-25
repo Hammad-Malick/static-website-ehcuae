@@ -166,6 +166,9 @@
     .ehc-vertical .content {
         padding: 2rem;
     }
+    .ehc-vertical .main-content {
+        padding: 2rem 1rem 6rem 1rem;
+    }
 
     .ehc-vertical .header {
         font-size: 3.5rem;
@@ -178,8 +181,15 @@
         display: none;
     }
     .ehc-vertical .nav-buttons {
-       left: 15rem;
-       top: 75%;
+        left: 2rem;
+        top: 83%;
+    }
+    .ehc-vertical .explore-btn{
+       width: 100%;
+       justify-content: center;
+    }
+    .ehc-vertical .counter{
+        width: 100%;
     }
 }
 
