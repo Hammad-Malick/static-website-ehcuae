@@ -9973,6 +9973,13 @@ section {
     overflow: hidden;
     border-radius: 8px;
 }
+@media only screen and (max-width: 767px) {
+    .ehc-carousel-item {
+        max-height: 400px;
+        max-width: 334px;
+    }
+}
+
 
 .ehc-carousel-item .btn-wrapper {
     opacity: 0;
