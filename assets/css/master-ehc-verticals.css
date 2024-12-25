@@ -9065,7 +9065,7 @@ section {
 
 @media only screen and (max-width: 1199px) {
     .footer-area .footer-logo img {
-      /*  max-height: 34px */
+        /*  max-height: 34px */
     }
 }
 
@@ -9242,6 +9242,7 @@ section {
     backdrop-filter: blur(7.5px);
     padding: 2rem 18rem;
 }
+
 @media only screen and (max-width: 767px) {
     .hero-area .image-wrapper .image-title {
         padding: 2rem 1rem;
@@ -9550,6 +9551,7 @@ section {
     background-position: 0rem -6rem;
     background-repeat: no-repeat;
 }
+
 @media only screen and (max-width: 767px) {
     .hero-area .image-wrapper {
         background-position: center center;
@@ -9933,12 +9935,14 @@ section {
     line-height: 1.6;
     margin-bottom: 40px;
 }
+
 @media only screen and (max-width: 767px) {
-    .ehc-section-description{
+    .ehc-section-description {
         font-size: 20px !important;
     }
+
     .ehc-section-title {
-        font-size: 50px !important;
+        font-size: 40px !important;
     }
 }
 
@@ -9975,6 +9979,7 @@ section {
     overflow: hidden;
     border-radius: 8px;
 }
+
 @media only screen and (max-width: 767px) {
     .ehc-carousel-item {
         max-height: 400px;
@@ -10035,11 +10040,12 @@ section {
 .ehc-section:nth-child(odd) .ehc-navigation .btn-wrapper a {
     color: #fff !important;
     background: #000;
-  
+
 }
-.btn-wrapper{
+
+.ehc-navigation .btn-wrapper {
     position: absolute;
-    right:49px;
+    right: 49px;
     top: -17px;
 }
 
@@ -10047,6 +10053,16 @@ section {
     color: #000 !important;
     background: #fff;
 
+}
+
+@media only screen and (max-width: 767px) {
+    .ehc-navigation .btn-wrapper a {
+        padding: 14px 24px;
+    }
+    .ehc-navigation .btn-wrapper {
+        right: 2px;
+        top: -7px;
+    }
 }
 
 .ehc-nav-button {
