@@ -9243,13 +9243,22 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
 }
+@media only screen and (max-width: 767px) {
+    .hero-area .image-wrapper {
+        background-position: center center;
+    }
+}
 
 .hero-area .image-wrapper .image-title {
     background: #72727200;
     backdrop-filter: blur(7.5px);
     padding: 2rem 18rem;
 }
-
+@media only screen and (max-width: 767px) {
+    .hero-area .image-wrapper .image-title {
+        padding: 2rem 1rem;
+    }
+}
 .hero-area .contact-box {
     padding: 85px 30px 40px;
     background-color: var(--black);

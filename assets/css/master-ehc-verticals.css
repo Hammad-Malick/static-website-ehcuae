@@ -9235,19 +9235,17 @@ section {
     margin-top: 0
 }
 
-.hero-area .image-wrapper {
-    place-content: end;
-    height: 40vh;
-    /* background: url('./../imgs/gallery/main-infra-sample.jpg'); */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+
 
 .hero-area .image-wrapper .image-title {
     background: #72727200;
     backdrop-filter: blur(7.5px);
     padding: 2rem 18rem;
+}
+@media only screen and (max-width: 767px) {
+    .hero-area .image-wrapper .image-title {
+        padding: 2rem 1rem;
+    }
 }
 
 .hero-area .contact-box {
@@ -9552,13 +9550,12 @@ section {
     background-position: 0rem -6rem;
     background-repeat: no-repeat;
 }
-
-.hero-area .image-wrapper .image-title {
-    background: #72727200;
-    backdrop-filter: blur(7.5px);
-    text-align: left;
-    padding: 2rem 18rem;
+@media only screen and (max-width: 767px) {
+    .hero-area .image-wrapper {
+        background-position: center center;
+    }
 }
+
 
 
 .vertical.section {

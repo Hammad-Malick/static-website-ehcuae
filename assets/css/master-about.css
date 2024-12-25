@@ -9215,6 +9215,11 @@ section {
     padding: 2rem 18rem;
     margin: 0;
 }
+@media only screen and (max-width: 767px) {
+    .hero-area .image-wrapper {
+        background-position: center center;
+    }
+}
 @media only screen and (max-width: 1919px) {
     .hero-area-inner {
         padding-top: 178px;
@@ -9243,6 +9248,9 @@ section {
 @media only screen and (max-width: 767px) {
     .hero-area .section-title {
         text-align: start
+    }
+    .hero-area .image-wrapper .image-title {
+        padding: 2rem 1rem;
     }
 }
 
