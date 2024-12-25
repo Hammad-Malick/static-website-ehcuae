@@ -897,13 +897,19 @@
           <script>
             // Function to check if SVG is supported
             document.addEventListener('DOMContentLoaded', () => {
+              const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+              if (isIOS) {
+                document.querySelector('.world-map').style.display = 'none';
+                document.querySelector('.map-fallback').style.display = 'block';
+              }
               function isSvgSupported() {
                 return document.implementation.hasFeature(
                   'http://www.w3.org/TR/SVG11/feature#BasicStructure',
                   '1.1'
                 );
               }
-  
+
               // Apply a class to the body based on SVG support
               if (isSvgSupported()) {
                 document.body.classList.add('svg-supported');
