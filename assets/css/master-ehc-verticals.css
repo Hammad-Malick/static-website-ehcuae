@@ -10079,7 +10079,7 @@ section {
 }
 
 .ehc-nav-button:hover {
-    border-color: #fff;
+    border-color: #000000;
 }
 
 .ehc-nav-button svg {
@@ -10091,7 +10091,7 @@ section {
 }
 
 .ehc-nav-button:hover svg {
-    stroke: #fff;
+    stroke: #000000;
 }
 
 .ehc-stats-grid {
