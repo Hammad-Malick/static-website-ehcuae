@@ -167,7 +167,7 @@
       <a href="home.html" class="nav-item">Home</a>
       <a href="about.html" class="nav-item">Who We Are</a>
       <a href="ehc-verticals.html" class="nav-item">EHC verticals</a>
-  <a href="blog-details.html" class="nav-item">Blogs</a>
+      <a href="blog-details.html" class="nav-item">Blogs</a>
       <a href="news.html" class="nav-item">News</a>
       <a href="contact.html" class="nav-item">Contact Us</a>
     </nav>
@@ -277,7 +277,8 @@
                         style="display: flex;flex-direction: column;gap:20px;height: 68vh;place-content: center;">
                         <h1 class="section-title has_fade_anim" data-fade-from="left" data-duration="0.75"
                           data-delay="0.30">Enterprise Holding <br> Company</h1>
-                        <h2 class="has_fade_anim hero-sub-heading" data-fade-from="left" data-duration="0.75" data-delay="0.30">
+                        <h2 class="has_fade_anim hero-sub-heading" data-fade-from="left" data-duration="0.75"
+                          data-delay="0.30">
                           Legacy of Excellence, Vision for Tomorrow
                         </h2>
                       </div>
@@ -324,19 +325,26 @@
 
           <!-- about area start  -->
           <section class="about-area">
-          <div class="container-fluid">
+            <div class="container-fluid">
               <div class="about-area-inner section-spacing">
                 <div class="section-content">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper">
-                      <h2 class="section-title has_text_move_anim">Empowering Transformation with 35+ Years of Legacy, Strategic Investments, and Innovative Solutions for Sustainable Growth and Lasting Impact.</h2>
+                      <h2 class="section-title has_text_move_anim">Empowering Transformation with 35+ Years of Legacy,
+                        Strategic Investments, and Innovative Solutions for Sustainable Growth and Lasting Impact.</h2>
                     </div>
                   </div>
                   <div class="content-last">
                     <div class="text-wrapper">
-                      <p class="text has_text_move_anim" data-delay="0.30">EHC Investment is a forward-thinking holding company, built on 35+ years of proven success of its leadership and subsidiaries. Rooted in a legacy of excellence across diverse industries, we combine decades of wisdom with fresh perspectives to strategically invest, balance risk, and maximize returns.
+                      <p class="text has_text_move_anim" data-delay="0.30">EHC Investment is a forward-thinking holding
+                        company, built on 35+ years of proven success of its leadership and subsidiaries. Rooted in a
+                        legacy of excellence across diverse industries, we combine decades of wisdom with fresh
+                        perspectives to strategically invest, balance risk, and maximize returns.
                       </p>
-                      <p class="text has_text_move_anim" data-delay="0.30"> By leveraging our expertise and fostering innovation through partnerships, we deliver exceptional performance and sustainable value. Committed to long-term stability and growth, EHC is shaping a resilient portfolio to create lasting impact for our shareholders and drive a brighter, more innovative future.</p>
+                      <p class="text has_text_move_anim" data-delay="0.30"> By leveraging our expertise and fostering
+                        innovation through partnerships, we deliver exceptional performance and sustainable value.
+                        Committed to long-term stability and growth, EHC is shaping a resilient portfolio to create
+                        lasting impact for our shareholders and drive a brighter, more innovative future.</p>
                     </div>
                     <div class="btn-wrapper has_fade_anim" data-fade-from="top" data-fade-offset="70"
                       data-ease="bounce">
@@ -672,9 +680,9 @@
           </div> -->
           <!-- feature area end  -->
           <!-- client area start  -->
-           <div class="container large mt-5 mb-4">
-             <h2 class="clients-area-top-header section-title"> Our Partners</h2>
-           </div>
+          <div class="container large mt-5 mb-4">
+            <h2 class="clients-area-top-header section-title"> Our Partners</h2>
+          </div>
           <div class="clients-area mt-4 mb-4">
             <div class="container-hd">
               <div class="clients-area">
@@ -808,7 +816,7 @@
                       stroke-width: 1.56px;
                     }
                   </style>
-                  <!-- <radialGradient id="radial-gradient" cx="860.27" cy="921.3" r="991.89"
+                  <radialGradient id="radial-gradient" cx="860.27" cy="921.3" r="991.89"
                     gradientTransform="translate(0.28 0.12) scale(2.97 3.34)" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#6d6e71" />
                     <stop offset="0.07" stop-color="#646567" />
@@ -816,7 +824,7 @@
                     <stop offset="0.56" stop-color="#333132" />
                     <stop offset="0.79" stop-color="#272325" />
                     <stop offset="1" stop-color="#231f20" />
-                  </radialGradient> -->
+                  </radialGradient>
                 </defs>
                 <rect class="cls-1" width="5000" height="3000" />
                 <image width="15342" height="6712" transform="translate(658.96 750.16) scale(0.24)"
@@ -887,7 +895,21 @@
             </div>
           </div>
           <script>
+            // Function to check if SVG is supported
             document.addEventListener('DOMContentLoaded', () => {
+              function isSvgSupported() {
+                return document.implementation.hasFeature(
+                  'http://www.w3.org/TR/SVG11/feature#BasicStructure',
+                  '1.1'
+                );
+              }
+  
+              // Apply a class to the body based on SVG support
+              if (isSvgSupported()) {
+                document.body.classList.add('svg-supported');
+              } else {
+                document.body.classList.add('no-svg');
+              }
               // Animate map paths
               const paths = document.querySelectorAll('.map-path');
               paths.forEach(path => {
