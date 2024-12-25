@@ -3855,6 +3855,7 @@ h6 {
     font-weight: 400;
     font-display: swap
 }
+
 @font-face {
     font-family: "aptos-light";
     src: url("../fonts/aptos-light/aptos-light.ttf");
@@ -9031,8 +9032,7 @@ section {
 }
 
 .footer-area-inner {
-    display: grid
-;
+    display: grid;
     gap: 80px 50px;
     grid-template-columns: 365px 190px 190px 385px;
     justify-content: space-between;
@@ -9569,6 +9569,16 @@ section {
 @media only screen and (max-width: 991px) {
     .about-area .section-content {
         grid-template-columns: 1fr
+    }
+}
+
+.about-area .container-fluid {
+    padding: 0px 198px;
+}
+
+@media only screen and (max-width: 780px) {
+    .about-area .container-fluid {
+        padding: 60px;
     }
 }
 
@@ -10863,18 +10873,17 @@ section {
 }
 
 @media only screen and (max-width: 1919px) {
-    .clients-area-inner {
-    }
+    .clients-area-inner {}
 }
 
 @media only screen and (max-width: 1399px) {
-    .clients-area-inner {
-    }
+    .clients-area-inner {}
 }
 
 .clients-area-inner {
     padding: 20px 0;
 }
+
 .clients-area .section-title {
     font-size: 14px;
     font-weight: 500;
@@ -11105,9 +11114,7 @@ section {
 
 @media only screen and (max-width: 767px) {
     .counter-area .counters-grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 30px
+        flex-direction: column;
     }
 }
 
@@ -11159,8 +11166,8 @@ section {
 
 /* latest news area strt */
 @media screen and (min-width: 780px) {
-    
-    .container.news{
+
+    .container.news {
         margin: 10px 9rem;
     }
 }
@@ -11236,6 +11243,12 @@ section {
     transform: translateX(5px);
 }
 
+.clients-area-top-header {
+    color: #ffffff;
+    margin-left: 10rem;
+
+}
+
 @media (max-width: 1024px) {
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -11250,8 +11263,12 @@ section {
     .news-title {
         font-size: 3rem;
     }
+    .clients-area-top-header{
+        padding: 22px 14px 6px 17px;
+        margin-left: 0rem;
+    }
 }
- 
+
 
 
 /* latest news area ends */

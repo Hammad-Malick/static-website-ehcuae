@@ -168,15 +168,18 @@
     }
 
     .ehc-vertical .header {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 
     .ehc-vertical .title {
         font-size: 3.5rem;
     }
-
+    .ehc-vertical .vertical-logo{
+        display: none;
+    }
     .ehc-vertical .nav-buttons {
-        right: 2rem;
+       left: 15rem;
+       top: 75%;
     }
 }
 
