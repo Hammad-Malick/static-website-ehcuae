@@ -10228,7 +10228,7 @@ section {
 
 @media only screen and (max-width: 1199px) {
     .footer-area .footer-logo img {
-        max-height: 34px
+      /*  max-height: 34px */
     }
 }
 

@@ -8749,9 +8749,19 @@ section {
     margin-top: -17px
 }
 
+.hero-sub-heading {
+    font-size: 40px;
+    margin-top: -17px
+}
+
 @media only screen and (max-width: 1919px) {
     .section-title {
         font-size: 46px;
+        margin-top: -15px
+    }
+
+    .hero-sub-heading {
+        font-size: 36px;
         margin-top: -15px
     }
 }
@@ -8759,6 +8769,11 @@ section {
 @media only screen and (max-width: 1399px) {
     .section-title {
         font-size: 42px;
+        margin-top: -13px
+    }
+
+    .hero-sub-heading {
+        font-size: 32px;
         margin-top: -13px
     }
 }
@@ -8782,9 +8797,19 @@ section {
         font-size: 35px;
         margin-top: 0
     }
+
+    .hero-sub-heading {
+        font-size: 25px;
+        margin-top: 0px
+    }
 }
 
 @media(max-width: 575px) {
+    .hero-sub-heading {
+        font-size: 20px;
+        margin-top: 0px
+    }
+
     .section-title {
         font-size: 30px;
         margin-top: 0
@@ -9107,7 +9132,7 @@ section {
 
 @media only screen and (max-width: 1199px) {
     .footer-area .footer-logo img {
-        max-height: 34px
+      /*  max-height: 34px */
     }
 }
 
@@ -9360,6 +9385,15 @@ section {
     margin-top: -10px
 }
 
+.hero-area .thumb {
+    position: absolute;
+    left: 80px;
+    top: 62px;
+}
+.hero-area .thumb img {
+    width: 300px;
+}
+
 @media only screen and (max-width: 1399px) {
     .hero-area .section-title {
         max-width: 730px;
@@ -9381,6 +9415,14 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
+    .hero-area .thumb {
+        left: 9px;
+        top: 10px;
+    }
+    .hero-area .thumb img {
+        width: 200px;
+    }
+    
     .hero-area .section-title {
         font-size: 38px
     }
@@ -11263,7 +11305,8 @@ section {
     .news-title {
         font-size: 3rem;
     }
-    .clients-area-top-header{
+
+    .clients-area-top-header {
         padding: 22px 14px 6px 17px;
         margin-left: 0rem;
     }
