@@ -281,35 +281,6 @@
 
 
 /* Check if SVG is supported */
-@supports (svg) {
-
-    /* If SVG is supported, show the SVG and hide the fallback image */
-    .map-fallback {
-        display: none;
-    }
-
-    .world-map {
-        display: block;
-    }
-    .country-names {
-        display: block;
-    }
-};
-/* If SVG is not supported (for older browsers or edge cases) */
-@supports not (svg) {
-
-    /* Show the fallback image and hide the SVG */
-    .map-fallback {
-        display: block;
-    }
-
-    .world-map {
-        display: none;
-    }
-    .country-names {
-        display: none;
-    }
-};
 
 @media screen and (max-width: 768px) {
     .country-image {
@@ -325,6 +296,15 @@
         top: -107px;
         display: none;
         transition: ease-in-out 1s;
+
+    }
+    .world-map{
+        height: 280px;
+    }
+    .country-name {
+        cursor:not-allowed ;
+        pointer-events: none;
+        font-size: 14px;
 
     }
 }
