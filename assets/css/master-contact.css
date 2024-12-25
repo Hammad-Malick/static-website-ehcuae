@@ -9240,7 +9240,7 @@ section {
     height: 40vh;
     background: url('./../imgs/gallery/contact-hbg.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: center -18rem;
     background-repeat: no-repeat;
 }
 

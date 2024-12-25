@@ -9548,8 +9548,8 @@ section {
     /* background: url('./../imgs/gallery/about-banner.jpg'); */
     background: url('./../imgs/gallery/main-infra-sample.jpg');
     background-size: cover;
-    background-position: 0rem -6rem;
     background-repeat: no-repeat;
+    background-position: 0rem -33rem;
 }
 
 @media only screen and (max-width: 767px) {
