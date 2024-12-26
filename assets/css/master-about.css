@@ -3721,7 +3721,7 @@
 }
 
 body {
-    font-family:  var(--font_aptos_light);
+    font-family: var(--font_aptos_light);
     line-height: 1
 }
 
@@ -3841,18 +3841,21 @@ h5 {
 h6 {
     font-size: 18px
 }
+
 @font-face {
     font-family: "aptos";
     src: url("../fonts/aptos-black/aptos-black.ttf");
     font-weight: 400;
     font-display: swap
 }
+
 @font-face {
     font-family: "aptos-light";
     src: url("../fonts/aptos-light/aptos-light.ttf");
     font-weight: 400;
     font-display: swap
 }
+
 @font-face {
     font-family: "recoleta";
     src: url("../fonts/recoleta/Latinotype - Recoleta Medium.otf");
@@ -3913,7 +3916,7 @@ h6 {
 .font-heading-recoleta-medium h4,
 .font-heading-recoleta-medium h5,
 .font-heading-recoleta-medium h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1.05
 }
@@ -3979,7 +3982,7 @@ h6 {
 .font-heading-beatricetrial-regular-2 h4,
 .font-heading-beatricetrial-regular-2 h5,
 .font-heading-beatricetrial-regular-2 h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 400;
     line-height: 1.08
 }
@@ -3990,7 +3993,7 @@ h6 {
 .font-heading-beatricetrial-medium h4,
 .font-heading-beatricetrial-medium h5,
 .font-heading-beatricetrial-medium h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1.08
 }
@@ -4012,7 +4015,7 @@ h6 {
 .font-heading-instumentsans-medium h4,
 .font-heading-instumentsans-medium h5,
 .font-heading-instumentsans-medium h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1
 }
@@ -4023,7 +4026,7 @@ h6 {
 .font-heading-instumentsans-semibold h4,
 .font-heading-instumentsans-semibold h5,
 .font-heading-instumentsans-semibold h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 600;
     line-height: 1
 }
@@ -4034,7 +4037,7 @@ h6 {
 .font-heading-spacegrotesk-bold h4,
 .font-heading-spacegrotesk-bold h5,
 .font-heading-spacegrotesk-bold h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 700;
     line-height: 1
 }
@@ -4045,7 +4048,7 @@ h6 {
 .font-heading-canelatrial-thin h4,
 .font-heading-canelatrial-thin h5,
 .font-heading-canelatrial-thin h6 {
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-weight: 300;
     line-height: 1.2
 }
@@ -4538,7 +4541,7 @@ h6 {
 
 .btn-close {
     content: "";
-    font-family:  var(--font_aptos);
+    font-family: var(--font_aptos);
     font-size: 16px;
     opacity: 1;
     filter: brightness(100) contrast(0);
@@ -6841,7 +6844,7 @@ section {
 
 .main-menu li.menu-item-has-children>a:after {
     content: "";
-    font-family:  var(--font_aptos_light);
+    font-family: var(--font_aptos_light);
     margin-inline-start: 5px;
     font-weight: 600;
     font-size: 14px
@@ -8135,7 +8138,7 @@ section {
     top: 40%;
     z-index: 99;
     transform: translateY(-50%);
-    font-family:  var(--font_aptos_light);
+    font-family: var(--font_aptos_light);
     transition: all .3s
 }
 
@@ -8627,7 +8630,7 @@ section {
 .font-heading-Beatricetrial h4,
 .font-heading-Beatricetrial h5,
 .font-heading-Beatricetrial h6 {
-    font-family:  var(--font_aptos)
+    font-family: var(--font_aptos)
 }
 
 .cf_feature.style-3 {
@@ -8983,8 +8986,7 @@ section {
 }
 
 .footer-area-inner {
-    display: grid
-;
+    display: grid;
     gap: 80px 50px;
     grid-template-columns: 365px 190px 190px 385px;
     justify-content: space-between;
@@ -9059,7 +9061,7 @@ section {
 
 @media only screen and (max-width: 1199px) {
     .footer-area .footer-logo img {
-      /*  max-height: 34px */
+        /*  max-height: 34px */
     }
 }
 
@@ -9199,6 +9201,7 @@ section {
     padding-top: 218px;
     padding-bottom: 133px
 }
+
 .hero-area .image-wrapper {
     place-content: end;
     height: 40vh;
@@ -9208,6 +9211,7 @@ section {
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .hero-area .image-wrapper .image-title {
     background: #72727200;
     backdrop-filter: blur(7.5px);
@@ -9215,11 +9219,13 @@ section {
     padding: 2rem 18rem;
     margin: 0;
 }
+
 @media only screen and (max-width: 767px) {
     .hero-area .image-wrapper {
         background-position: center center;
     }
 }
+
 @media only screen and (max-width: 1919px) {
     .hero-area-inner {
         padding-top: 178px;
@@ -9249,6 +9255,7 @@ section {
     .hero-area .section-title {
         text-align: start
     }
+
     .hero-area .image-wrapper .image-title {
         padding: 2rem 1rem;
     }
@@ -10107,7 +10114,8 @@ section {
     filter: grayscale(1);
     transition: all .3s ease
 }
-.team-box .thumb img:hover{
+
+.team-box .thumb img:hover {
     filter: none;
     transform: scale(1.1);
     transition: all .3s ease
@@ -10544,6 +10552,7 @@ section {
     opacity: 0.3;
     transition: all 0.5s ease;
 }
+
 .director-card:hover .director-image {
     filter: none;
     transform: scale(1.1);
@@ -10716,5 +10725,105 @@ section {
 
 /* rest team ends */
 
+
+/* custom client area on mobile only */
+
+.clients-area-slider {
+    background-color: var(--white)
+}
+
+.dark .clients-area-slider {
+    background-color: var(--white)
+}
+
+.clients-area-inner-slider {
+    /* padding: 55px 0; */
+    position: relative;
+    /* padding-inline-start: 120px; */
+    margin-inline-end: calc((100vw - var(--container-max-widths))/-2)
+}
+
+@media only screen and (max-width: 1399px) {
+    .clients-area-inner-slider {
+        padding: 35px 0;
+        /* padding-inline-start: 80px */
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .clients-area-inner-slider {
+        padding-inline-start: 0;
+        margin-inline-end: 0
+    }
+}
+
+.clients-area-inner-slider .shape-1 {
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    top: 0;
+    inset-inline-end: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+@media only screen and (max-width: 991px) {
+    .clients-area-inner-slider .shape-1 {
+        display: none
+    }
+}
+
+.clients-area-inner-slider .shape-1 img {
+    /* width: 100px; */
+    /* height: 100%; */
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.dir-rtl .clients-area-inner-slider .shape-1 img {
+    transform: rotateY(180deg)
+}
+
+.client-slider-active .swiper-slide {
+    width: 150px
+}
+
+.client-slider .swiper-wrapper {
+    transition-timing-function: linear;
+    align-items: center;
+}
+
+.clients-area-slider {
+    display: none;
+}
+
+.has-right-line.o-f-heading-m {
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .clients-area-slider {
+        display: block;
+    }
+
+    .client-area {
+        display: none;
+    }
+
+    .has-left-line.o-f-heading-d {
+        display: none;
+    }
+
+    .has-right-line.o-f-heading-m {
+        display: block;
+    }
+
+    .has-right-line.o-f-heading-m::after {
+        width: 117px;
+        left: 10rem;
+    }
+}
+
+/* custom client area on mobile only */
 
 /* custom end */
