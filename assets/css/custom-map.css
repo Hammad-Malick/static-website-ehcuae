@@ -40,10 +40,6 @@
     height: 100vh;
 }
 
-.world-map {
-    width: 100%;
-    height: auto;
-}
 
 .map-path {
     /* fill: #2a9b9d; */
@@ -275,20 +271,35 @@
     transition: ease-in-out 1s;
 
 }
+
 .map-fallback {
     display: block;
-  }
-  .world-map {
+}
+
+.world-map {}
+
+/* If SVG is supported, show the SVG and hide the fallback image */
+.svg-supported .map-fallback {
     display: none;
-  }
-  
-  /* If SVG is supported, show the SVG and hide the fallback image */
-  .svg-supported .map-fallback {
-    display: none;
-  }
-  .svg-supported .world-map {
+}
+
+.world-map {
     display: block;
-  }
+    width: 100%;
+    height: auto;
+}
+
+.svg-supported .world-map-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* .world-map-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+} */
 /* Check if SVG is supported */
 
 @media screen and (max-width: 768px) {
@@ -308,22 +319,131 @@
 
     }
 
-        .world-map {
-            height: 275px;
-        }
-    
+    .svg-supported .world-map {
+        display: none;
+        height: 275px;
+    }
+
+    .svg-supported .world-map-mobile {
+        display: block;
+        height: 450px;
+    }
+
     .country-name {
-        cursor:not-allowed ;
+        cursor: not-allowed;
         pointer-events: none;
         font-size: 14px;
 
     }
-    .country-names{
+
+    .country-names {
         padding: 1rem;
         display: none;
+    }
+    .uae-slider-container{
+        display: block !important;
     }
 }
 
 .country-image.active {
     display: flex;
 }
+
+
+/* slider country name */
+
+.uae-slider-container {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(90deg, rgba(63,61,62,1) 0%, rgba(63,61,63,1) 47%, rgba(61,59,60,1) 100%);
+}
+
+.uae-slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 153px;
+    overflow: hidden;
+}
+
+.uae-slider-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.uae-slider-slide.uae-slider-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.uae-slider-triangle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.uae-slider-triangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.uae-slider-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.uae-slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+.uae-slider-nav:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.uae-slider-prev {
+    left: 20px;
+}
+
+.uae-slider-next {
+    right: 20px;
+}
+
+.uae-slider-nav svg {
+    width: 30px;
+    height: 30px;
+    stroke: currentColor;
+    stroke-width: 1;
+    fill: none;
+}
+
+/* slider country name ends */
