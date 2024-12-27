@@ -44,6 +44,8 @@
       setTimeout(() => {
         $('#container').addClass('loaded');
         if ($('#container').hasClass('loaded')) {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
           $('#preloader').delay(1000).queue(function () {
             $(this).remove();
           });
@@ -54,6 +56,8 @@
       setTimeout(() => {
         $('#container').addClass('loaded');
         if ($('#container').hasClass('loaded')) {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
           $('#preloader').delay(1000).queue(function () {
             $(this).remove();
           });
