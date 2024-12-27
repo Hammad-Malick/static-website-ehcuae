@@ -8982,7 +8982,26 @@ section {
 .dark .footer-area {
     background-color: #1c1c1c
 }
+.footer-area-inner.mobile {
+    display: none;
 
+}
+@media (max-width: 780px) {
+    .footer-options {
+        flex-direction: row;
+    }
+
+    .footer-area-inner.mobile {
+        display: block;
+
+    }
+
+    .footer-area-inner {
+        display: none;
+
+    }
+
+}
 @media only screen and (max-width: 991px) {
     .footer-area {
         padding: 0 15px

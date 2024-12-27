@@ -9140,6 +9140,26 @@ section {
 .footer-area .newsletter-text .text {
     color: var(--white-2)
 }
+.footer-area-inner.mobile {
+    display: none;
+
+}
+@media (max-width: 780px) {
+    .footer-options {
+        flex-direction: row;
+    }
+
+    .footer-area-inner.mobile {
+        display: block;
+
+    }
+
+    .footer-area-inner {
+        display: none;
+
+    }
+
+}
 
 .copyright-area-inner {
     display: flex;
