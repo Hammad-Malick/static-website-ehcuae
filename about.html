@@ -316,8 +316,8 @@
                     <div class="title-wrapper">
                       <!-- <h2 class="section-title has_fade_anim">Committed to shaping a sustainable and innovative future
                         while making a meaningful difference on both regional and global scale.</h2> -->
-                        <h2 class="section-title has_fade_anim">Shaping Sustainability</h2>
-                        <span class="section-subtitle  has-right-line o-f-heading-m">02. our footprint</span>
+                      <h2 class="section-title has_fade_anim">Shaping Sustainability</h2>
+                      <span class="section-subtitle  has-right-line o-f-heading-m">02. our footprint</span>
                     </div>
                   </div>
                 </div>
@@ -383,21 +383,86 @@
       </section>
       <!-- awards area end  -->
       <section class="team-area" id="leader">
-        <div class="container">
+        <div class="container p-0">
           <div class="team-area-inner section-spacing">
             <div class="section-header">
               <div class="section-title-wrapper">
                 <div class="title-wrapper">
                   <h2 class="section-title has_fade_anim">Meet Our Leadership</h2>
+                  <div class="team-nav-wrapper">
+                    <button class="team-slider-nav team-slider-prev">
+                      <!-- <svg viewBox="0 0 24 24">
+                        <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg> -->
+                      < </button>
+                        <button class="team-slider-nav team-slider-next">
+                          <!-- <svg viewBox="0 0 24 24">
+                        <path d="M9 18l6-6-6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg> -->
+                          >
+                        </button>
+                  </div>
                 </div>
               </div>
-              <!-- <div class="text-wrapper">
-                <p class="text has_fade_anim">We deploy a highly skilled team, specializing in delivering scalable
-                  solutions and innovative strategies. Our professionals bring diverse expertise, working together
-                  to achieve measurable success in every project we undertake.</p>
-              </div> -->
             </div>
-            <div class="team-wrapper-box">
+
+            <div id="team-mobile" class="team-slider-wrapper">
+              <div class="team-slider-container">
+                <div class="team-slider-track">
+                  <div class="team-slider-item active">
+                    <div class="team-slider-image-wrapper">
+                      <img src="assets/imgs/team/Untitled-2.png" alt="Moustafa Rashad" class="team-slider-image">
+                    </div>
+                    <div class="team-slider-content">
+                      <h3 class="team-slider-name">Moustafa Rashad</h3>
+                      <p class="team-slider-title">Chief Executive Officer</p>
+                    </div>
+                  </div>
+                  <div class="team-slider-item">
+                    <div class="team-slider-image-wrapper">
+                      <img src="assets/imgs/team/Untitled-3.png" alt="Raouf Andrea" class="team-slider-image">
+                    </div>
+                    <div class="team-slider-content">
+                      <h3 class="team-slider-name">Raouf Andrea</h3>
+                      <p class="team-slider-title">Chief Corporate Officer</p>
+                    </div>
+                  </div>
+                  <div class="team-slider-item">
+                    <div class="team-slider-image-wrapper">
+                      <img src="assets/imgs/team/Haitam-khader_COO.png" alt="Haitam Khader" class="team-slider-image">
+                    </div>
+                    <div class="team-slider-content">
+                      <h3 class="team-slider-name">Haitam Khader</h3>
+                      <p class="team-slider-title">Chief Commercial Officer</p>
+                    </div>
+                  </div>
+                  <div class="team-slider-item">
+                    <div class="team-slider-image-wrapper">
+                      <img src="assets/imgs/team/Cfo-Mahmoud-Ismail.png" alt="Mahmoud Ismail" class="team-slider-image">
+                    </div>
+                    <div class="team-slider-content">
+                      <h3 class="team-slider-name">Mahmoud Ismail</h3>
+                      <p class="team-slider-title">Chief Financial Officer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-slider-dots"></div>
+              </div>
+              <div class="team-slider-overlay"></div>
+              <div class="team-slider-drawer">
+                <div class="team-slider-drawer-content">
+                  <button class="team-slider-drawer-close">&times;</button>
+                  <img src="" alt="" class="team-slider-drawer-image">
+                  <h3 class="team-slider-drawer-name"></h3>
+                  <p class="team-slider-drawer-title"></p>
+                  <div class="team-slider-drawer-bio"></div>
+                </div>
+              </div>
+              <div id="overlay"></div>
+            </div>
+
+
+            <div id="team-desktop" class="team-wrapper-box">
               <div class="team-wrapper">
                 <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.30">
                   <a>
@@ -1022,92 +1087,92 @@
 
   </script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('DOM fully loaded and parsed');
-      const track = document.querySelector('.carousel-track');
-      const cards = document.querySelectorAll('.director-card');
-      const prevBtn = document.querySelector('.nav-button.prev');
-      const nextBtn = document.querySelector('.nav-button.next');
-      const counterCurrent = document.querySelector('.counter-current');
-      const counterTotal = document.querySelector('.counter-total');
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   console.log('DOM fully loaded and parsed');
+    //   const track = document.querySelector('.carousel-track');
+    //   const cards = document.querySelectorAll('.director-card');
+    //   const prevBtn = document.querySelector('.nav-button.prev');
+    //   const nextBtn = document.querySelector('.nav-button.next');
+    //   const counterCurrent = document.querySelector('.counter-current');
+    //   const counterTotal = document.querySelector('.counter-total');
 
-      let currentIndex = 0;
-      const cardWidth = cards[0].offsetWidth;
-      const visibleCards = 3;
-      const totalSlides = Math.ceil(cards.length - visibleCards + 1);
+    //   let currentIndex = 0;
+    //   const cardWidth = cards[0].offsetWidth;
+    //   const visibleCards = 3;
+    //   const totalSlides = Math.ceil(cards.length - visibleCards + 1);
 
-      // Initialize counter
-      counterTotal.textContent = totalSlides;
+    //   // Initialize counter
+    //   counterTotal.textContent = totalSlides;
 
-      function updateCarousel() {
-        // Update transform
-        gsap.to(track, {
-          x: -currentIndex * (cardWidth + 32), // 32px is the gap
-          duration: 0.5,
-          ease: 'power2.out'
-        });
+    //   function updateCarousel() {
+    //     // Update transform
+    //     gsap.to(track, {
+    //       x: -currentIndex * (cardWidth + 32), // 32px is the gap
+    //       duration: 0.5,
+    //       ease: 'power2.out'
+    //     });
 
-        // Update active states
-        cards.forEach((card, index) => {
-          if (index >= currentIndex && index < currentIndex + visibleCards) {
-            card.classList.add('active');
-            gsap.to(card, { opacity: 1, duration: 0.5 });
-          } else {
-            card.classList.remove('active');
-            gsap.to(card, { opacity: 0.3, duration: 0.5 });
-          }
-        });
+    //     // Update active states
+    //     cards.forEach((card, index) => {
+    //       if (index >= currentIndex && index < currentIndex + visibleCards) {
+    //         card.classList.add('active');
+    //         gsap.to(card, { opacity: 1, duration: 0.5 });
+    //       } else {
+    //         card.classList.remove('active');
+    //         gsap.to(card, { opacity: 0.3, duration: 0.5 });
+    //       }
+    //     });
 
-        // Animate counter
-        gsap.to(counterCurrent, {
-          duration: 0.5,
-          snap: { textContent: 1 },
-          textContent: currentIndex + 1,
-          ease: 'power2.out'
-        });
-      }
+    //     // Animate counter
+    //     gsap.to(counterCurrent, {
+    //       duration: 0.5,
+    //       snap: { textContent: 1 },
+    //       textContent: currentIndex + 1,
+    //       ease: 'power2.out'
+    //     });
+    //   }
 
-      // Navigation buttons
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex < cards.length - visibleCards) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
+    //   // Navigation buttons
+    //   nextBtn.addEventListener('click', () => {
+    //     if (currentIndex < cards.length - visibleCards) {
+    //       currentIndex++;
+    //       updateCarousel();
+    //     }
+    //   });
 
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
+    //   prevBtn.addEventListener('click', () => {
+    //     if (currentIndex > 0) {
+    //       currentIndex--;
+    //       updateCarousel();
+    //     }
+    //   });
 
-      // Initial animations
-      gsap.from('.title-container', {
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-      });
+    //   // Initial animations
+    //   gsap.from('.title-container', {
+    //     x: -100,
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: 'power3.out'
+    //   });
 
-      gsap.from('.director-card', {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        // stagger: 0.2,
-        ease: 'power3.out'
-      });
-      gsap.to('.director-card', {
-        y: 50,
-        opacity: 1,
-        duration: 1,
-        // stagger: 0.2,
-        ease: 'power3.out'
-      });
+    //   gsap.from('.director-card', {
+    //     y: 50,
+    //     opacity: 0,
+    //     duration: 1,
+    //     // stagger: 0.2,
+    //     ease: 'power3.out'
+    //   });
+    //   gsap.to('.director-card', {
+    //     y: 50,
+    //     opacity: 1,
+    //     duration: 1,
+    //     // stagger: 0.2,
+    //     ease: 'power3.out'
+    //   });
 
-      // Initialize carousel
-      updateCarousel();
-    });
+    //   // Initialize carousel
+    //   updateCarousel();
+    // });
   </script>
 
 
@@ -1146,6 +1211,200 @@
           });
         });
       });
+    });
+  </script>
+  <script>
+    const teamSlider = {
+      currentSlide: 0,
+      totalSlides: document.querySelectorAll('.team-slider-item').length,
+      track: document.querySelector('.team-slider-track'),
+      items: document.querySelectorAll('.team-slider-item'),
+      dotsContainer: document.querySelector('.team-slider-dots'),
+
+      init() {
+        this.createDots();
+        this.setupEventListeners();
+        this.setupTouchEvents();
+        this.initialAnimation();
+        this.updateSlider();
+        this.setupItemClickEvents();
+      },
+
+      createDots() {
+        for (let i = 0; i < this.totalSlides; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('team-slider-dot');
+          if (i === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => this.goToSlide(i));
+          this.dotsContainer.appendChild(dot);
+        }
+      },
+
+      setupEventListeners() {
+        document.querySelector('.team-slider-prev').addEventListener('click', () => this.navigate('prev'));
+        document.querySelector('.team-slider-next').addEventListener('click', () => this.navigate('next'));
+      },
+
+      setupTouchEvents() {
+        let startX, moveX;
+        const threshold = 50;
+
+        this.track.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        this.track.addEventListener('touchmove', (e) => {
+          moveX = e.touches[0].clientX;
+        }, { passive: true });
+
+        this.track.addEventListener('touchend', () => {
+          if (startX && moveX) {
+            const diff = startX - moveX;
+            if (Math.abs(diff) > threshold) {
+              if (diff > 0) this.navigate('next');
+              else this.navigate('prev');
+            }
+          }
+        });
+      },
+
+      navigate(direction) {
+        if (direction === 'next') {
+          this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+        } else {
+          this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        }
+        this.updateSlider();
+      },
+
+      goToSlide(index) {
+        this.currentSlide = index;
+        this.updateSlider();
+      },
+
+      updateSlider() {
+        const slideWidth = window.innerWidth <= 768 ? 75 : 100;
+        const offset = -this.currentSlide * slideWidth;
+
+        gsap.to(this.track, {
+          x: `${offset}%`,
+          duration: 0.5,
+          ease: 'power2.out'
+        });
+
+        // Update active states
+        this.items.forEach((item, index) => {
+          const isActive = index === this.currentSlide;
+          item.classList.toggle('active', isActive);
+
+          gsap.to(item, {
+            opacity: isActive ? 1 : 0.3,
+            duration: 0.5
+          });
+        });
+
+        // Update dots
+        const dots = this.dotsContainer.querySelectorAll('.team-slider-dot');
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === this.currentSlide);
+        });
+      },
+      setupItemClickEvents() {
+        this.items.forEach(item => {
+          item.addEventListener('click', () => teamSliderDrawer.openDrawer(item));
+        });
+      },
+      initialAnimation() {
+        gsap.from(this.items, {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: 'power3.out'
+        });
+      }
+    };
+    const teamSliderDrawer = {
+      drawer: document.querySelector('.team-slider-drawer'),
+      closeBtn: document.querySelector('.team-slider-drawer-close'),
+      image: document.querySelector('.team-slider-drawer-image'),
+      name: document.querySelector('.team-slider-drawer-name'),
+      overlay: document.querySelector('.team-slider-overlay'),
+      title: document.querySelector('.team-slider-drawer-title'),
+      bio: document.querySelector('.team-slider-drawer-bio'),
+
+      init() {
+        this.setupEventListeners();
+      },
+
+      setupEventListeners() {
+        this.closeBtn.addEventListener('click', () => this.closeDrawer());
+        this.overlay.addEventListener('click', () => this.closeDrawer());
+      },
+
+      openDrawer(item) {
+        const image = item.querySelector('.team-slider-image').src;
+        const name = item.querySelector('.team-slider-name').textContent;
+
+        const title = item.querySelector('.team-slider-title').textContent;
+        const bio = this.getBio(name);
+
+        this.image.src = image;
+        this.image.alt = name;
+        this.name.textContent = name;
+        this.title.textContent = title;
+        this.bio.textContent = bio;
+        gsap.to(this.overlay, {
+          opacity: 1,
+          visibility: 'visible',
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        gsap.to(this.drawer, {
+          y: '0%',
+          duration: 0.5,
+          ease: 'power2.out'
+        });
+      },
+
+      closeDrawer() {
+        gsap.to(this.overlay, {
+          opacity: 0,
+          visibility: 'hidden',
+          duration: 0.3,
+          ease: 'power2.in'
+        });
+        gsap.to(this.drawer, {
+          y: '100%',
+          duration: 0.5,
+          ease: 'power2.in'
+        });
+      },
+
+      getBio(name) {
+        const bios = {
+          'Moustafa Rashad': 'Moustafa Rashad is a visionary leader with over 20 years of experience in the tech industry. As the CEO, he has led the company through significant growth and innovation, establishing it as a market leader in AI and machine learning solutions.',
+          'Raouf Andrea': `Raouf Charalambous serves as the Chief Corporate Officer at EHC Investment, leveraging over 15 years of corporate leadership experience. With a Bachelor’s degree in Architectural Engineering, Raouf combines technical expertise with strategic vision. He has a proven track record as a General Manager and entrepreneur, having founded and successfully managed his own business before joining EHC.
+At EHC Investment, Raouf oversees the company’s portfolio across its core verticals: energy, infrastructure, safety, and technology. His leadership emphasizes the transformative potential of technology and artificial intelligence, driving innovation throughout the business. Passionate about integrating AI solutions, Raouf focuses on enhancing efficiency and delivering sustainable, data-driven outcomes. Known for fostering partnerships and collaboration, he aligns EHC’s strategic goals with long-term value creation, placing technology and AI at the forefront of its vision.`,
+          'Haitam Khader': `Haitham possesses over 20 years of professional experience, held key leadership roles in globally renowned organizations across the Europe, Middle East, and Asia. He has successfully led transformative projects, driving strategic growth and optimizing business operations in complex and dynamic environments.
+
+Haitham holds a master’s degree in Logistics and Supply Chain Management from the University of Sydney in Australia, and an MBA in Corporate Finance from the University of Manchester in United Kingdome. He is also accredited with numerous prestigious certifications, such Certified Commercial Contracts Manager (CCCM), BGS Certified Business Analyst, Certified Cost Professional (CCP), Certified Planning and Scheduling Professional (PSP), Risk Management Professional (RMP), Agile Certified Professional (ACP), Project Management Professional (PMP), and few others.
+
+In addition to his corporate achievements, Haitham has published several articles on industry innovation, strategic management, and operational excellence. He also serves as an independent arbitrator, and as an editorial member for industry-leading publications.`,
+          'Mahmoud Ismail': `Mahmoud serves as the Chief Financial Officer at EHC Investment, bringing over 15 years of expertise in finance and leadership across diversified industries. Throughout his career, Mahmoud has demonstrated a proven ability to drive financial strategy, optimize operations, and support sustainable growth.
+With extensive experience in corporate finance, strategic planning, and risk management, Mahmoud has successfully overseen complex financial structures, led high-performing teams, and implemented robust financial frameworks. He specializes in aligning financial goals with long-term business objectives, ensuring both operational efficiency and profitability.
+A results-driven leader, Mahmoud is deeply committed to fostering innovation and building a strong foundation for EHC's success in a competitive market.`
+        };
+        return bios[name] || 'Bio information not available.';
+      }
+    };
+
+    teamSlider.init();
+    teamSliderDrawer.init();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      teamSlider.updateSlider();
     });
   </script>
 </body>

@@ -5500,7 +5500,7 @@ section {
 }
 
 .dark .container-preloader .loader-section {
-    background-color: var(--black)
+    background-color: black
 }
 
 .container-preloader .loader-section.section-left {
