@@ -10012,6 +10012,13 @@ section {
         max-height: 440px;
         min-height: 410px;
         width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .ehc-carousel-container {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
 }
 
