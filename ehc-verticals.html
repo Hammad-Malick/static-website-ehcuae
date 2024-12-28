@@ -683,7 +683,7 @@
                   <div class="footer-logo">
                     <a href="home.html"><img src="assets/imgs/logo/EHC-Black-trans.png" width="400" alt="site-logo"></a>
                   </div>
-                  <p class="info-text">Enterprise Holding Company  </p>
+                  <p class="info-text">Enterprise Holding Company </p>
                   <ul class="social-links">
                     <li><a href="https://www.facebook.com/EHCInvestment/" target="_blank"><i
                           class="fa-brands fa-facebook-f"></i></a></li>
@@ -892,7 +892,12 @@
       });
 
       // Responsive handling
-      window.addEventListener('resize', updateCarousel);
+      window.addEventListener('resize', () => {
+        updateCarousel();
+      });
+    });
+    window.addEventListener('resize', () => {
+      updateCarousel();
     });
 
     // Section animations
