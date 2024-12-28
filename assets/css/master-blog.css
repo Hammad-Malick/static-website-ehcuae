@@ -9641,5 +9641,32 @@ section {
     background-color: var(--white);
     color: var(--black)
 }
+.footer-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-area-inner.mobile {
+    display: none;
+
+}
+
+@media (max-width: 780px) {
+    .footer-options {
+        flex-direction: row;
+    }
+
+    .footer-area-inner.mobile {
+        display: block;
+
+    }
+
+    .footer-area-inner {
+        display: none;
+
+    }
+
+}
 
 /*# sourceMappingURL=master-blog.css.map */
