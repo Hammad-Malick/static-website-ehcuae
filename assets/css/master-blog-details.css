@@ -9688,6 +9688,9 @@ section {
     .hero-area .image-wrapper {
         background-position: center center;
     }
+    .hero-area .image-wrapper .image-title {
+        padding: 2rem 1rem;
+    }
 }
 .footer-options {
     display: flex;
