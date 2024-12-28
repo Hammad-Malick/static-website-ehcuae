@@ -31,7 +31,15 @@
 
 
 <body class="font-heading-beatricetrial-regular-2 dark">
+  <div class="overlay"></div>
 
+  <div class="detail-drawer">
+      <button class="drawer-close">&times;</button>
+      <img src="" alt="" class="drawer-image">
+      <h2 class="drawer-name"></h2>
+      <p class="drawer-title"></p>
+      <div class="drawer-bio"></div>
+  </div>
   <!-- Preloader -->
   <div id="preloader">
     <div id="container" class="container-preloader">
@@ -464,7 +472,7 @@
 
             <div id="team-desktop" class="team-wrapper-box">
               <div class="team-wrapper">
-                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.30">
+                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.30" data-member="moustafa">
                   <a>
                     <div class="thumb">
                       <img src="assets/imgs/team/Untitled-2.png" alt="team icon"> <!-- Sample Image -->
@@ -477,7 +485,7 @@
                   </a>
 
                 </div>
-                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.60">
+                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.60" data-member="raouf">
                   <a>
                     <div class="thumb">
                       <img src="assets/imgs/team/Untitled-3.png" alt="team icon"> <!-- Sample Image -->
@@ -489,7 +497,7 @@
                   </a>
 
                 </div>
-                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45">
+                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45" data-member="haitam">
                   <a>
                     <div class="thumb" style="background: #ffffff !important;">
                       <img src="assets/imgs/team/Haitam-khader_COO.png" alt="team icon"> <!-- Sample Image -->
@@ -501,7 +509,7 @@
                   </a>
 
                 </div>
-                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45">
+                <div class="team-box has_fade_anim" data-fade-from="left" data-delay="0.45" data-member="mahmoud">
                   <a>
                     <div class="thumb" style="background: #ffffff !important;">
                       <img src="assets/imgs/team/Cfo-Mahmoud-Ismail.png" alt="team icon"> <!-- Sample Image -->
@@ -515,6 +523,7 @@
                 </div>
               </div>
             </div>
+           
           </div>
         </div>
       </section>
@@ -860,7 +869,8 @@
 
       <!-- in app view -->
 
-      <div class="clients-area-slider mt-4 mb-4">
+      <h2 class="has_fade_anim clients-area-slider-title">Our Solution Providers, Partners in Our Success</h2>
+      <div class="clients-area-slider mb-4">
         <div class="container-hd">
           <div class="clients-area-slider">
             <div class="container-fluid p-0">
@@ -1407,6 +1417,103 @@ A results-driven leader, Mahmoud is deeply committed to fostering innovation and
       teamSlider.updateSlider();
     });
   </script>
+  <script>
+    const teamMembers = {
+      moustafa: {
+        name: 'Moustafa Rashad',
+        title: 'Chief Executive Officer',
+        image: 'assets/imgs/team/Untitled-2.png',
+        bio: 'Moustafa Rashad is a visionary leader with over 15 years of experience in driving technological innovation and business growth. His strategic approach has been instrumental in establishing our company as a leader in the global market.'
+      },
+      raouf: {
+        name: 'Raouf Andrea',
+        title: 'Chief Corporate Officer',
+        image: 'assets/imgs/team/Untitled-3.png',
+        bio: `Raouf Charalambous serves as the Chief Corporate Officer at EHC Investment, leveraging over 15 years of corporate leadership experience. With a Bachelor’s degree in Architectural Engineering, Raouf combines technical expertise with strategic vision. He has a proven track record as a General Manager and entrepreneur, having founded and successfully managed his own business before joining EHC.
+At EHC Investment, Raouf oversees the company’s portfolio across its core verticals: energy, infrastructure, safety, and technology. His leadership emphasizes the transformative potential of technology and artificial intelligence, driving innovation throughout the business. Passionate about integrating AI solutions, Raouf focuses on enhancing efficiency and delivering sustainable, data-driven outcomes. Known for fostering partnerships and collaboration, he aligns EHC’s strategic goals with long-term value creation, placing technology and AI at the forefront of its vision.`
+      },
+      haitam: {
+        name: 'Haitam Khader',
+        title: 'Chief Commercial Officer',
+        image: 'assets/imgs/team/Haitam-khader_COO.png',
+        bio: `Haitham possesses over 20 years of professional experience, held key leadership roles in globally renowned organizations across the Europe, Middle East, and Asia. He has successfully led transformative projects, driving strategic growth and optimizing business operations in complex and dynamic environments.
+
+Haitham holds a master’s degree in Logistics and Supply Chain Management from the University of Sydney in Australia, and an MBA in Corporate Finance from the University of Manchester in United Kingdome. He is also accredited with numerous prestigious certifications, such Certified Commercial Contracts Manager (CCCM), BGS Certified Business Analyst, Certified Cost Professional (CCP), Certified Planning and Scheduling Professional (PSP), Risk Management Professional (RMP), Agile Certified Professional (ACP), Project Management Professional (PMP), and few others.
+
+In addition to his corporate achievements, Haitham has published several articles on industry innovation, strategic management, and operational excellence. He also serves as an independent arbitrator, and as an editorial member for industry-leading publications.`
+      },
+      mahmoud: {
+        name: 'Mahmoud Ismail',
+        title: 'Chief Financial Officer',
+        image: 'assets/imgs/team/Cfo-Mahmoud-Ismail.png',
+        bio: `Mahmoud serves as the Chief Financial Officer at EHC Investment, bringing over 15 years of expertise in finance and leadership across diversified industries. Throughout his career, Mahmoud has demonstrated a proven ability to drive financial strategy, optimize operations, and support sustainable growth.
+With extensive experience in corporate finance, strategic planning, and risk management, Mahmoud has successfully overseen complex financial structures, led high-performing teams, and implemented robust financial frameworks. He specializes in aligning financial goals with long-term business objectives, ensuring both operational efficiency and profitability.
+A results-driven leader, Mahmoud is deeply committed to fostering innovation and building a strong foundation for EHC's success in a competitive market.`
+      }
+    };
+
+    const drawer1 = document.querySelector('.detail-drawer');
+    const overlay1 = document.querySelector('.overlay');
+    const closeButton = document.querySelector('.drawer-close');
+    let isDrawerOpen = false;
+
+    function openDrawer(memberId) {
+      if (isDrawerOpen) return;
+
+      const member = teamMembers[memberId];
+      if (!member) return;
+
+      // Update drawer content
+      drawer1.querySelector('.drawer-image').src = member.image;
+      drawer1.querySelector('.drawer-image').alt = member.name;
+      drawer1.querySelector('.drawer-name').textContent = member.name;
+      drawer1.querySelector('.drawer-title').textContent = member.title;
+      drawer1.querySelector('.drawer-bio').textContent = member.bio;
+
+      // Animate drawer and overlay
+      const tl = gsap.timeline();
+      tl.to(overlay1, {
+        opacity: 1,
+        visibility: 'visible',
+        duration: 0.3
+      })
+        .to(drawer1, {
+          x: '-100%',
+          duration: 0.5,
+          ease: 'power3.out'
+        }, '-=0.1');
+
+      isDrawerOpen = true;
+    }
+
+    function closeDrawer() {
+      if (!isDrawerOpen) return;
+
+      const tl = gsap.timeline();
+      tl.to(drawer1, {
+        x: '0%',
+        duration: 0.5,
+        ease: 'power3.in'
+      })
+        .to(overlay1, {
+          opacity: 0,
+          visibility: 'hidden',
+          duration: 0.3
+        }, '-=0.2');
+
+      isDrawerOpen = false;
+    }
+
+    // Event Listeners
+    document.querySelectorAll('.team-box').forEach(member => {
+      member.addEventListener('click', () => {
+        openDrawer(member.dataset.member);
+      });
+    });
+
+    closeButton.addEventListener('click', closeDrawer);
+    overlay1.addEventListener('click', closeDrawer);
+  </script> 
 </body>
 
 </html>

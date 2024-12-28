@@ -9679,9 +9679,9 @@ section {
     }
 }
 
-@media(max-width: 575px) {
+@media(max-width: 780px) {
     .about-area .section-content {
-        padding: 60px 30px
+        padding: 30px 30px
     }
 }
 
@@ -10827,6 +10827,13 @@ section {
     display: none;
 }
 
+.clients-area-slider-title {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
 .has-right-line.o-f-heading-m {
     display: none;
 }
@@ -10835,7 +10842,9 @@ section {
     .clients-area-slider {
         display: block;
     }
-
+    .clients-area-slider-title {
+        display: block;
+    }
     .client-area {
         display: none;
     }
@@ -11074,6 +11083,7 @@ section {
     opacity: 1;
     visibility: visible;
 }
+
 #team-mobile {
     display: none;
 }
@@ -11086,8 +11096,87 @@ section {
     #team-desktop {
         display: none;
     }
+
     .team-nav-wrapper {
         display: flex;
+    }
+}
+
+.detail-drawer {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100vh;
+    background: #1a1a1a;
+    padding: 2rem;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    z-index: 99999;
+}
+
+.drawer-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.drawer-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.drawer-image {
+    width: 150px;
+    /* height: 150px; */
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.drawer-name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.drawer-title {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.drawer-bio {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .detail-drawer {
+        width: 100%;
+        right: -100%;
     }
 }
 
