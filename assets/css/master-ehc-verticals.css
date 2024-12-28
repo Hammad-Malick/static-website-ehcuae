@@ -10011,6 +10011,7 @@ section {
     .ehc-carousel {
         max-height: 440px;
         min-height: 410px;
+        width: 100%;
     }
 }
 
@@ -10313,6 +10314,9 @@ section {
 }
 
 @media (max-width: 780px) {
+    .nav-slided-container{
+        display: none;
+    }
     .footer-options {
         flex-direction: row;
     }
