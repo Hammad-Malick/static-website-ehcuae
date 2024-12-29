@@ -8982,10 +8982,12 @@ section {
 .dark .footer-area {
     background-color: #1c1c1c
 }
+
 .footer-area-inner.mobile {
     display: none;
 
 }
+
 @media (max-width: 780px) {
     .footer-options {
         flex-direction: row;
@@ -9002,6 +9004,7 @@ section {
     }
 
 }
+
 @media only screen and (max-width: 991px) {
     .footer-area {
         padding: 0 15px
@@ -9568,7 +9571,15 @@ section {
     .contact-content {
         flex-direction: column;
     }
+
+    .contact-item h2 {
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
+
 .footer-options {
     display: flex;
     flex-direction: column;
