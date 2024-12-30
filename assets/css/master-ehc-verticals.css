@@ -10008,6 +10008,7 @@ section {
         max-height: 400px;
         max-width: 334px;
     }
+
     .ehc-carousel {
         max-height: 440px;
         min-height: 410px;
@@ -10015,10 +10016,20 @@ section {
         min-width: 100%;
         max-width: 100%;
     }
+
     .ehc-carousel-container {
         width: 100%;
         min-width: 100%;
         max-width: 100%;
+    }
+
+    .ehc-carousel-item .btn-wrapper {
+        opacity: 1 !important;
+    }
+
+    .ehc-carousel-item .btn-wrapper a {
+        height: 45px;
+        width: 117px;
     }
 }
 
@@ -10063,6 +10074,12 @@ section {
     align-items: flex-end;
     justify-content: space-between;
 
+}
+
+.ehc-carousel-item-title img {
+    background: #f7f7f714;
+    backdrop-filter: blur(7.5px);
+    padding: 5px;
 }
 
 .ehc-navigation {
@@ -10321,9 +10338,10 @@ section {
 }
 
 @media (max-width: 780px) {
-    .nav-slided-container{
+    .nav-slided-container {
         display: none;
     }
+
     .footer-options {
         flex-direction: row;
     }

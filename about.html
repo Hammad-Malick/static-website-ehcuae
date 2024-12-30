@@ -34,11 +34,11 @@
   <div class="overlay"></div>
 
   <div class="detail-drawer">
-      <button class="drawer-close">&times;</button>
-      <img src="" alt="" class="drawer-image">
-      <h2 class="drawer-name"></h2>
-      <p class="drawer-title"></p>
-      <div class="drawer-bio"></div>
+    <button class="drawer-close">&times;</button>
+    <img src="" alt="" class="drawer-image">
+    <h2 class="drawer-name"></h2>
+    <p class="drawer-title"></p>
+    <div class="drawer-bio"></div>
   </div>
   <!-- Preloader -->
   <div id="preloader">
@@ -291,7 +291,7 @@
               <div class="counter-wrapper-box">
                 <div class="counter-wrapper">
                   <div class="thumb overflow-hidden">
-                    <img src="assets/imgs/gallery/about-g-2.webp" alt="image">
+                    <img class="desktop-only" src="assets/imgs/gallery/about-g-2.webp" alt="image">
                   </div>
                   <div class="counter-box">
                     <h1 class=" has_fade_anim">From Abu Dhabi to the world</h1>
@@ -396,7 +396,7 @@
             <div class="section-header">
               <div class="section-title-wrapper">
                 <div class="title-wrapper">
-                  <h2 class="section-title has_fade_anim">Meet Our Leadership</h2>
+                  <h2 class="section-title has_fade_anim">Our Leadership</h2>
                   <div class="team-nav-wrapper">
                     <button class="team-slider-nav team-slider-prev">
                       <!-- <svg viewBox="0 0 24 24">
@@ -523,7 +523,7 @@
                 </div>
               </div>
             </div>
-           
+
           </div>
         </div>
       </section>
@@ -1393,7 +1393,7 @@
 
       getBio(name) {
         const bios = {
-          'Moustafa Rashad': 'Moustafa Rashad is a visionary leader with over 20 years of experience in the tech industry. As the CEO, he has led the company through significant growth and innovation, establishing it as a market leader in AI and machine learning solutions.',
+          'Moustafa Rashad': `Moustafa Rashad, CEO of EHC Investment, brings over 20 years of experience in the energy sector to strategically guide the company's direction and growth. Utilizing his extensive management expertise, he oversees operations and drives critical business decisions while cultivating a culture of innovation. With the support of a proactive board of directors and a strong C-suite, EHC Investment has achieved significant milestones, including successful mergers and acquisitions, as well as the implementation of comprehensive investment strategies that enhance shareholder value. Moustafa’s strategic vision and unwavering commitment to excellence, combined with collaborative efforts across the organization, underscore EHC Investment's robust capabilities as a diversified holding company, well-equipped to navigate market challenges and seize growth opportunities, driving sustainable success and long-term value creation.`,
           'Raouf Andrea': `Raouf Charalambous serves as the Chief Corporate Officer at EHC Investment, leveraging over 15 years of corporate leadership experience. With a Bachelor’s degree in Architectural Engineering, Raouf combines technical expertise with strategic vision. He has a proven track record as a General Manager and entrepreneur, having founded and successfully managed his own business before joining EHC.
 At EHC Investment, Raouf oversees the company’s portfolio across its core verticals: energy, infrastructure, safety, and technology. His leadership emphasizes the transformative potential of technology and artificial intelligence, driving innovation throughout the business. Passionate about integrating AI solutions, Raouf focuses on enhancing efficiency and delivering sustainable, data-driven outcomes. Known for fostering partnerships and collaboration, he aligns EHC’s strategic goals with long-term value creation, placing technology and AI at the forefront of its vision.`,
           'Haitam Khader': `Haitham possesses over 20 years of professional experience, held key leadership roles in globally renowned organizations across the Europe, Middle East, and Asia. He has successfully led transformative projects, driving strategic growth and optimizing business operations in complex and dynamic environments.
@@ -1423,7 +1423,7 @@ A results-driven leader, Mahmoud is deeply committed to fostering innovation and
         name: 'Moustafa Rashad',
         title: 'Chief Executive Officer',
         image: 'assets/imgs/team/Untitled-2.png',
-        bio: 'Moustafa Rashad is a visionary leader with over 15 years of experience in driving technological innovation and business growth. His strategic approach has been instrumental in establishing our company as a leader in the global market.'
+        bio: `Moustafa Rashad, CEO of EHC Investment, brings over 20 years of experience in the energy sector to strategically guide the company's direction and growth. Utilizing his extensive management expertise, he oversees operations and drives critical business decisions while cultivating a culture of innovation. With the support of a proactive board of directors and a strong C-suite, EHC Investment has achieved significant milestones, including successful mergers and acquisitions, as well as the implementation of comprehensive investment strategies that enhance shareholder value. Moustafa’s strategic vision and unwavering commitment to excellence, combined with collaborative efforts across the organization, underscore EHC Investment's robust capabilities as a diversified holding company, well-equipped to navigate market challenges and seize growth opportunities, driving sustainable success and long-term value creation.`
       },
       raouf: {
         name: 'Raouf Andrea',
@@ -1513,7 +1513,7 @@ A results-driven leader, Mahmoud is deeply committed to fostering innovation and
 
     closeButton.addEventListener('click', closeDrawer);
     overlay1.addEventListener('click', closeDrawer);
-  </script> 
+  </script>
 </body>
 
 </html>
