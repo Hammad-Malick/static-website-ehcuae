@@ -3721,7 +3721,7 @@
 }
 
 body {
-    font-family: var(--font_kanit);
+    font-family: var(--font_aptos_light);
     line-height: 1
 }
 
@@ -3843,6 +3843,19 @@ h6 {
 }
 
 @font-face {
+    font-family: "aptos";
+    src: url("../fonts/aptos-black/aptos-black.ttf");
+    font-weight: 400;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "aptos-light";
+    src: url("../fonts/aptos-light/aptos-light.ttf");
+    font-weight: 400;
+    font-display: swap
+}
+@font-face {
     font-family: "recoleta";
     src: url("../fonts/recoleta/Latinotype - Recoleta Medium.otf");
     font-display: swap
@@ -3882,6 +3895,8 @@ h6 {
 
 :root {
     --font_recoleta: "recoleta";
+    --font_aptos: "aptos";
+    --font_aptos_light: "aptos-light";
     --font_teko: "Teko", sans-serif;
     --font_dmsans: "DM Sans", sans-serif;
     --font_plusjakartasans: "Plus Jakarta Sans", sans-serif;
@@ -3900,7 +3915,7 @@ h6 {
 .font-heading-recoleta-medium h4,
 .font-heading-recoleta-medium h5,
 .font-heading-recoleta-medium h6 {
-    font-family: var(--font_recoleta);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1.05
 }
@@ -3911,7 +3926,7 @@ h6 {
 .font-heading-teko-bold h4,
 .font-heading-teko-bold h5,
 .font-heading-teko-bold h6 {
-    font-family: var(--font_teko);
+    font-family: var(--font_aptos);
     font-weight: 700;
     line-height: .94
 }
@@ -3922,7 +3937,7 @@ h6 {
 .font-heading-dmsans-medium h4,
 .font-heading-dmsans-medium h5,
 .font-heading-dmsans-medium h6 {
-    font-family: var(--font_dmsans);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1
 }
@@ -3933,7 +3948,7 @@ h6 {
 .font-heading-plusjakartasans-regular h4,
 .font-heading-plusjakartasans-regular h5,
 .font-heading-plusjakartasans-regular h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family: var(--font_aptos);
     font-weight: 400;
     line-height: 1
 }
@@ -3944,7 +3959,7 @@ h6 {
 .font-heading-plusjakartasans-regular-2 h4,
 .font-heading-plusjakartasans-regular-2 h5,
 .font-heading-plusjakartasans-regular-2 h6 {
-    font-family: var(--font_plusjakartasans);
+    font-family: var(--font_aptos);
     font-weight: 400;
     line-height: 1.08
 }
@@ -3955,7 +3970,7 @@ h6 {
 .font-heading-beatricetrial-regular h4,
 .font-heading-beatricetrial-regular h5,
 .font-heading-beatricetrial-regular h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_aptos);
     font-weight: 400;
     line-height: 1.07
 }
@@ -3966,7 +3981,7 @@ h6 {
 .font-heading-beatricetrial-regular-2 h4,
 .font-heading-beatricetrial-regular-2 h5,
 .font-heading-beatricetrial-regular-2 h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_aptos);
     font-weight: 400;
     line-height: 1.08
 }
@@ -3977,7 +3992,7 @@ h6 {
 .font-heading-beatricetrial-medium h4,
 .font-heading-beatricetrial-medium h5,
 .font-heading-beatricetrial-medium h6 {
-    font-family: var(--font_beatricetrial);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1.08
 }
@@ -3988,7 +4003,7 @@ h6 {
 .font-heading-khand-bold h4,
 .font-heading-khand-bold h5,
 .font-heading-khand-bold h6 {
-    font-family: var(--font_khand);
+    font-family: var(--font_aptos);
     font-weight: 700;
     line-height: .88
 }
@@ -3999,7 +4014,7 @@ h6 {
 .font-heading-instumentsans-medium h4,
 .font-heading-instumentsans-medium h5,
 .font-heading-instumentsans-medium h6 {
-    font-family: var(--font_instrumentsans);
+    font-family: var(--font_aptos);
     font-weight: 500;
     line-height: 1
 }
@@ -4010,7 +4025,7 @@ h6 {
 .font-heading-instumentsans-semibold h4,
 .font-heading-instumentsans-semibold h5,
 .font-heading-instumentsans-semibold h6 {
-    font-family: var(--font_instrumentsans);
+    font-family: var(--font_aptos);
     font-weight: 600;
     line-height: 1
 }
@@ -4021,7 +4036,7 @@ h6 {
 .font-heading-spacegrotesk-bold h4,
 .font-heading-spacegrotesk-bold h5,
 .font-heading-spacegrotesk-bold h6 {
-    font-family: var(--font_spacegrotesk);
+    font-family: var(--font_aptos);
     font-weight: 700;
     line-height: 1
 }
@@ -4032,7 +4047,7 @@ h6 {
 .font-heading-canelatrial-thin h4,
 .font-heading-canelatrial-thin h5,
 .font-heading-canelatrial-thin h6 {
-    font-family: var(--font_canelatrial);
+    font-family: var(--font_aptos);
     font-weight: 300;
     line-height: 1.2
 }
@@ -4525,7 +4540,7 @@ h6 {
 
 .btn-close {
     content: "";
-    font-family: "icomoon";
+    font-family: var(--font_aptos);
     font-size: 16px;
     opacity: 1;
     filter: brightness(100) contrast(0);
@@ -6827,7 +6842,7 @@ section {
 
 .main-menu li.menu-item-has-children>a:after {
     content: "";
-    font-family: var(--font_awesome);
+    font-family: var(--font_aptos_light);
     margin-inline-start: 5px;
     font-weight: 600;
     font-size: 14px
@@ -8121,7 +8136,7 @@ section {
     top: 40%;
     z-index: 99;
     transform: translateY(-50%);
-    font-family: var(--font_primary);
+    font-family: var(--font_aptos_light);
     transition: all .3s
 }
 
@@ -8613,7 +8628,7 @@ section {
 .font-heading-Beatricetrial h4,
 .font-heading-Beatricetrial h5,
 .font-heading-Beatricetrial h6 {
-    font-family: var(--font_beatricetrial)
+    font-family: var(--font_aptos)
 }
 
 .cf_feature.style-3 {
@@ -9276,7 +9291,7 @@ section {
     color: var(--primary);
     line-height: 1;
     display: inline-block;
-    font-family: var(--font_beatricetrial)
+    font-family: var(--font_aptos)
 }
 
 @media only screen and (max-width: 1199px) {
@@ -9369,21 +9384,21 @@ section {
 .blog-details-area .blogdetails__wrapper {
     margin-top: 100px;
     display: grid;
-    gap: 30px 140px;
-    grid-template-columns: 80px 850px
+    /* gap: 30px 140px; */
+    grid-template-columns: auto
 }
 
 @media only screen and (max-width: 1199px) {
     .blog-details-area .blogdetails__wrapper {
-        gap: 30px 60px;
-        grid-template-columns: 80px 1fr;
+        /* gap: 30px 60px; */
+        grid-template-columns: auto;
         margin-top: 80px
     }
 }
 
 @media only screen and (max-width: 991px) {
     .blog-details-area .blogdetails__wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         margin-top: 60px
     }
 }
@@ -9433,7 +9448,7 @@ section {
     font-size: 27px;
     line-height: 1.11;
     color: var(--white);
-    font-family: var(--font_beatricetrial)
+    font-family: var(--font_aptos_light)
 }
 
 @media only screen and (max-width: 991px) {
@@ -9670,7 +9685,7 @@ section {
     place-content: end;
     height: 40vh;
 
-    background: url('./../imgs/blog/img-s-26.webp');
+    background: url('./../imgs/gallery/blog-b.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
